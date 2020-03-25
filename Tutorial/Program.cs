@@ -8,11 +8,14 @@ namespace Tutorial
         [STAThread]
         static void Main(string[] args)
         {
-            Engine.Initialize("Tutorial", 960, 720);
+            Engine.Initialize("Tutorial", 960, 720, new Configuration());
+
+            Engine.AddNode(new MainNode());
 
             while (Engine.DoEvents())
             {
-                if (!Engine.Update()) break;
+                Engine.Update();
+                if (Engine.Keyboard.GetKeyState(Keys.Escape) == ButtonState.Push) break;
             }
 
             Engine.Terminate();
