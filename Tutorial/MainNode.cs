@@ -27,19 +27,25 @@ namespace Tutorial
         {
             AddChildNode(characterNode);
             AddChildNode(uiNode);
+            var backTexture = new SpriteNode()
+            {
+                Texture = Resources.Texture_Background,
+                ZOrder = -100
+            };
+            AddChildNode(backTexture);
 
             characterNode.AddChildNode(player);
 
             scoreNode = new TextNode()
             {
-                Font = Resources.Font,
+                Font = Resources.Font30,
                 Text = "Score : 0"
             };
             uiNode.AddChildNode(scoreNode);
 
             waveNode = new TextNode()
             {
-                Font = Resources.Font,
+                Font = Resources.Font30,
                 Text = "Wave : 1",
                 Position = new Vector2F(200, 0)
             };

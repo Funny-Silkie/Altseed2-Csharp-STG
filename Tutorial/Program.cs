@@ -10,7 +10,7 @@ namespace Tutorial
         {
             Engine.Initialize("Tutorial", 960, 720, new Configuration());
 
-            Engine.AddNode(new MainNode());
+            Engine.AddNode(new TitleNode());
 
             while (Engine.DoEvents())
             {
