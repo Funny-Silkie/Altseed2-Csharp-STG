@@ -436,7 +436,7 @@
         </member>
         <member name="T:Altseed.ToolDir">
             <summary>
-            ImGuiで使用する方向
+            ツール機能で使用する方向
             </summary>
         </member>
         <member name="F:Altseed.ToolDir.Left">
@@ -556,7 +556,7 @@
         </member>
         <member name="T:Altseed.ToolInputText">
             <summary>
-            Toolにおいてインプットされるテキストの設定を表します
+            ツール機能においてインプットされるテキストの設定を表します
             </summary>
         </member>
         <member name="F:Altseed.ToolInputText.CharsDecimal">
@@ -656,7 +656,7 @@
         </member>
         <member name="T:Altseed.ToolColorEdit">
             <summary>
-            Toolにおける色の設定を表します
+            ツール機能における色の設定を表します
             </summary>
         </member>
         <member name="F:Altseed.ToolColorEdit.NoAlpha">
@@ -806,7 +806,7 @@
         </member>
         <member name="T:Altseed.ToolWindow">
             <summary>
-            Toolのウィンドウにおける設定を表します
+            ツール機能のウィンドウにおける設定を表します
             </summary>
         </member>
         <member name="F:Altseed.ToolWindow.NoTitleBar">
@@ -903,7 +903,7 @@
         </member>
         <member name="T:Altseed.ToolTabBar">
             <summary>
-            Toolのタブバーにおける設定を表します
+            ツール機能のタブバーにおける設定を表します
             </summary>
         </member>
         <member name="F:Altseed.ToolTabBar.Reorderable">
@@ -944,7 +944,7 @@
         </member>
         <member name="T:Altseed.ToolGlyphRanges">
             <summary>
-            Tool機能を使ってフォントを読み込む際の範囲を指定します。ビット演算は行わないでください。
+            ツール機能を使ってフォントを読み込む際の範囲を指定します。ビット演算は行わないでください。
             </summary>
         </member>
         <member name="F:Altseed.ToolGlyphRanges.Cyrillic">
@@ -3480,6 +3480,11 @@
             マウスを管理するクラスを取得します。
             </summary>
         </member>
+        <member name="P:Altseed.Engine.Joystick">
+            <summary>
+            ジョイスティックを管理するクラスを取得します。
+            </summary>
+        </member>
         <member name="P:Altseed.Engine.Graphics">
             <summary>
             グラフィックのクラスを取得します。
@@ -3523,6 +3528,11 @@
         <member name="M:Altseed.Engine.RemoveNode(Altseed.Node)">
             <summary>
             エンジンからノードを削除します。
+            </summary>
+        </member>
+        <member name="P:Altseed.Engine.WindowSize">
+            <summary>
+            ウィンドウのサイズを取得する
             </summary>
         </member>
         <member name="P:Altseed.Engine.WindowTitle">
