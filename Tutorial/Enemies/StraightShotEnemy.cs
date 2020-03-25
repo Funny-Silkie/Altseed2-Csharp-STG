@@ -1,4 +1,5 @@
 ﻿using Altseed;
+using System;
 using static Tutorial.Resources;
 
 namespace Tutorial
@@ -26,11 +27,9 @@ namespace Tutorial
 
         protected override void OnUpdate()
         {
-            if (count > 250)
-            {
-                Shot((Player.Position - Position).Normal * 5);
-                count = 0;
-            }
+            if (count % 150 == 0) Shot((Player.Position - Position).Normal * 5);
+            
+            Position -= new Vector2F(MathF.Sin(MathHelper.DegreeToRadian(count)) * 3.0f, 0);
 
             base.OnUpdate();
             count++;

@@ -34,6 +34,12 @@ namespace Tutorial
             }
         }
 
+        protected override void OnUpdate()
+        {
+            base.OnUpdate();
+            RemoveMyselfIfOutOfWindow();
+        }
+
         /// <summary>
         /// 弾を撃つ
         /// </summary>
