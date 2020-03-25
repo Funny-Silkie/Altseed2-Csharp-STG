@@ -26,8 +26,15 @@ namespace Tutorial
             var size2 = announce.Font.CalcTextureSize(announce.Text, WritingDirection.Horizontal, true) * announce.Scale;
             announce.Position = new Vector2F(480, 600) - size2 / 2;
 
+            var backTexture = new SpriteNode()
+            {
+                Texture = Resources.Texture_image,
+                ZOrder = -1
+            };
+
             AddChildNode(titleText);
             AddChildNode(announce);
+            AddChildNode(backTexture);
         }
 
         protected override void OnUpdate()
