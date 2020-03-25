@@ -20,7 +20,8 @@ namespace Tutorial
         {
             this.player = player;
             Texture = Texture_UFO;
-            Init();
+            CenterPosition = Texture.Size / 2;
+            Radius = Texture.Size.X / 8;
             this.speed = speed;
         }
 

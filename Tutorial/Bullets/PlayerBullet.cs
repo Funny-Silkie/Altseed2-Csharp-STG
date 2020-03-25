@@ -17,7 +17,8 @@ namespace Tutorial
         public PlayerBullet(Vector2F position) : base(position, velocity)
         {
             Texture = Texture_Bullet_Blue;
-            Init();
+            CenterPosition = Texture.Size / 2;
+            Radius = Texture.Size.X / 2;
         }
 
         protected override void OnCollision(CollidableObject obj)

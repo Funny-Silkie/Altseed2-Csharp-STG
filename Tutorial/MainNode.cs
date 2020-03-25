@@ -13,7 +13,7 @@ namespace Tutorial
         private int wave = 1;
         private readonly Queue<Enemy>[] enemies = new Queue<Enemy>[waves];
         private readonly Node characterNode = new Node();
-        private readonly Player player = new Player(default);
+        private readonly Player player = new Player(new Vector2F(100, 360));
         private readonly Node uiNode = new Node();
         private TextNode scoreNode;
         private TextNode waveNode;

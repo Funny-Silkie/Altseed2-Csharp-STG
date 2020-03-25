@@ -20,7 +20,7 @@ namespace Tutorial
         /// <summary>
         /// 衝突半径を取得する
         /// </summary>
-        public float Radius { get; set; }
+        public float Radius { get; protected set; }
 
         /// <summary>
         /// 新しいインスタンスを生成する
@@ -29,15 +29,6 @@ namespace Tutorial
         protected CollidableObject(Vector2F position)
         {
             Position = position;
-        }
-
-        /// <summary>
-        /// <see cref="DrawnNode.CenterPosition"/>，<see cref="Radius"/>を設定する
-        /// </summary>
-        protected void Init()
-        {
-            CenterPosition = Texture.Size / 2;
-            Radius = Texture.Size.X / 2;
         }
 
         protected override void OnAdded() => Objects.Add(this);
@@ -66,13 +57,7 @@ namespace Tutorial
         /// <param name="o1">衝突を調べるオブジェクト</param>
         /// <param name="o2">衝突を調べるオブジェクト</param>
         /// <returns><paramref name="o1"/>と<paramref name="o2"/>が衝突していたらtrue，それ以外でfalse</returns>
-        private static bool IsCollide(CollidableObject o1, CollidableObject o2)
-        {
-            var distance = Vector2F.Distance(o1.Position, o2.Position);
-            var radsum = o1.Radius + o2.Radius;
-            System.Console.WriteLine($"distance:{distance}, radsum:{radsum}");
-            return distance <= radsum;
-        }
+        private static bool IsCollide(CollidableObject o1, CollidableObject o2) => Vector2F.Distance(o1.Position, o2.Position) <= o1.Radius + o2.Radius;
 
         /// <summary>
         /// 衝突時に実行

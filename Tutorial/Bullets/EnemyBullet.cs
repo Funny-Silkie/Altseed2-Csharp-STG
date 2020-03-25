@@ -13,7 +13,8 @@ namespace Tutorial
         public EnemyBullet(Vector2F position, Vector2F velocity) : base(position, velocity)
         {
             Texture = Texture_Bullet_Red;
-            Init();
+            CenterPosition = Texture.Size / 2;
+            Radius = Texture.Size.X / 2;
         }
 
         protected override void OnCollision(CollidableObject obj)

@@ -17,7 +17,8 @@ namespace Tutorial
         public Player(Vector2F position) : base(position)
         {
             Texture = Texture_Player;
-            Init();
+            CenterPosition = Texture.Size / 2;
+            Radius = Texture.Size.X / 4;
         }
 
         protected override void OnCollision(CollidableObject obj)
