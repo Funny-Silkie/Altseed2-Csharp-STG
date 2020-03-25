@@ -27,6 +27,8 @@ namespace Tutorial
             {
                 Parent.AddChildNode(new DeathEffect(Position));
                 Parent.RemoveChildNode(this);
+                Engine.RemoveNode(Parent.Parent);
+                Engine.AddNode(new GameOverNode());
             }
         }
 
