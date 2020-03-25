@@ -10,7 +10,7 @@ namespace Tutorial
         /// </summary>
         /// <param name="position">座標</param>
         /// <param name="velocity">速度</param>
-        public EnemyBullet(Vector2F position, Vector2F velocity) : base(position, velocity)
+        public EnemyBullet(MainNode stage, Vector2F position, Vector2F velocity) : base(stage, position, velocity)
         {
             Texture = Texture_Bullet_Red;
             CenterPosition = Texture.Size / 2;

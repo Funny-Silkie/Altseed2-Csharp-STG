@@ -15,7 +15,7 @@ namespace Tutorial
                 Text = "Game Over"
             };
             var size1 = titleText.Font.CalcTextureSize(titleText.Text, WritingDirection.Horizontal, true);
-            titleText.Position = new Vector2F(480, 100) - size1 / 2;
+            titleText.Position = new Vector2F(Engine.WindowSize.X / 2, 100) - size1 / 2;
 
             var announce = new TextNode()
             {
@@ -24,7 +24,7 @@ namespace Tutorial
                 Scale = new Vector2F(0.5f, 0.5f)
             };
             var size2 = announce.Font.CalcTextureSize(announce.Text, WritingDirection.Horizontal, true) * announce.Scale;
-            announce.Position = new Vector2F(480, 600) - size2 / 2;
+            announce.Position = new Vector2F(Engine.WindowSize.X / 2, 600) - size2 / 2;
 
             AddChildNode(titleText);
             AddChildNode(announce);

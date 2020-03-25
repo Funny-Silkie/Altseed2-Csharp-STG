@@ -23,11 +23,17 @@ namespace Tutorial
         public float Radius { get; protected set; }
 
         /// <summary>
+        /// 所属するステージを取得する
+        /// </summary>
+        public MainNode Stage { get; }
+
+        /// <summary>
         /// 新しいインスタンスを生成する
         /// </summary
         /// <param name="position">座標</param>
-        protected CollidableObject(Vector2F position)
+        protected CollidableObject(MainNode stage, Vector2F position)
         {
+            Stage = stage;
             Position = position;
         }
 
@@ -57,7 +63,7 @@ namespace Tutorial
         /// <param name="o1">衝突を調べるオブジェクト</param>
         /// <param name="o2">衝突を調べるオブジェクト</param>
         /// <returns><paramref name="o1"/>と<paramref name="o2"/>が衝突していたらtrue，それ以外でfalse</returns>
-        private static bool IsCollide(CollidableObject o1, CollidableObject o2) => Vector2F.Distance(o1.Position, o2.Position) <= o1.Radius + o2.Radius;
+        private static bool IsCollide(CollidableObject o1, CollidableObject o2) => (o1.Position - o2.Position).Length <= o1.Radius + o2.Radius;
 
         /// <summary>
         /// 衝突時に実行
@@ -71,7 +77,7 @@ namespace Tutorial
         protected void RemoveMyselfIfOutOfWindow()
         {
             var halfSize = Texture.Size / 2;
-            if (Position.X < halfSize.X || Position.Y < halfSize.Y || Position.X > 960 - halfSize.X || Position.Y > 720 - halfSize.Y) Parent?.RemoveChildNode(this);
+            if (Position.X < halfSize.X || Position.Y < halfSize.Y || Position.X > Engine.WindowSize.X - halfSize.X || Position.Y > Engine.WindowSize.Y - halfSize.Y) Parent?.RemoveChildNode(this);
         }
 
         /// <summary>

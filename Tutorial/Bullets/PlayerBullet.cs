@@ -14,7 +14,7 @@ namespace Tutorial
         /// 新しいインスタンスを生成する
         /// </summary>
         /// <param name="position">座標</param>
-        public PlayerBullet(Vector2F position) : base(position, velocity)
+        public PlayerBullet(MainNode stage, Vector2F position) : base(stage, position, velocity)
         {
             Texture = Texture_Bullet_Blue;
             CenterPosition = Texture.Size / 2;

@@ -13,7 +13,7 @@ namespace Tutorial
         private int wave = 1;
         private readonly Queue<Enemy>[] enemies = new Queue<Enemy>[waves];
         private readonly Node characterNode = new Node();
-        private readonly Player player = new Player(new Vector2F(100, 360));
+        private Player player;
         private readonly Node uiNode = new Node();
         private TextNode scoreNode;
         private TextNode waveNode;
@@ -34,6 +34,7 @@ namespace Tutorial
             };
             AddChildNode(backTexture);
 
+            player = new Player(this, new Vector2F(100, 360));
             characterNode.AddChildNode(player);
 
             scoreNode = new TextNode()
@@ -52,6 +53,9 @@ namespace Tutorial
             uiNode.AddChildNode(waveNode);
 
             InitAllWave();
+
+            //AddChildNode(new StayEnemy(new Vector2F(500, 500)));
+            AddChildNode(new StraightShotEnemy(player, new Vector2F(600, 360)));
         }
 
         /// <summary>
@@ -69,6 +73,8 @@ namespace Tutorial
         /// </summary>
         private void InitWave1()
         {
+            enemies[0].Enqueue(new StraightShotEnemy(player, new Vector2F(600, 300)));
+            enemies[0].Enqueue(new StraightShotEnemy(player, new Vector2F(600, 420)));
             enemies[0].Enqueue(new ChaseEnemy(player, new Vector2F(600, 300), 3.0f));
             enemies[0].Enqueue(new ChaseEnemy(player, new Vector2F(600, 420), 3.0f));
         }
@@ -78,6 +84,16 @@ namespace Tutorial
             scoreNode.Text = $"Score : {Score}";
             waveNode.Text = $"Wave : {wave}";
 
+            //Summon();
+
+            count++;
+        }
+
+        /// <summary>
+        /// 敵召還関連
+        /// </summary>
+        private void Summon()
+        {
             if (count % 300 == 0)
             {
                 if (enemies[wave - 1].Count > 0) characterNode.AddChildNode(enemies[wave - 1].Dequeue());
@@ -87,8 +103,6 @@ namespace Tutorial
                     wave++;
                 }
             }
-
-            count++;
         }
     }
 }

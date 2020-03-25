@@ -19,7 +19,7 @@ namespace Tutorial
         /// </summary>
         /// <param name="position">座標</param>
         /// <param name="velocity">速度</param>
-        public Bullet(Vector2F position, Vector2F velocity) : base(position)
+        public Bullet(MainNode stage, Vector2F position, Vector2F velocity) : base(stage, position)
         {
             this.velocity = velocity;
             ZOrder--;
