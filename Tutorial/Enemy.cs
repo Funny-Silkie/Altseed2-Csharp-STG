@@ -7,7 +7,7 @@ namespace Tutorial
     /// </summary>
     public abstract class Enemy : CollidableObject
     {
-        public override bool DoSurvey => false;
+        public override bool DoSurvey => true;
         
         /// <summary>
         /// 新しいインスタンスを生成する
@@ -20,7 +20,11 @@ namespace Tutorial
 
         protected override void OnCollision(CollidableObject obj)
         {
-            if (obj is PlayerBullet) Parent?.RemoveChildNode(this);
+            if (obj is PlayerBullet)
+            {
+                Parent.AddChildNode(new DeathEffect(Position));
+                Parent.RemoveChildNode(this);
+            }
         }
     }
 }

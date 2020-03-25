@@ -24,7 +24,11 @@ namespace Tutorial
 
         protected override void OnCollision(CollidableObject obj)
         {
-            
+            if (obj is Enemy || obj is EnemyBullet)
+            {
+                Parent.AddChildNode(new DeathEffect(Position));
+                Parent.RemoveChildNode(this);
+            }
         }
 
         protected override void OnUpdate()
