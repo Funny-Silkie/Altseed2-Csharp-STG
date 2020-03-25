@@ -7,14 +7,15 @@ namespace Tutorial
     /// </summary>
     public sealed class Player : CollidableObject
     {
-        public override bool DoSurvey { get; } = false;
+        public override bool DoSurvey => false;
 
         public override float Radius { get; }
 
         /// <summary>
         /// 新しいインスタンスを生成する
         /// </summary>
-        public Player()
+        /// <param name="position">座標</param>
+        public Player(Vector2F position) : base(position)
         {
             Texture = Texture2D.LoadStrict("Resources/Player.png");
             CenterPosition = Texture.Size / 2;
@@ -29,6 +30,8 @@ namespace Tutorial
         protected override void OnUpdate()
         {
             Move();
+            Shot();
+
             base.OnUpdate();
         }
 
@@ -41,17 +44,25 @@ namespace Tutorial
             const int maxY = 720;
             var x = Position.X;
             var y = Position.Y;
-            var size = Texture.Size;
+            var halfSize = Texture.Size / 2;
 
-            if (Engine.Keyboard.GetKeyState(Keys.Up) == ButtonState.Push) y -= 1.5f;
-            if (Engine.Keyboard.GetKeyState(Keys.Down) == ButtonState.Push) y += 1.5f;
-            if (Engine.Keyboard.GetKeyState(Keys.Right) == ButtonState.Push) x += 1.5f;
-            if (Engine.Keyboard.GetKeyState(Keys.Left) == ButtonState.Push) x -= 1.5f;
+            if (Engine.Keyboard.GetKeyState(Keys.Up) == ButtonState.Hold) y -= 1.5f;
+            if (Engine.Keyboard.GetKeyState(Keys.Down) == ButtonState.Hold) y += 1.5f;
+            if (Engine.Keyboard.GetKeyState(Keys.Right) == ButtonState.Hold) x += 1.5f;
+            if (Engine.Keyboard.GetKeyState(Keys.Left) == ButtonState.Hold) x -= 1.5f;
 
-            x = MathHelper.Clamp(x, maxX - size.X / 2, size.X / 2);
-            y = MathHelper.Clamp(y, maxY - size.Y / 2, size.Y / 2);
+            x = MathHelper.Clamp(x, maxX - halfSize.X, halfSize.X);
+            y = MathHelper.Clamp(y, maxY - halfSize.Y, halfSize.Y);
 
             Position = new Vector2F(x, y);
+        }
+
+        /// <summary>
+        /// ショット
+        /// </summary>
+        private void Shot()
+        {
+            if (Engine.Keyboard.GetKeyState(Keys.Z) == ButtonState.Push) Parent.AddChildNode(new PlayerBullet(Position));
         }
     }
 }

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Altseed;
+﻿using Altseed;
 
 namespace Tutorial
 {
@@ -11,7 +8,7 @@ namespace Tutorial
     public class MainNode : Node
     {
         private readonly Node characterNode = new Node();
-        private readonly Player player = new Player();
+        private readonly Player player = new Player(default);
         private readonly Node uiNode = new Node();
 
         /// <summary>

@@ -26,10 +26,11 @@ namespace Tutorial
 
         /// <summary>
         /// 新しいインスタンスを生成する
-        /// </summary>
-        protected CollidableObject()
+        /// </summary
+        /// <param name="position">座標</param>
+        protected CollidableObject(Vector2F position)
         {
-
+            Position = position;
 
         }
         /// <summary>
@@ -38,7 +39,9 @@ namespace Tutorial
         /// <param name="obj"></param>
         private void CollideWith(CollidableObject obj)
         {
-
+            if (obj == null) return;
+            if (!obj.DoSurvey) obj.OnCollision(this);
+            OnCollision(obj);
         }
 
         /// <summary>
@@ -58,6 +61,12 @@ namespace Tutorial
         protected override void OnUpdate()
         {
             if (DoSurvey) Survey();
+        }
+
+        protected void RemoveMyselfIfOutOfWindow()
+        {
+            var halfSize = Texture.Size / 2;
+            if (Position.X < halfSize.X || Position.Y < halfSize.Y || Position.X > 960 - halfSize.X || Position.Y > 720 - halfSize.Y) Parent?.RemoveChildNode(this);
         }
 
         /// <summary>
