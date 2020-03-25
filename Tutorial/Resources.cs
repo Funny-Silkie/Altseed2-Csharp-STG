@@ -11,6 +11,12 @@ namespace Tutorial
         public static Font Font30 { get; } = Font.LoadDynamicFontStrict("Resources/GenYoMinJP-Bold.ttf", 30);
         public static Font Font100 { get; } = Font.LoadDynamicFontStrict("Resources/GenYoMinJP-Bold.ttf", 100);
         #endregion
+        #region Sounds
+        public static Sound Sound_BGM { get; }
+        public static Sound Sound_EnemyShot { get; }
+        public static Sound Sound_Explosion { get; }
+        public static Sound Sound_PlayerShot { get; }
+        #endregion
         #region Textures
         public static Texture2D Texture_Background { get; } = Texture2D.LoadStrict("Resources/Background.png");
         public static Texture2D Texture_Bullet_Blue { get; } = Texture2D.LoadStrict("Resources/Bullet_Blue.png");
