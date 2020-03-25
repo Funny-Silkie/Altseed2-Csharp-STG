@@ -1,4 +1,5 @@
 ﻿using Altseed;
+using static Tutorial.Resources;
 
 namespace Tutorial
 {
@@ -13,7 +14,11 @@ namespace Tutorial
         /// 新しいインスタンスを生成する
         /// </summary>
         /// <param name="position">座標</param>
-        public PlayerBullet(Vector2F position) : base(position, velocity) { }
+        public PlayerBullet(Vector2F position) : base(position, velocity)
+        {
+            Texture = Texture_Bullet_Blue;
+            Init();
+        }
 
         protected override void OnCollision(CollidableObject obj)
         {

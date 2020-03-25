@@ -1,4 +1,5 @@
 ﻿using Altseed;
+using static Tutorial.Resources;
 
 namespace Tutorial
 {
@@ -11,7 +12,8 @@ namespace Tutorial
         /// <param name="velocity">速度</param>
         public EnemyBullet(Vector2F position, Vector2F velocity) : base(position, velocity)
         {
-            
+            Texture = Texture_Bullet_Red;
+            Init();
         }
 
         protected override void OnCollision(CollidableObject obj)

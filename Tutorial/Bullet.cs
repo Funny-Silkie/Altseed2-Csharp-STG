@@ -2,16 +2,17 @@
 
 namespace Tutorial
 {
+    /// <summary>
+    /// 弾のクラス
+    /// </summary>
     public abstract class Bullet : CollidableObject
     {
         public sealed override bool DoSurvey => false;
 
-        public sealed override float Radius { get; }
-
         /// <summary>
-        /// 速度を取得魔取得または設定する
+        /// 移動距離
         /// </summary>
-        public Vector2F Velocity { get; set; }
+        private readonly Vector2F velocity;
 
         /// <summary>
         /// 新しいインスタンスを生成する
@@ -20,16 +21,13 @@ namespace Tutorial
         /// <param name="velocity">速度</param>
         public Bullet(Vector2F position, Vector2F velocity) : base(position)
         {
-            Texture = Texture2D.LoadStrict("Resources/Bullet.png");
-            CenterPosition = Texture.Size / 2;
-            Radius = Texture.Size.X / 2;
-            Velocity = velocity;
+            this.velocity = velocity;
             ZOrder--;
         }
 
         protected override void OnUpdate()
         {
-            Position += Velocity;
+            Position += velocity;
             base.OnUpdate();
             RemoveMyselfIfOutOfWindow();
         }

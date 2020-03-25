@@ -7,7 +7,8 @@ namespace Tutorial
     /// </summary>
     public abstract class Enemy : CollidableObject
     {
-        public override bool DoSurvey => true;
+        public sealed override bool DoSurvey => true;
+        public abstract int Score { get; }
         
         /// <summary>
         /// 新しいインスタンスを生成する
@@ -22,6 +23,7 @@ namespace Tutorial
         {
             if (obj is PlayerBullet)
             {
+                ((MainNode)Parent.Parent).Score += Score;
                 Parent.AddChildNode(new DeathEffect(Position));
                 Parent.RemoveChildNode(this);
             }

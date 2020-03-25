@@ -1,4 +1,5 @@
 ﻿using Altseed;
+using static Tutorial.Resources;
 
 namespace Tutorial
 {
@@ -16,22 +17,21 @@ namespace Tutorial
         public DeathEffect(Vector2F position)
         {
             Position = position;
-            Texture = Texture2D.LoadStrict("Resources/DeathEffect.png");
-            Scale = new Vector2F(0.25f, 0.25f);
-            CenterPosition = new Vector2F(16f, 16f);
+            Texture = Texture_Explosion;
+            CenterPosition = new Vector2F(32f, 32f);
             ZOrder++;
-            Src = new RectF(default, Texture.Size / 4);
+            Src = new RectF(default, new Vector2F(Texture.Size.X / 9, Texture.Size.Y));
         }
 
         protected override void OnUpdate()
         {
-            var size = Texture.Size / 4;
-            var pos = new Vector2F(size.X * (count % 4), size.Y * (count / 4));
+            var size = new Vector2F(Texture.Size.X / 9, Texture.Size.Y);
+            var pos = new Vector2F(size.X * (count / 2 % 9), size.Y);
             Src = new RectF(pos, size);
 
             count++;
 
-            if (count >= 16) Parent?.RemoveChildNode(this);
+            if (count >= 18) Parent?.RemoveChildNode(this);
         }
     }
 }
