@@ -5,7 +5,7 @@ namespace Tutorial
     /// <summary>
     /// クリア画面
     /// </summary>
-    public class ClearNode : Node
+    public class LevelCompletedNode : Node
     {
         protected override void OnAdded()
         {

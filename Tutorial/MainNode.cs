@@ -184,7 +184,7 @@ namespace Tutorial
                     if (wave > waves)
                     {
                         Engine.RemoveNode(this);
-                        Engine.AddNode(new ClearNode());
+                        Engine.AddNode(new LevelCompletedNode());
                     }
                 }
             }
