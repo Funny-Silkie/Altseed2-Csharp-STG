@@ -1,4 +1,5 @@
 ﻿using Altseed;
+using static Tutorial.Resources;
 
 namespace Tutorial
 {
@@ -31,6 +32,7 @@ namespace Tutorial
                 Stage.Score += Score;
                 Parent.AddChildNode(new DeathEffect(Position));
                 Parent.RemoveChildNode(this);
+                //Engine.Sound.Play(Sound_Explosion);
             }
         }
 
@@ -44,6 +46,10 @@ namespace Tutorial
         /// 弾を撃つ
         /// </summary>
         /// <param name="velocity">弾速</param>
-        protected void Shot(Vector2F velocity) => Parent.AddChildNode(new EnemyBullet(Stage, Position, velocity));
+        protected void Shot(Vector2F velocity)
+        {
+            Parent.AddChildNode(new EnemyBullet(Stage, Position, velocity));
+            //Engine.Sound.Play(Sound_EnemyShot);
+        }
     }
 }

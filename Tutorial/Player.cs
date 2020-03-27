@@ -25,9 +25,9 @@ namespace Tutorial
         {
             if (obj is Enemy || obj is EnemyBullet)
             {
+                //Engine.Sound.Play(Sound_Explosion)
                 Parent.RemoveChildNode(this);
-                Engine.RemoveNode(Stage);
-                Engine.AddNode(new GameOverNode());
+                Stage.ToGameOver();
             }
         }
 
@@ -66,6 +66,8 @@ namespace Tutorial
         private void Shot()
         {
             if (Engine.Keyboard.GetKeyState(Keys.Z) == ButtonState.Push) Parent.AddChildNode(new PlayerBullet(Stage, Position + CenterPosition));
+            //Engine.Sound.Play(Sound_PlayerShot);
+
             //if (Engine.Keyboard.GetKeyState(Keys.Z) == ButtonState.Hold)
             //    for (int i = 0; i < 5; i++)
             //    {

@@ -8,6 +8,7 @@ namespace Tutorial
     /// </summary>
     public class MainNode : Node
     {
+        private int? bgmID = null;
         private int count = 0;
         const int waves = 3;
         private int wave = 1;
@@ -54,7 +55,18 @@ namespace Tutorial
 
             InitAllWave();
 
+            //InitBGM();
+
             //AddChildNode(new StayEnemy(new Vector2F(500, 500)));
+        }
+
+        /// <summary>
+        /// BGM初期化
+        /// </summary>
+        private void InitBGM()
+        {
+            Resources.Sound_BGM.IsLoopingMode = true;
+            bgmID = Engine.Sound.Play(Resources.Sound_BGM);
         }
 
         /// <summary>
@@ -167,6 +179,16 @@ namespace Tutorial
             Summon();
 
             count++;
+        }
+
+        /// <summary>
+        /// ゲームオーバー画面に遷移
+        /// </summary>
+        public void ToGameOver()
+        {
+            //if (!bgmID.HasValue) Engine.Sound.FadeOut(bgmID.Value, 3.0f);
+            Engine.RemoveNode(this);
+            Engine.AddNode(new GameOverNode());
         }
 
         /// <summary>
