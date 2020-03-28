@@ -77,7 +77,7 @@ namespace Tutorial
         protected void RemoveMyselfIfOutOfWindow()
         {
             var halfSize = Texture.Size / 2;
-            if (Position.X < halfSize.X || Position.Y < halfSize.Y || Position.X > Engine.WindowSize.X - halfSize.X || Position.Y > Engine.WindowSize.Y - halfSize.Y) Parent?.RemoveChildNode(this);
+            if (Position.X < -halfSize.X || Position.Y < -halfSize.Y || Position.X > Engine.WindowSize.X + halfSize.X || Position.Y > Engine.WindowSize.Y + halfSize.Y) Parent?.RemoveChildNode(this);
         }
 
         /// <summary>

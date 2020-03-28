@@ -52,10 +52,8 @@ namespace Tutorial
             if (Engine.Keyboard.GetKeyState(Keys.Right) == ButtonState.Hold) x += 2.5f;
             if (Engine.Keyboard.GetKeyState(Keys.Left) == ButtonState.Hold) x -= 2.5f;
 
-            //x = MathHelper.Clamp(x, Engine.WindowSize.X - halfSize.X, halfSize.X);
-            x = MathHelper.Clamp(x, Engine.WindowSize.X, 0);
-            //y = MathHelper.Clamp(y, Engine.WindowSize.Y - halfSize.Y, halfSize.Y);
-            y = MathHelper.Clamp(y, Engine.WindowSize.Y, 0);
+            x = MathHelper.Clamp(x, Engine.WindowSize.X - halfSize.X, halfSize.X);
+            y = MathHelper.Clamp(y, Engine.WindowSize.Y - halfSize.Y, halfSize.Y);
 
             Position = new Vector2F(x, y);
         }
