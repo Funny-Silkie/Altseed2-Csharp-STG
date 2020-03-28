@@ -1032,6 +1032,21 @@
             新しいインスタンスを生成する
             </summary>
         </member>
+        <member name="M:Altseed.Configuration.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            シリアライズされたデータをもとに<see cref="T:Altseed.Configuration"/>のインスタンスを生成する
+            </summary>
+            <param name="info">シリアライズされたデータを格納するオブジェクト</param>
+            <param name="context">送信元の情報</param>
+        </member>
+        <member name="M:Altseed.Configuration.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            シリアライズするデータを設定します。
+            </summary>
+            <param name="info">シリアライズされるデータを格納するオブジェクト</param>
+            <param name="context">送信先の情報</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Altseed.Configuration.Deserialize_GetPtr(System.IntPtr@,System.Runtime.Serialization.SerializationInfo)" -->
         <member name="T:Altseed.Core">
             <summary>
             C++のCoreとの仲介を担うクラス
@@ -1130,6 +1145,33 @@
             </summary>
             <param name="size">要素数</param>
         </member>
+        <member name="M:Altseed.Int8Array.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            シリアライズされたデータをもとに<see cref="T:Altseed.Int8Array"/>のインスタンスを生成する
+            </summary>
+            <param name="info">シリアライズされたデータを格納するオブジェクト</param>
+            <param name="context">送信元の情報</param>
+        </member>
+        <member name="M:Altseed.Int8Array.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            シリアライズするデータを設定します。
+            </summary>
+            <param name="info">シリアライズされるデータを格納するオブジェクト</param>
+            <param name="context">送信先の情報</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Altseed.Int8Array.Deserialize_GetPtr(System.IntPtr@,System.Runtime.Serialization.SerializationInfo)" -->
+        <member name="M:Altseed.Int8Array.Call_GetPtr(System.Runtime.Serialization.SerializationInfo)">
+            <summary>
+            呼び出し禁止
+            </summary>
+        </member>
+        <member name="M:Altseed.Int8Array.Int8Array_Unsetter_Deserialize(System.Runtime.Serialization.SerializationInfo,System.Int32@)">
+            <summary>
+            <see cref="M:Altseed.Int8Array.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)"/>でデシリアライズされなかったオブジェクトを呼び出す
+            </summary>
+            <param name="info">シリアライズされたデータを格納するオブジェクト</param>
+            <param name="Count"><see cref="P:Altseed.Int8Array.Count"/></param>
+        </member>
         <member name="P:Altseed.Int8Array.Item(System.Int32)">
             <summary>
             指定したインデックスの要素を取得または設定する
@@ -1183,6 +1225,33 @@
             インスタンスを作成します。
             </summary>
             <param name="size">要素数</param>
+        </member>
+        <member name="M:Altseed.Int32Array.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            シリアライズされたデータをもとに<see cref="T:Altseed.Int32Array"/>のインスタンスを生成する
+            </summary>
+            <param name="info">シリアライズされたデータを格納するオブジェクト</param>
+            <param name="context">送信元の情報</param>
+        </member>
+        <member name="M:Altseed.Int32Array.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            シリアライズするデータを設定します。
+            </summary>
+            <param name="info">シリアライズされるデータを格納するオブジェクト</param>
+            <param name="context">送信先の情報</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Altseed.Int32Array.Deserialize_GetPtr(System.IntPtr@,System.Runtime.Serialization.SerializationInfo)" -->
+        <member name="M:Altseed.Int32Array.Call_GetPtr(System.Runtime.Serialization.SerializationInfo)">
+            <summary>
+            呼び出し禁止
+            </summary>
+        </member>
+        <member name="M:Altseed.Int32Array.Int32Array_Unsetter_Deserialize(System.Runtime.Serialization.SerializationInfo,System.Int32@)">
+            <summary>
+            <see cref="M:Altseed.Int32Array.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)"/>でデシリアライズされなかったオブジェクトを呼び出す
+            </summary>
+            <param name="info">シリアライズされたデータを格納するオブジェクト</param>
+            <param name="Count"><see cref="P:Altseed.Int32Array.Count"/></param>
         </member>
         <member name="P:Altseed.Int32Array.Item(System.Int32)">
             <summary>
@@ -1238,6 +1307,33 @@
             </summary>
             <param name="size">要素数</param>
         </member>
+        <member name="M:Altseed.VertexArray.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            シリアライズされたデータをもとに<see cref="T:Altseed.VertexArray"/>のインスタンスを生成する
+            </summary>
+            <param name="info">シリアライズされたデータを格納するオブジェクト</param>
+            <param name="context">送信元の情報</param>
+        </member>
+        <member name="M:Altseed.VertexArray.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            シリアライズするデータを設定します。
+            </summary>
+            <param name="info">シリアライズされるデータを格納するオブジェクト</param>
+            <param name="context">送信先の情報</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Altseed.VertexArray.Deserialize_GetPtr(System.IntPtr@,System.Runtime.Serialization.SerializationInfo)" -->
+        <member name="M:Altseed.VertexArray.Call_GetPtr(System.Runtime.Serialization.SerializationInfo)">
+            <summary>
+            呼び出し禁止
+            </summary>
+        </member>
+        <member name="M:Altseed.VertexArray.VertexArray_Unsetter_Deserialize(System.Runtime.Serialization.SerializationInfo,System.Int32@)">
+            <summary>
+            <see cref="M:Altseed.VertexArray.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)"/>でデシリアライズされなかったオブジェクトを呼び出す
+            </summary>
+            <param name="info">シリアライズされたデータを格納するオブジェクト</param>
+            <param name="Count"><see cref="P:Altseed.VertexArray.Count"/></param>
+        </member>
         <member name="P:Altseed.VertexArray.Item(System.Int32)">
             <summary>
             指定したインデックスの要素を取得または設定する
@@ -1292,6 +1388,33 @@
             </summary>
             <param name="size">要素数</param>
         </member>
+        <member name="M:Altseed.FloatArray.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            シリアライズされたデータをもとに<see cref="T:Altseed.FloatArray"/>のインスタンスを生成する
+            </summary>
+            <param name="info">シリアライズされたデータを格納するオブジェクト</param>
+            <param name="context">送信元の情報</param>
+        </member>
+        <member name="M:Altseed.FloatArray.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            シリアライズするデータを設定します。
+            </summary>
+            <param name="info">シリアライズされるデータを格納するオブジェクト</param>
+            <param name="context">送信先の情報</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Altseed.FloatArray.Deserialize_GetPtr(System.IntPtr@,System.Runtime.Serialization.SerializationInfo)" -->
+        <member name="M:Altseed.FloatArray.Call_GetPtr(System.Runtime.Serialization.SerializationInfo)">
+            <summary>
+            呼び出し禁止
+            </summary>
+        </member>
+        <member name="M:Altseed.FloatArray.FloatArray_Unsetter_Deserialize(System.Runtime.Serialization.SerializationInfo,System.Int32@)">
+            <summary>
+            <see cref="M:Altseed.FloatArray.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)"/>でデシリアライズされなかったオブジェクトを呼び出す
+            </summary>
+            <param name="info">シリアライズされたデータを格納するオブジェクト</param>
+            <param name="Count"><see cref="P:Altseed.FloatArray.Count"/></param>
+        </member>
         <member name="P:Altseed.FloatArray.Item(System.Int32)">
             <summary>
             指定したインデックスの要素を取得または設定する
@@ -1345,6 +1468,33 @@
             インスタンスを作成します。
             </summary>
             <param name="size">要素数</param>
+        </member>
+        <member name="M:Altseed.Vector2FArray.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            シリアライズされたデータをもとに<see cref="T:Altseed.Vector2FArray"/>のインスタンスを生成する
+            </summary>
+            <param name="info">シリアライズされたデータを格納するオブジェクト</param>
+            <param name="context">送信元の情報</param>
+        </member>
+        <member name="M:Altseed.Vector2FArray.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            シリアライズするデータを設定します。
+            </summary>
+            <param name="info">シリアライズされるデータを格納するオブジェクト</param>
+            <param name="context">送信先の情報</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Altseed.Vector2FArray.Deserialize_GetPtr(System.IntPtr@,System.Runtime.Serialization.SerializationInfo)" -->
+        <member name="M:Altseed.Vector2FArray.Call_GetPtr(System.Runtime.Serialization.SerializationInfo)">
+            <summary>
+            呼び出し禁止
+            </summary>
+        </member>
+        <member name="M:Altseed.Vector2FArray.Vector2FArray_Unsetter_Deserialize(System.Runtime.Serialization.SerializationInfo,System.Int32@)">
+            <summary>
+            <see cref="M:Altseed.Vector2FArray.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)"/>でデシリアライズされなかったオブジェクトを呼び出す
+            </summary>
+            <param name="info">シリアライズされたデータを格納するオブジェクト</param>
+            <param name="Count"><see cref="P:Altseed.Vector2FArray.Count"/></param>
         </member>
         <member name="P:Altseed.Vector2FArray.Item(System.Int32)">
             <summary>
@@ -1520,14 +1670,14 @@
             グラフィックの制御を行うクラス
             </summary>
         </member>
-        <member name="P:Altseed.Graphics.CommandList">
-            <summary>
-            コマンドリストを取得します。
-            </summary>
-        </member>
         <member name="P:Altseed.Graphics.BuiltinShader">
             <summary>
             組み込みのシェーダを取得します。
+            </summary>
+        </member>
+        <member name="P:Altseed.Graphics.ClearColor">
+            <summary>
+            クリア色を取得または設定します。
             </summary>
         </member>
         <member name="M:Altseed.Graphics.GetInstance">
@@ -1554,14 +1704,64 @@
             </summary>
             <returns>正常に処理した場合は　true 。それ以外の場合は false。</returns>
         </member>
-        <member name="T:Altseed.Texture2D">
+        <member name="T:Altseed.TextureBase">
             <summary>
-            2Dテクスチャのクラス
+            テクスチャのベースクラス
             </summary>
         </member>
-        <member name="P:Altseed.Texture2D.Size">
+        <member name="P:Altseed.TextureBase.Size">
             <summary>
             テクスチャの大きさ(ピクセル)を取得します。
+            </summary>
+        </member>
+        <member name="M:Altseed.TextureBase.Save(System.String)">
+            <summary>
+            png画像として保存します
+            </summary>
+            <param name="path">保存先</param>
+            <returns>成功したか否か</returns>
+        </member>
+        <member name="M:Altseed.TextureBase.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            シリアライズされたデータをもとに<see cref="T:Altseed.TextureBase"/>のインスタンスを生成する
+            </summary>
+            <param name="info">シリアライズされたデータを格納するオブジェクト</param>
+            <param name="context">送信元の情報</param>
+        </member>
+        <member name="M:Altseed.TextureBase.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            シリアライズするデータを設定します。
+            </summary>
+            <param name="info">シリアライズされるデータを格納するオブジェクト</param>
+            <param name="context">送信先の情報</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Altseed.TextureBase.Deserialize_GetPtr(System.IntPtr@,System.Runtime.Serialization.SerializationInfo)" -->
+        <member name="M:Altseed.TextureBase.Call_GetPtr(System.Runtime.Serialization.SerializationInfo)">
+            <summary>
+            呼び出し禁止
+            </summary>
+        </member>
+        <member name="M:Altseed.TextureBase.TextureBase_Unsetter_Deserialize(System.Runtime.Serialization.SerializationInfo,Altseed.Vector2I@)">
+            <summary>
+            <see cref="M:Altseed.TextureBase.OnDeserialization(System.Object)"/>でデシリアライズされなかったオブジェクトを呼び出す
+            </summary>
+            <param name="info">シリアライズされたデータを格納するオブジェクト</param>
+            <param name="Size"><see cref="P:Altseed.TextureBase.Size"/></param>
+        </member>
+        <member name="M:Altseed.TextureBase.OnDeserialization(System.Object)">
+            <summary>
+            デシリアライズ時に実行
+            </summary>
+            <param name="sender">現在はサポートされていない 常にnullを返す</param>
+        </member>
+        <member name="T:Altseed.Texture2D">
+            <summary>
+            テクスチャのクラス
+            </summary>
+        </member>
+        <member name="P:Altseed.Texture2D.Path">
+            <summary>
+            読み込んだファイルのパスを取得します。
             </summary>
         </member>
         <member name="M:Altseed.Texture2D.Load(System.String)">
@@ -1577,18 +1777,38 @@
             </summary>
             <returns>再読み込みに成功したら true。それ以外の場合は false</returns>
         </member>
-        <member name="M:Altseed.Texture2D.GetPath">
-            <summary>
-            読み込んだファイルのパスを取得します。
-            </summary>
-            <returns>読み込んだファイルのパス</returns>
-        </member>
         <member name="M:Altseed.Texture2D.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
             シリアライズされたデータをもとに<see cref="T:Altseed.Texture2D"/>のインスタンスを生成する
             </summary>
             <param name="info">シリアライズされたデータを格納するオブジェクト</param>
             <param name="context">送信元の情報</param>
+        </member>
+        <member name="M:Altseed.Texture2D.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            シリアライズするデータを設定します。
+            </summary>
+            <param name="info">シリアライズされるデータを格納するオブジェクト</param>
+            <param name="context">送信先の情報</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Altseed.Texture2D.Deserialize_GetPtr(System.IntPtr@,System.Runtime.Serialization.SerializationInfo)" -->
+        <member name="M:Altseed.Texture2D.Call_GetPtr(System.Runtime.Serialization.SerializationInfo)">
+            <summary>
+            呼び出し禁止
+            </summary>
+        </member>
+        <member name="M:Altseed.Texture2D.Texture2D_Unsetter_Deserialize(System.Runtime.Serialization.SerializationInfo,System.String@)">
+            <summary>
+            <see cref="M:Altseed.Texture2D.OnDeserialization(System.Object)"/>でデシリアライズされなかったオブジェクトを呼び出す
+            </summary>
+            <param name="info">シリアライズされたデータを格納するオブジェクト</param>
+            <param name="Path"><see cref="P:Altseed.Texture2D.Path"/></param>
+        </member>
+        <member name="M:Altseed.Texture2D.OnDeserialization(System.Object)">
+            <summary>
+            デシリアライズ時に実行
+            </summary>
+            <param name="sender">現在はサポートされていない 常にnullを返す</param>
         </member>
         <member name="M:Altseed.Texture2D.LoadStrict(System.String)">
             <summary>
@@ -1610,19 +1830,6 @@
             <param name="result"><paramref name="path"/>をパスに持つテクスチャのデータを格納した<see cref="T:Altseed.Texture2D"/>の新しいインスタンス 読み込めなかったらnull</param>
             <returns><paramref name="result"/>を正常に読み込めたらtrue、それ以外でfalse</returns>
         </member>
-        <member name="M:Altseed.Texture2D.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
-            <summary>
-            シリアライズするデータを設定します。
-            </summary>
-            <param name="info">シリアライズされるデータを格納するオブジェクト</param>
-            <param name="context">送信先のデータ</param>
-        </member>
-        <member name="M:Altseed.Texture2D.OnDeserialization(System.Object)">
-            <summary>
-            デシリアライズ時に実行
-            </summary>
-            <param name="sender">現在はサポートされていない 常にnullを返す</param>
-        </member>
         <member name="T:Altseed.RenderTexture">
             <summary>
             ポストエフェクトやカメラにおける描画先のクラス
@@ -1630,7 +1837,7 @@
         </member>
         <member name="M:Altseed.RenderTexture.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
-            シリアライズされたデータをもとに<see cref="T:Altseed.Texture2D"/>のインスタンスを生成する
+            シリアライズされたデータをもとに<see cref="T:Altseed.RenderTexture"/>のインスタンスを生成する
             </summary>
             <param name="info">シリアライズされたデータを格納するオブジェクト</param>
             <param name="context">送信元の情報</param>
@@ -1640,7 +1847,13 @@
             シリアライズするデータを設定します。
             </summary>
             <param name="info">シリアライズされるデータを格納するオブジェクト</param>
-            <param name="context">送信先のデータ</param>
+            <param name="context">送信先の情報</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Altseed.RenderTexture.Deserialize_GetPtr(System.IntPtr@,System.Runtime.Serialization.SerializationInfo)" -->
+        <member name="M:Altseed.RenderTexture.Call_GetPtr(System.Runtime.Serialization.SerializationInfo)">
+            <summary>
+            呼び出し禁止
+            </summary>
         </member>
         <member name="M:Altseed.RenderTexture.OnDeserialization(System.Object)">
             <summary>
@@ -1693,7 +1906,7 @@
             <param name="key">検索する<see cref="T:Altseed.Texture2D"/>のインスタンスの名前</param>
             <returns><paramref name="key"/>を名前として持つ<see cref="T:Altseed.Texture2D"/>のインスタンス</returns>
         </member>
-        <member name="M:Altseed.Material.SetTexture(System.String,Altseed.Texture2D)">
+        <member name="M:Altseed.Material.SetTexture(System.String,Altseed.TextureBase)">
             <summary>
             指定した名前を持つ<see cref="T:Altseed.Texture2D"/>の値を設定する
             </summary>
@@ -1742,11 +1955,10 @@
             </summary>
             <param name="polygon">描画する<see cref="T:Altseed.RenderedPolygon"/>のインスタンス</param>
         </member>
-        <member name="M:Altseed.Renderer.Render(Altseed.CommandList)">
+        <member name="M:Altseed.Renderer.Render">
             <summary>
             コマンドリストを描画します。
             </summary>
-            <param name="commandList">描画するコマンドリスト</param>
         </member>
         <member name="M:Altseed.Renderer.SetCamera(Altseed.RenderedCamera)">
             <summary>
@@ -1777,6 +1989,26 @@
         <member name="P:Altseed.Rendered.Transform">
             <summary>
             変換行列を取得または設定します。
+            </summary>
+        </member>
+        <member name="M:Altseed.Rendered.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            シリアライズされたデータをもとに<see cref="T:Altseed.Rendered"/>のインスタンスを生成する
+            </summary>
+            <param name="info">シリアライズされたデータを格納するオブジェクト</param>
+            <param name="context">送信元の情報</param>
+        </member>
+        <member name="M:Altseed.Rendered.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            シリアライズするデータを設定します。
+            </summary>
+            <param name="info">シリアライズされるデータを格納するオブジェクト</param>
+            <param name="context">送信先の情報</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Altseed.Rendered.Deserialize_GetPtr(System.IntPtr@,System.Runtime.Serialization.SerializationInfo)" -->
+        <member name="M:Altseed.Rendered.Call_GetPtr(System.Runtime.Serialization.SerializationInfo)">
+            <summary>
+            呼び出し禁止
             </summary>
         </member>
         <member name="T:Altseed.RenderedSprite">
@@ -1816,7 +2048,13 @@
             シリアライズするデータを設定します。
             </summary>
             <param name="info">シリアライズされるデータを格納するオブジェクト</param>
-            <param name="context">送信先のデータ</param>
+            <param name="context">送信先の情報</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Altseed.RenderedSprite.Deserialize_GetPtr(System.IntPtr@,System.Runtime.Serialization.SerializationInfo)" -->
+        <member name="M:Altseed.RenderedSprite.Call_GetPtr(System.Runtime.Serialization.SerializationInfo)">
+            <summary>
+            呼び出し禁止
+            </summary>
         </member>
         <member name="T:Altseed.RenderedText">
             <summary>
@@ -1865,7 +2103,13 @@
             シリアライズするデータを設定します。
             </summary>
             <param name="info">シリアライズされるデータを格納するオブジェクト</param>
-            <param name="context">送信先のデータ</param>
+            <param name="context">送信先の情報</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Altseed.RenderedText.Deserialize_GetPtr(System.IntPtr@,System.Runtime.Serialization.SerializationInfo)" -->
+        <member name="M:Altseed.RenderedText.Call_GetPtr(System.Runtime.Serialization.SerializationInfo)">
+            <summary>
+            呼び出し禁止
+            </summary>
         </member>
         <member name="T:Altseed.RenderedPolygon">
             <summary>
@@ -1914,7 +2158,13 @@
             シリアライズするデータを設定します。
             </summary>
             <param name="info">シリアライズされるデータを格納するオブジェクト</param>
-            <param name="context">送信先のデータ</param>
+            <param name="context">送信先の情報</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Altseed.RenderedPolygon.Deserialize_GetPtr(System.IntPtr@,System.Runtime.Serialization.SerializationInfo)" -->
+        <member name="M:Altseed.RenderedPolygon.Call_GetPtr(System.Runtime.Serialization.SerializationInfo)">
+            <summary>
+            呼び出し禁止
+            </summary>
         </member>
         <member name="T:Altseed.RenderedCamera">
             <summary>
@@ -1948,7 +2198,13 @@
             シリアライズするデータを設定します。
             </summary>
             <param name="info">シリアライズされるデータを格納するオブジェクト</param>
-            <param name="context">送信先のデータ</param>
+            <param name="context">送信先の情報</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Altseed.RenderedCamera.Deserialize_GetPtr(System.IntPtr@,System.Runtime.Serialization.SerializationInfo)" -->
+        <member name="M:Altseed.RenderedCamera.Call_GetPtr(System.Runtime.Serialization.SerializationInfo)">
+            <summary>
+            呼び出し禁止
+            </summary>
         </member>
         <member name="T:Altseed.BuiltinShader">
             <summary>
@@ -1988,18 +2244,32 @@
         </member>
         <member name="M:Altseed.Shader.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
-            シリアライズされた情報から新しいインスタンスを生成する
+            シリアライズされたデータをもとに<see cref="T:Altseed.Shader"/>のインスタンスを生成する
             </summary>
-            <param name="info">シリアライズされた情報を格納するオブジェクト</param>
+            <param name="info">シリアライズされたデータを格納するオブジェクト</param>
             <param name="context">送信元の情報</param>
         </member>
-        <member name="M:Altseed.Shader.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+        <member name="M:Altseed.Shader.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
-            シリアライズする情報を設定する
+            シリアライズするデータを設定します。
             </summary>
-            <param name="info">シリアライズする情報が格納されるオブジェクト</param>
+            <param name="info">シリアライズされるデータを格納するオブジェクト</param>
             <param name="context">送信先の情報</param>
-            <exception cref="T:System.ArgumentNullException"><paramref name="info"/>がnull</exception>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Altseed.Shader.Deserialize_GetPtr(System.IntPtr@,System.Runtime.Serialization.SerializationInfo)" -->
+        <member name="M:Altseed.Shader.Call_GetPtr(System.Runtime.Serialization.SerializationInfo)">
+            <summary>
+            呼び出し禁止
+            </summary>
+        </member>
+        <member name="M:Altseed.Shader.Shader_Unsetter_Deserialize(System.Runtime.Serialization.SerializationInfo,Altseed.ShaderStageType@,System.String@,System.String@)">
+            <summary>
+            <see cref="M:Altseed.Shader.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)"/>でデシリアライズされなかったオブジェクトを呼び出す
+            </summary>
+            <param name="info">シリアライズされたデータを格納するオブジェクト</param>
+            <param name="StageType"><see cref="P:Altseed.Shader.StageType"/></param>
+            <param name="Code"><see cref="P:Altseed.Shader.Code"/></param>
+            <param name="Name"><see cref="P:Altseed.Shader.Name"/></param>
         </member>
         <member name="T:Altseed.Glyph">
             <summary>
@@ -2061,6 +2331,11 @@
             フォントの行間の距離を取得する
             </summary>
         </member>
+        <member name="P:Altseed.Font.Path">
+            <summary>
+            読み込んだファイルのパスを取得します。
+            </summary>
+        </member>
         <member name="M:Altseed.Font.LoadDynamicFont(System.String,System.Int32)">
             <summary>
             動的にフォントを生成します
@@ -2075,6 +2350,16 @@
             </summary>
             <param name="path">読み込むフォントのパス</param>
             <returns><paramref name="path"/>の指定するファイルから生成されたフォント</returns>
+        </member>
+        <member name="M:Altseed.Font.GenerateFontFile(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            a2fフォントを生成します
+            </summary>
+            <param name="dynamicFontPath">読み込むtruetypeフォントのパス</param>
+            <param name="staticFontPath">生成するa2fフォントのパス</param>
+            <param name="size">フォントのサイズ</param>
+            <param name="characters">フォント化させる文字列</param>
+            <returns>生成できたか否か</returns>
         </member>
         <member name="M:Altseed.Font.GetGlyph(System.Int32)">
             <summary>
@@ -2097,12 +2382,6 @@
             <param name="c1">文字1</param>
             <param name="c2">文字2</param>
             <returns>カーニング</returns>
-        </member>
-        <member name="M:Altseed.Font.GetPath">
-            <summary>
-            読み込んだファイルのパスを取得します。
-            </summary>
-            <returns>読み込んだファイルのパス</returns>
         </member>
         <member name="M:Altseed.Font.CalcTextureSize(System.String,Altseed.WritingDirection,System.Boolean)">
             <summary>
@@ -2136,17 +2415,29 @@
         </member>
         <member name="M:Altseed.Font.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
-            シリアライズされたデータをもとにインスタンスを生成する
+            シリアライズされたデータをもとに<see cref="T:Altseed.Font"/>のインスタンスを生成する
             </summary>
-            <param name="info">シリアライズされた情報を格納するオブジェクト</param>
+            <param name="info">シリアライズされたデータを格納するオブジェクト</param>
             <param name="context">送信元の情報</param>
         </member>
-        <member name="M:Altseed.Font.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+        <member name="M:Altseed.Font.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
-            シリアライズするデータを設定する
+            シリアライズするデータを設定します。
             </summary>
-            <param name="info">シリアライズするデータを格納するオブジェクト</param>
+            <param name="info">シリアライズされるデータを格納するオブジェクト</param>
             <param name="context">送信先の情報</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Altseed.Font.Deserialize_GetPtr(System.IntPtr@,System.Runtime.Serialization.SerializationInfo)" -->
+        <member name="M:Altseed.Font.Call_GetPtr(System.Runtime.Serialization.SerializationInfo)">
+            <summary>
+            呼び出し禁止
+            </summary>
+        </member>
+        <member name="M:Altseed.Font.System#Runtime#Serialization#IDeserializationCallback#OnDeserialization(System.Object)">
+            <summary>
+            デシリアライズ時に実行
+            </summary>
+            <param name="sender">現在はサポートされていない 常にnullを返す</param>
         </member>
         <member name="M:Altseed.Font.LoadDynamicFontStrict(System.String,System.Int32)">
             <summary>
@@ -2173,12 +2464,6 @@
             <exception cref="T:System.IO.FileNotFoundException"><paramref name="path"/>で指定したファイルが見つからない</exception>
             <exception cref="T:System.IO.PathTooLongException"><paramref name="path"/>が長すぎる</exception>
             <exception cref="T:System.SystemException">ファイルが破損していたまたは読み込みに失敗した</exception>
-        </member>
-        <member name="M:Altseed.Font.OnDeserialization(System.Object)">
-            <summary>
-            デシリアライズ時に実行
-            </summary>
-            <param name="sender">現在はサポートされていない 常にnullを返す</param>
         </member>
         <member name="M:Altseed.Font.TryLoadDynamicFont(System.String,System.Int32,Altseed.Font@)">
             <summary>
@@ -2644,6 +2929,11 @@
             読み込むファイルがファイルパッケージ内に格納されているかどうかを取得します。
             </summary>
         </member>
+        <member name="P:Altseed.StreamFile.Path">
+            <summary>
+            読み込んだファイルのパスを取得します。
+            </summary>
+        </member>
         <member name="M:Altseed.StreamFile.Create(System.String)">
             <summary>
             指定ファイルを読み込む<see cref="T:Altseed.StreamFile"/>の新しいインスタンスを生成します。
@@ -2664,17 +2954,44 @@
             </summary>
             <returns>現在読み込んでいるファイルのデータ</returns>
         </member>
-        <member name="M:Altseed.StreamFile.GetPath">
-            <summary>
-            読み込んだファイルのパスを取得します。
-            </summary>
-            <returns>読み込んだファイルのパス</returns>
-        </member>
         <member name="M:Altseed.StreamFile.Reload">
             <summary>
             再読み込みを行います。
             </summary>
             <returns>再読み込み処理がうまくいったらtrue，それ以外でfalse</returns>
+        </member>
+        <member name="M:Altseed.StreamFile.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            シリアライズされたデータをもとに<see cref="T:Altseed.StreamFile"/>のインスタンスを生成する
+            </summary>
+            <param name="info">シリアライズされたデータを格納するオブジェクト</param>
+            <param name="context">送信元の情報</param>
+        </member>
+        <member name="M:Altseed.StreamFile.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            シリアライズするデータを設定します。
+            </summary>
+            <param name="info">シリアライズされるデータを格納するオブジェクト</param>
+            <param name="context">送信先の情報</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Altseed.StreamFile.Deserialize_GetPtr(System.IntPtr@,System.Runtime.Serialization.SerializationInfo)" -->
+        <member name="M:Altseed.StreamFile.Call_GetPtr(System.Runtime.Serialization.SerializationInfo)">
+            <summary>
+            呼び出し禁止
+            </summary>
+        </member>
+        <member name="M:Altseed.StreamFile.StreamFile_Unsetter_Deserialize(System.Runtime.Serialization.SerializationInfo,System.Int32@)">
+            <summary>
+            <see cref="!:OnDeserialization(object)"/>でデシリアライズされなかったオブジェクトを呼び出す
+            </summary>
+            <param name="info">シリアライズされたデータを格納するオブジェクト</param>
+            <param name="CurrentPosition"><see cref="P:Altseed.StreamFile.CurrentPosition"/></param>
+        </member>
+        <member name="M:Altseed.StreamFile.System#Runtime#Serialization#IDeserializationCallback#OnDeserialization(System.Object)">
+            <summary>
+            デシリアライズ時に実行
+            </summary>
+            <param name="sender">現在はサポートされていない 常にnullを返す</param>
         </member>
         <member name="P:Altseed.StreamFile.TempBuffer">
             <summary>
@@ -2751,6 +3068,26 @@
             再読み込みを行います。
             </summary>
             <returns>再読み込み処理がうまくいったらtrue，それ以外でfalse</returns>
+        </member>
+        <member name="M:Altseed.StaticFile.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            シリアライズされたデータをもとに<see cref="T:Altseed.StaticFile"/>のインスタンスを生成する
+            </summary>
+            <param name="info">シリアライズされたデータを格納するオブジェクト</param>
+            <param name="context">送信元の情報</param>
+        </member>
+        <member name="M:Altseed.StaticFile.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            シリアライズするデータを設定します。
+            </summary>
+            <param name="info">シリアライズされるデータを格納するオブジェクト</param>
+            <param name="context">送信先の情報</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Altseed.StaticFile.Deserialize_GetPtr(System.IntPtr@,System.Runtime.Serialization.SerializationInfo)" -->
+        <member name="M:Altseed.StaticFile.Call_GetPtr(System.Runtime.Serialization.SerializationInfo)">
+            <summary>
+            呼び出し禁止
+            </summary>
         </member>
         <member name="P:Altseed.StaticFile.Buffer">
             <summary>
@@ -2876,6 +3213,16 @@
             音源の長さ(秒)を取得します。
             </summary>
         </member>
+        <member name="P:Altseed.Sound.Path">
+            <summary>
+            読み込んだファイルのパスを取得します。
+            </summary>
+        </member>
+        <member name="P:Altseed.Sound.IsDecompressed">
+            <summary>
+            音源を解凍するかどうかを取得する
+            </summary>
+        </member>
         <member name="M:Altseed.Sound.Load(System.String,System.Boolean)">
             <summary>
             音声ファイルを読み込みます。
@@ -2884,17 +3231,33 @@
             <param name="isDecompressed">音を再生する前にデータを全て解凍するか?</param>
             <returns>読み込んだ音源データ</returns>
         </member>
-        <member name="M:Altseed.Sound.GetPath">
+        <member name="M:Altseed.Sound.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
-            読み込んだファイルのパスを取得します。
+            シリアライズされたデータをもとに<see cref="T:Altseed.Sound"/>のインスタンスを生成する
             </summary>
-            <returns>読み込んだファイルのパス</returns>
+            <param name="info">シリアライズされたデータを格納するオブジェクト</param>
+            <param name="context">送信元の情報</param>
         </member>
-        <member name="M:Altseed.Sound.GetIsDecompressed">
+        <member name="M:Altseed.Sound.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
-            音源を解凍するかどうかを取得する
+            シリアライズするデータを設定します。
             </summary>
-            <returns>音源を解凍するかどうか</returns>
+            <param name="info">シリアライズされるデータを格納するオブジェクト</param>
+            <param name="context">送信先の情報</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Altseed.Sound.Deserialize_GetPtr(System.IntPtr@,System.Runtime.Serialization.SerializationInfo)" -->
+        <member name="M:Altseed.Sound.Call_GetPtr(System.Runtime.Serialization.SerializationInfo)">
+            <summary>
+            呼び出し禁止
+            </summary>
+        </member>
+        <member name="M:Altseed.Sound.Sound_Unsetter_Deserialize(System.Runtime.Serialization.SerializationInfo,System.String@,System.Boolean@)">
+            <summary>
+            <see cref="M:Altseed.Sound.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)"/>でデシリアライズされなかったオブジェクトを呼び出す
+            </summary>
+            <param name="info">シリアライズされたデータを格納するオブジェクト</param>
+            <param name="Path"><see cref="P:Altseed.Sound.Path"/></param>
+            <param name="IsDecompressed"><see cref="P:Altseed.Sound.IsDecompressed"/></param>
         </member>
         <member name="M:Altseed.Sound.LoadStrict(System.String,System.Boolean)">
             <summary>
@@ -3051,6 +3414,14 @@
             </summary>
             <param name="id">音のID</param>
             <param name="spectrums">音のスペクトル情報を格納するための配列</param>
+            <param name="window">フーリエ変換に用いる窓関数</param>
+        </member>
+        <member name="M:Altseed.SoundMixer.GetSpectrumData(System.Int32,System.Int32,Altseed.FFTWindow)">
+            <summary>
+            再生中の音のスペクトル情報を取得します。
+            </summary>
+            <param name="id">音のID</param>
+            <param name="dataNum">音のスペクトル情報を格納するための配列の容量</param>
             <param name="window">フーリエ変換に用いる窓関数</param>
         </member>
         <member name="T:Altseed.Log">
@@ -3683,6 +4054,16 @@
             </summary>
             <param name="radian">変換したい弧度法の値</param>
             <returns>度数法としての<paramref name="radian"/>の値</returns>
+        </member>
+        <member name="M:Altseed.MathHelper.CalcTransform(Altseed.Vector2F,Altseed.Vector2F,System.Single,Altseed.Vector2F)">
+            <summary>
+            Transformを計算します。
+            </summary>
+            <param name="position">座標</param>
+            <param name="centerPosition">中心座標</param>
+            <param name="angle">角度（弧度法）</param>
+            <param name="scale">拡大率</param>
+            <returns></returns>
         </member>
         <member name="T:Altseed.Matrix33F">
             <summary>
@@ -5322,6 +5703,16 @@
             拡大率を取得または設定します。
             </summary>
         </member>
+        <member name="P:Altseed.DrawnNode.TurnLR">
+            <summary>
+            左右を反転するかどうかを取得または設定します。
+            </summary>
+        </member>
+        <member name="P:Altseed.DrawnNode.TurnUL">
+            <summary>
+            上下を反転するかどうかを取得または設定します。
+            </summary>
+        </member>
         <member name="P:Altseed.DrawnNode.ZOrder">
             <summary>
             描画時の重ね順を取得または設定します。
@@ -5331,22 +5722,6 @@
             <summary>
             このノードを描画するカメラを取得または設定します。
             </summary>
-        </member>
-        <member name="M:Altseed.DrawnNode.#ctor">
-            <summary>
-            新しいインスタンスを生成する
-            </summary>
-        </member>
-        <member name="M:Altseed.DrawnNode.UpdateTransform">
-            <summary>
-            <see cref="P:Altseed.DrawnNode.Transform"/>を更新する
-            </summary>
-        </member>
-        <member name="M:Altseed.DrawnNode.OnDeserialization(System.Object)">
-            <summary>
-            デシリアライズ時に実行
-            </summary>
-            <param name="sender">現在サポートされていない 常にnullを返す</param>
         </member>
         <member name="T:Altseed.Node">
             <summary>

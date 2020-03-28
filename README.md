@@ -1,3 +1,3 @@
 Altseed2 Csharp STG
 
-Altseed2のバージョン：2020/3/27/14:05現在
+Altseed2のバージョン：2020/3/29/01:16現在
