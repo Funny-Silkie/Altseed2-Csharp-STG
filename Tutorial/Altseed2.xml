@@ -1719,6 +1719,7 @@
             png画像として保存します
             </summary>
             <param name="path">保存先</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="path"/>がnull</exception>
             <returns>成功したか否か</returns>
         </member>
         <member name="M:Altseed.TextureBase.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
@@ -1769,6 +1770,7 @@
             指定したファイルからテクスチャを読み込みます。
             </summary>
             <param name="path">読み込むファイルのパス</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="path"/>がnull</exception>
             <returns>テクスチャ</returns>
         </member>
         <member name="M:Altseed.Texture2D.Reload">
@@ -1830,6 +1832,13 @@
             <param name="result"><paramref name="path"/>をパスに持つテクスチャのデータを格納した<see cref="T:Altseed.Texture2D"/>の新しいインスタンス 読み込めなかったらnull</param>
             <returns><paramref name="result"/>を正常に読み込めたらtrue、それ以外でfalse</returns>
         </member>
+        <member name="M:Altseed.Texture2D.LoadAsync(System.String)">
+            <summary>
+            非同期読み込みを行う
+            </summary>
+            <param name="path">読み込むパス</param>
+            <returns></returns>
+        </member>
         <member name="T:Altseed.RenderTexture">
             <summary>
             ポストエフェクトやカメラにおける描画先のクラス
@@ -1876,6 +1885,7 @@
             指定した名前を持つ<see cref="T:Altseed.Vector4F"/>のインスタンスを取得する
             </summary>
             <param name="key">検索する<see cref="T:Altseed.Vector4F"/>のインスタンスの名前</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="key"/>がnull</exception>
             <returns><paramref name="key"/>を名前として持つ<see cref="T:Altseed.Vector4F"/>のインスタンス</returns>
         </member>
         <member name="M:Altseed.Material.SetVector4F(System.String,Altseed.Vector4F)">
@@ -1884,12 +1894,14 @@
             </summary>
             <param name="key">検索する<see cref="T:Altseed.Vector4F"/>のインスタンスの名前</param>
             <param name="value">設定する<see cref="T:Altseed.Vector4F"/>のインスタンスの値</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="key"/>がnull</exception>
         </member>
         <member name="M:Altseed.Material.GetMatrix44F(System.String)">
             <summary>
             指定した名前を持つ<see cref="T:Altseed.Matrix44F"/>のインスタンスを取得する
             </summary>
             <param name="key">検索する<see cref="T:Altseed.Matrix44F"/>のインスタンスの名前</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="key"/>がnull</exception>
             <returns><paramref name="key"/>を名前として持つ<see cref="T:Altseed.Matrix44F"/>のインスタンス</returns>
         </member>
         <member name="M:Altseed.Material.SetMatrix44F(System.String,Altseed.Matrix44F)">
@@ -1898,12 +1910,14 @@
             </summary>
             <param name="key">検索する<see cref="T:Altseed.Matrix44F"/>のインスタンスの名前</param>
             <param name="value">設定する<see cref="T:Altseed.Matrix44F"/>のインスタンスの値</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="key"/>がnull</exception>
         </member>
         <member name="M:Altseed.Material.GetTexture(System.String)">
             <summary>
             指定した名前を持つ<see cref="T:Altseed.Texture2D"/>のインスタンスを取得する
             </summary>
             <param name="key">検索する<see cref="T:Altseed.Texture2D"/>のインスタンスの名前</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="key"/>がnull</exception>
             <returns><paramref name="key"/>を名前として持つ<see cref="T:Altseed.Texture2D"/>のインスタンス</returns>
         </member>
         <member name="M:Altseed.Material.SetTexture(System.String,Altseed.TextureBase)">
@@ -1912,6 +1926,7 @@
             </summary>
             <param name="key">検索する<see cref="T:Altseed.Texture2D"/>のインスタンスの名前</param>
             <param name="value">設定する<see cref="T:Altseed.Texture2D"/>のインスタンスの値</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="key"/>がnull</exception>
         </member>
         <member name="M:Altseed.Material.GetShader(Altseed.ShaderStageType)">
             <summary>
@@ -2240,6 +2255,7 @@
             <param name="name">シェーダの名前</param>
             <param name="code">コンパイルするコード</param>
             <param name="shaderStage"></param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="name"/>, <paramref name="code"/>のいずれかがnull</exception>
             <returns>コンパイルの結果生成されたシェーダ</returns>
         </member>
         <member name="M:Altseed.Shader.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
@@ -2331,6 +2347,11 @@
             フォントの行間の距離を取得する
             </summary>
         </member>
+        <member name="P:Altseed.Font.IsStaticFont">
+            <summary>
+            StaticFontか否か
+            </summary>
+        </member>
         <member name="P:Altseed.Font.Path">
             <summary>
             読み込んだファイルのパスを取得します。
@@ -2342,6 +2363,7 @@
             </summary>
             <param name="path">読み込むフォントのパス</param>
             <param name="size">フォントのサイズ</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="path"/>がnull</exception>
             <returns><paramref name="path"/>の指定するファイルから生成されたフォント</returns>
         </member>
         <member name="M:Altseed.Font.LoadStaticFont(System.String)">
@@ -2349,6 +2371,7 @@
             静的にフォントを生成します
             </summary>
             <param name="path">読み込むフォントのパス</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="path"/>がnull</exception>
             <returns><paramref name="path"/>の指定するファイルから生成されたフォント</returns>
         </member>
         <member name="M:Altseed.Font.GenerateFontFile(System.String,System.String,System.Int32,System.String)">
@@ -2359,6 +2382,7 @@
             <param name="staticFontPath">生成するa2fフォントのパス</param>
             <param name="size">フォントのサイズ</param>
             <param name="characters">フォント化させる文字列</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="dynamicFontPath"/>, <paramref name="staticFontPath"/>のいずれかがnull</exception>
             <returns>生成できたか否か</returns>
         </member>
         <member name="M:Altseed.Font.GetGlyph(System.Int32)">
@@ -2397,6 +2421,7 @@
             テクスチャ追加対応フォントを生成します
             </summary>
             <param name="baseFont">ベースとなるフォント</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="baseFont"/>がnull</exception>
             <returns>テクスチャ追加対応フォント</returns>
         </member>
         <member name="M:Altseed.Font.AddImageGlyph(System.Int32,Altseed.Texture2D)">
@@ -2432,6 +2457,14 @@
             <summary>
             呼び出し禁止
             </summary>
+        </member>
+        <member name="M:Altseed.Font.Font_Unsetter_Deserialize(System.Runtime.Serialization.SerializationInfo,System.Int32@,System.Boolean@)">
+            <summary>
+            <see cref="!:OnDeserialization(object)"/>でデシリアライズされなかったオブジェクトを呼び出す
+            </summary>
+            <param name="info">シリアライズされたデータを格納するオブジェクト</param>
+            <param name="Size"><see cref="P:Altseed.Font.Size"/></param>
+            <param name="IsStaticFont"><see cref="P:Altseed.Font.IsStaticFont"/></param>
         </member>
         <member name="M:Altseed.Font.System#Runtime#Serialization#IDeserializationCallback#OnDeserialization(System.Object)">
             <summary>
@@ -2939,6 +2972,7 @@
             指定ファイルを読み込む<see cref="T:Altseed.StreamFile"/>の新しいインスタンスを生成します。
             </summary>
             <param name="path">読み込むファイルのパス</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="path"/>がnull</exception>
             <returns>pathで読み込むファイルを格納する<see cref="T:Altseed.StreamFile"/>の新しいインスタンスを生成します。</returns>
         </member>
         <member name="M:Altseed.StreamFile.Read(System.Int32)">
@@ -3055,6 +3089,7 @@
             指定ファイルを読み込んだ<see cref="T:Altseed.StaticFile"/>の新しいインスタンスを生成します。
             </summary>
             <param name="path">読み込むファイルのパス</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="path"/>がnull</exception>
             <returns>pathで読み込んだファイルを格納する<see cref="T:Altseed.StaticFile"/>の新しいインスタンスを生成します。</returns>
         </member>
         <member name="M:Altseed.StaticFile.GetBuffer">
@@ -3126,6 +3161,13 @@
             <exception cref="T:System.IO.PathTooLongException"><paramref name="path"/>が長すぎる</exception>
             <exception cref="T:System.Security.SecurityException">アクセスが拒否された</exception>
         </member>
+        <member name="M:Altseed.StaticFile.CreateAsync(System.String)">
+            <summary>
+            非同期読み込みを行う
+            </summary>
+            <param name="path">読み込むパス</param>
+            <returns></returns>
+        </member>
         <member name="T:Altseed.File">
             <summary>
             ファイル制御を行うクラス
@@ -3142,6 +3184,7 @@
             ファイル読み込み時に自動的に保管されるディレクトリを追加します。
             </summary>
             <param name="path">追加するディレクトリ</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="path"/>がnull</exception>
             <returns>追加処理がうまくいったらtrue，それ以外でfalse</returns>
         </member>
         <member name="M:Altseed.File.AddRootPackageWithPassword(System.String,System.String)">
@@ -3150,6 +3193,7 @@
             </summary>
             <param name="path">読み込むファイルパッケージのパス</param>
             <param name="password">読み込むファイルパッケージのパスワード</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="path"/>, <paramref name="password"/>のいずれかがnull</exception>
             <returns>読み込み処理がうまくいったらtrue，それ以外でfalse</returns>
         </member>
         <member name="M:Altseed.File.AddRootPackage(System.String)">
@@ -3157,6 +3201,7 @@
             ファイルパッケージをパスワード無しで読み込む
             </summary>
             <param name="path">読み込むファイルパッケージのパス</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="path"/>がnull</exception>
             <returns>読み込み処理がうまくいったらtrue，それ以外でfalse</returns>
         </member>
         <member name="M:Altseed.File.ClearRootDirectories">
@@ -3177,6 +3222,7 @@
             </summary>
             <param name="srcPath">パックするファイルのディレクトリ</param>
             <param name="dstPath">パックされたファイル名</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="srcPath"/>, <paramref name="dstPath"/>のいずれかがnull</exception>
             <returns>パック処理がうまくいったらtrue，それ以外でfalse</returns>
         </member>
         <member name="M:Altseed.File.PackWithPassword(System.String,System.String,System.String)">
@@ -3186,6 +3232,7 @@
             <param name="srcPath">パックするファイルのディレクトリ</param>
             <param name="dstPath">パックされたファイル名</param>
             <param name="password">かけるパスワード</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="srcPath"/>, <paramref name="dstPath"/>, <paramref name="password"/>のいずれかがnull</exception>
             <returns>パック処理がうまくいったらtrue，それ以外でfalse</returns>
         </member>
         <member name="T:Altseed.Sound">
@@ -3229,6 +3276,7 @@
             </summary>
             <param name="path">読み込む音声ファイルのパス</param>
             <param name="isDecompressed">音を再生する前にデータを全て解凍するか?</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="path"/>がnull</exception>
             <returns>読み込んだ音源データ</returns>
         </member>
         <member name="M:Altseed.Sound.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
@@ -3291,6 +3339,7 @@
             音を再生します。
             </summary>
             <param name="sound">音源データ</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="sound"/>がnull</exception>
             <returns>再生中の音のID</returns>
         </member>
         <member name="M:Altseed.SoundMixer.GetIsPlaying(System.Int32)">
@@ -3478,6 +3527,7 @@
             <summary>
             ウィンドウに表示するタイトルを取得または設定します
             </summary>
+            <exception cref="T:System.ArgumentNullException">設定しようとした値がnull</exception>
         </member>
         <member name="P:Altseed.Window.Size">
             <summary>
