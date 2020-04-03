@@ -4,6 +4,31 @@
         <name>Altseed2</name>
     </assembly>
     <members>
+        <member name="T:Altseed.GraphicsDeviceType">
+            <summary>
+            描画方法を表します。
+            </summary>
+        </member>
+        <member name="F:Altseed.GraphicsDeviceType.Default">
+            <summary>
+            実行環境をもとに自動選択
+            </summary>
+        </member>
+        <member name="F:Altseed.GraphicsDeviceType.DirectX">
+            <summary>
+            DirectX
+            </summary>
+        </member>
+        <member name="F:Altseed.GraphicsDeviceType.Metal">
+            <summary>
+            Metal
+            </summary>
+        </member>
+        <member name="F:Altseed.GraphicsDeviceType.Vulkan">
+            <summary>
+            Vulkan
+            </summary>
+        </member>
         <member name="T:Altseed.FramerateMode">
             <summary>
             フレームレートモード
@@ -994,7 +1019,7 @@
         </member>
         <member name="T:Altseed.Configuration">
             <summary>
-            Coreを初期化する際の設定を保持すクラス
+            Altseed2 の設定を表すクラス
             </summary>
         </member>
         <member name="P:Altseed.Configuration.IsFullscreen">
@@ -1005,6 +1030,16 @@
         <member name="P:Altseed.Configuration.IsResizable">
             <summary>
             画面サイズ可変かどうかを取得または設定します。
+            </summary>
+        </member>
+        <member name="P:Altseed.Configuration.DeviceType">
+            <summary>
+            描画方法を取得または設定します。
+            </summary>
+        </member>
+        <member name="P:Altseed.Configuration.WaitVSync">
+            <summary>
+            垂直同期信号を待つかどうかを取得または設定します。
             </summary>
         </member>
         <member name="P:Altseed.Configuration.ConsoleLoggingEnabled">
@@ -1029,7 +1064,7 @@
         </member>
         <member name="M:Altseed.Configuration.#ctor">
             <summary>
-            新しいインスタンスを生成する
+            新しいインスタンスを生成します。
             </summary>
         </member>
         <member name="M:Altseed.Configuration.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
@@ -3946,6 +3981,11 @@
             エンジンにノードを追加します。
             </summary>
         </member>
+        <member name="M:Altseed.Engine.ClearNodes">
+            <summary>
+            エンジンからノードを全て削除します。
+            </summary>
+        </member>
         <member name="M:Altseed.Engine.RemoveNode(Altseed.Node)">
             <summary>
             エンジンからノードを削除します。
@@ -5824,6 +5864,11 @@
             子要素を追加します。
             </summary>
             <param name="node">追加する要素</param>
+        </member>
+        <member name="M:Altseed.Node.ClearNodes">
+            <summary>
+            子要素をすべて削除します
+            </summary>
         </member>
         <member name="M:Altseed.Node.RemoveChildNode(Altseed.Node)">
             <summary>
