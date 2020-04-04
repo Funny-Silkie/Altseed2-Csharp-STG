@@ -4,6 +4,26 @@
         <name>Altseed2</name>
     </assembly>
     <members>
+        <member name="T:Altseed.AltseedContext">
+            <summary>
+            Altseed2における<see cref="T:System.Threading.SynchronizationContext"/>
+            </summary>
+        </member>
+        <member name="P:Altseed.AltseedContext.Count">
+            <summary>
+            溜められた処理の個数を取得する
+            </summary>
+        </member>
+        <member name="P:Altseed.AltseedContext.IsUpdated">
+            <summary>
+            更新されるかどうかを取得または設定する
+            </summary>
+        </member>
+        <member name="M:Altseed.AltseedContext.Update">
+            <summary>
+            溜められた処理の実行を行う
+            </summary>
+        </member>
         <member name="T:Altseed.GraphicsDeviceType">
             <summary>
             描画方法を表します。
@@ -457,6 +477,21 @@
         <member name="F:Altseed.WritingDirection.Horizontal">
             <summary>
             横書き
+            </summary>
+        </member>
+        <member name="T:Altseed.RenderTargetCareType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.RenderTargetCareType.DontCare">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.RenderTargetCareType.Clear">
+            <summary>
+            
             </summary>
         </member>
         <member name="T:Altseed.ToolDir">
@@ -1859,14 +1894,6 @@
             <exception cref="T:System.SystemException">テクスチャが破損または読み込みに失敗</exception>
             <returns><paramref name="path"/>をパスに持つテクスチャのデータを格納した<see cref="T:Altseed.Texture2D"/>の新しいインスタンス</returns>
         </member>
-        <member name="M:Altseed.Texture2D.TryLoad(System.String,Altseed.Texture2D@)">
-            <summary>
-            指定パスからテクスチャを読み込む
-            </summary>
-            <param name="path">読み込むテクスチャのパス</param>
-            <param name="result"><paramref name="path"/>をパスに持つテクスチャのデータを格納した<see cref="T:Altseed.Texture2D"/>の新しいインスタンス 読み込めなかったらnull</param>
-            <returns><paramref name="result"/>を正常に読み込めたらtrue、それ以外でfalse</returns>
-        </member>
         <member name="M:Altseed.Texture2D.LoadAsync(System.String)">
             <summary>
             非同期読み込みを行う
@@ -2533,23 +2560,6 @@
             <exception cref="T:System.IO.PathTooLongException"><paramref name="path"/>が長すぎる</exception>
             <exception cref="T:System.SystemException">ファイルが破損していたまたは読み込みに失敗した</exception>
         </member>
-        <member name="M:Altseed.Font.TryLoadDynamicFont(System.String,System.Int32,Altseed.Font@)">
-            <summary>
-            動的にフォントを読み込む
-            </summary>
-            <param name="path">フォントファイルのパス</param>
-            <param name="size">フォントサイズ</param>
-            <param name="result">動的に生成されるフォント 生成できなかったらnull</param>
-            <returns><paramref name="result"/>を生成出来たらtrue，それ以外でfalse</returns>
-        </member>
-        <member name="M:Altseed.Font.TryLoadStaticFont(System.String,Altseed.Font@)">
-            <summary>
-            静的にフォントを読み込む
-            </summary>
-            <param name="path">フォントファイルのパス</param>
-            <param name="result">静的に生成されるフォント 生成できなかったらnull</param>
-            <returns><paramref name="result"/>を生成出来たらtrue，それ以外でfalse</returns>
-        </member>
         <member name="M:Altseed.Font.AddImageGlyph(System.Char,Altseed.Texture2D)">
             <summary>
             テクスチャ文字を追加する
@@ -3079,14 +3089,6 @@
             <exception cref="T:System.SystemException">ファイルが破損または読み込みに失敗</exception>
             <returns><paramref name="path"/>をパスに持つファイルのデータを格納した<see cref="T:Altseed.StreamFile"/>の新しいインスタンス</returns>
         </member>
-        <member name="M:Altseed.StreamFile.TryCreate(System.String,Altseed.StreamFile@)">
-            <summary>
-            指定パスからファイルを読み込む
-            </summary>
-            <param name="path">読み込むファイルのパス</param>
-            <param name="result"><paramref name="path"/>をパスに持つファイルのデータを格納した<see cref="T:Altseed.StreamFile"/>の新しいインスタンス 読み込めなかったらnull</param>
-            <returns><paramref name="result"/>を正常に読み込めたらtrue、それ以外でfalse</returns>
-        </member>
         <member name="M:Altseed.StreamFile.Save(System.String)">
             <summary>
             指定したパスに保存する
@@ -3175,14 +3177,6 @@
             <exception cref="T:System.IO.PathTooLongException"><paramref name="path"/>が指定するパスが見つからない</exception>
             <exception cref="T:System.SystemException">ファイルが破損または読み込みに失敗</exception>
             <returns><paramref name="path"/>をパスに持つファイルのデータを格納した<see cref="T:Altseed.StaticFile"/>の新しいインスタンス</returns>
-        </member>
-        <member name="M:Altseed.StaticFile.TryCreate(System.String,Altseed.StaticFile@)">
-            <summary>
-            指定パスからファイルを読み込む
-            </summary>
-            <param name="path">読み込むファイルのパス</param>
-            <param name="result"><paramref name="path"/>をパスに持つファイルのデータを格納した<see cref="T:Altseed.StaticFile"/>の新しいインスタンス 読み込めなかったらnull</param>
-            <returns><paramref name="result"/>を正常に読み込めたらtrue、それ以外でfalse</returns>
         </member>
         <member name="M:Altseed.StaticFile.Save(System.String)">
             <summary>
@@ -3354,15 +3348,6 @@
             <exception cref="T:System.IO.PathTooLongException"><paramref name="path"/>が指定するパスが見つからない</exception>
             <exception cref="T:System.SystemException">音源が破損または読み込みに失敗</exception>
             <returns><paramref name="path"/>をパスに持つ音源のデータを格納した<see cref="T:Altseed.Sound"/>の新しいインスタンス</returns>
-        </member>
-        <member name="M:Altseed.Sound.TryLoad(System.String,System.Boolean,Altseed.Sound@)">
-            <summary>
-            指定パスから音源を読み込む
-            </summary>
-            <param name="path">読み込む音源のパス</param>
-            <param name="isDecompressed">一気に解凍するかどうか</param>
-            <param name="result"><paramref name="path"/>をパスに持つ音源のデータを格納した<see cref="T:Altseed.Sound"/>の新しいインスタンス 読み込めなかったらnull</param>
-            <returns><paramref name="result"/>を正常に読み込めたらtrue、それ以外でfalse</returns>
         </member>
         <member name="T:Altseed.SoundMixer">
             <summary>
@@ -3869,6 +3854,34 @@
             </summary>
             <returns>このインスタンスを表す文字列</returns>
         </member>
+        <member name="M:Altseed.RenderPassParameter.#ctor(Altseed.Color,Altseed.RenderTargetCareType,Altseed.RenderTargetCareType)">
+            <summary>
+            新しいインスタンスを生成する
+            </summary>
+            <param name="clearColor"></param>
+            <param name="colorCare"></param>
+            <param name="depthCare"></param>
+        </member>
+        <member name="M:Altseed.RenderPassParameter.Equals(Altseed.RenderPassParameter)">
+            <summary>
+            もう一つの<see cref="T:Altseed.RenderPassParameter"/>との間の等価性を判定する
+            </summary>
+            <param name="other">等価線を判定する<see cref="T:Altseed.RenderPassParameter"/>のインスタンス</param>
+            <returns><paramref name="other"/>との間との等価性が認められたらtrue，それ以外でfalse</returns>
+        </member>
+        <member name="M:Altseed.RenderPassParameter.Equals(System.Object)">
+            <summary>
+            オブジェクトとの等価性を判定する
+            </summary>
+            <param name="obj">等価性を判定するオブジェクト</param>
+            <returns><paramref name="obj"/>との間との等価性が認められたらtrue，それ以外でfalse</returns>
+        </member>
+        <member name="M:Altseed.RenderPassParameter.GetHashCode">
+            <summary>
+            このインスタンスのハッシュコードを返す
+            </summary>
+            <returns>このインスタンスのハッシュコード</returns>
+        </member>
         <member name="T:Altseed.Engine">
             <summary>
             Altseed2 のエンジンを表します。
@@ -3971,6 +3984,11 @@
             ウインドウを表すクラスを取得します。
             </summary>
         </member>
+        <member name="P:Altseed.Engine.Tool">
+            <summary>
+            ツールを管理するクラスを取得します。
+            </summary>
+        </member>
         <member name="M:Altseed.Engine.GetNodes">
             <summary>
             エンジンに登録されているノードの列挙子を返します。
@@ -3981,14 +3999,14 @@
             エンジンにノードを追加します。
             </summary>
         </member>
-        <member name="M:Altseed.Engine.ClearNodes">
-            <summary>
-            エンジンからノードを全て削除します。
-            </summary>
-        </member>
         <member name="M:Altseed.Engine.RemoveNode(Altseed.Node)">
             <summary>
             エンジンからノードを削除します。
+            </summary>
+        </member>
+        <member name="P:Altseed.Engine.Context">
+            <summary>
+            <see cref="T:System.Threading.SynchronizationContext"/>を取得します。
             </summary>
         </member>
         <member name="P:Altseed.Engine.WindowSize">
@@ -5758,6 +5776,11 @@
             描画対象とする <see cref="T:Altseed.DrawnNode"/> のグループを取得または設定します。
             </summary>
         </member>
+        <member name="M:Altseed.CameraNode.#ctor">
+            <summary>
+            新しいインスタンスを生成する
+            </summary>
+        </member>
         <member name="P:Altseed.CameraNode.Transform">
             <summary>
             変形行列を取得または設定します。
@@ -5813,6 +5836,11 @@
             このノードを描画するカメラを取得または設定します。
             </summary>
         </member>
+        <member name="M:Altseed.DrawnNode.UpdateTransform">
+            <summary>
+            <see cref="P:Altseed.DrawnNode.Transform"/>を更新する
+            </summary>
+        </member>
         <member name="T:Altseed.Node">
             <summary>
             ゲームシーンを構成するノードを表します。
@@ -5865,16 +5893,36 @@
             </summary>
             <param name="node">追加する要素</param>
         </member>
-        <member name="M:Altseed.Node.ClearNodes">
-            <summary>
-            子要素をすべて削除します
-            </summary>
-        </member>
         <member name="M:Altseed.Node.RemoveChildNode(Altseed.Node)">
             <summary>
             子要素を削除します。
             </summary>
             <param name="node">削除する要素</param>
+        </member>
+        <member name="M:Altseed.Node.OnAdded">
+            <summary>
+            自身が親に追加された時に実行
+            </summary>
+        </member>
+        <member name="M:Altseed.Node.OnRemoved">
+            <summary>
+            自身が親から削除された時に実行
+            </summary>
+        </member>
+        <member name="M:Altseed.Node.OnRegistered">
+            <summary>
+            自身がエンジンに追加された時に実行
+            </summary>
+        </member>
+        <member name="M:Altseed.Node.OnUnregistered">
+            <summary>
+            自身がエンジンから削除された時に実行
+            </summary>
+        </member>
+        <member name="M:Altseed.Node.OnUpdate">
+            <summary>
+            自身が更新された時に実行
+            </summary>
         </member>
         <member name="M:Altseed.Node.EnumerateAncestors">
             <summary>
@@ -5915,6 +5963,19 @@
             <summary>
             描画を実行します。
             </summary>
+        </member>
+        <member name="M:Altseed.PolygonNode.SetVertexes(Altseed.Vector2F[])">
+            <summary>
+            頂点情報を設定する
+            </summary>
+            <param name="vertexes">設定する各頂点の座標を格納する配列</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="vertexes"/>がnull</exception>
+        </member>
+        <member name="M:Altseed.PolygonNode.SetAllVertexColor(Altseed.Color)">
+            <summary>
+            各頂点に指定した色を設定する
+            </summary>
+            <param name="color">設定する色</param>
         </member>
         <member name="T:Altseed.SpriteNode">
             <summary>
