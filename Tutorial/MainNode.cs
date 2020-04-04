@@ -10,7 +10,7 @@ namespace Tutorial
     {
         private int? bgmID = null;
         private int count = 0;
-        const int waves = 3;
+        private const int waves = 3;
         private int wave = 1;
         private readonly Queue<Enemy>[] enemies = new Queue<Enemy>[waves];
         private readonly Node characterNode = new Node();
@@ -18,13 +18,14 @@ namespace Tutorial
         private readonly Node uiNode = new Node();
         private TextNode scoreNode;
         private TextNode waveNode;
+        private bool fading = false;
 
         /// <summary>
         /// スコアを取得または設定する
         /// </summary>
         public int Score { get; set; }
 
-        protected override void OnAdded()
+        protected override void OnRegistered()
         {
             AddChildNode(characterNode);
             AddChildNode(uiNode);
@@ -57,7 +58,12 @@ namespace Tutorial
 
             //InitBGM();
 
-            //AddChildNode(new StayEnemy(new Vector2F(500, 500)));
+            //AddChildNode(new StayEnemy(player, new Vector2F(500, 500)));
+        }
+
+        protected override void OnUnregistered()
+        {
+            CollidableObject.Objects.Clear();
         }
 
         /// <summary>
@@ -187,8 +193,10 @@ namespace Tutorial
         public void ToGameOver()
         {
             //if (!bgmID.HasValue) Engine.Sound.FadeOut(bgmID.Value, 3.0f);
+            if (fading) return;
             Engine.RemoveNode(this);
             Engine.AddNode(new GameOverNode());
+            fading = true;
         }
 
         /// <summary>
@@ -203,10 +211,12 @@ namespace Tutorial
                 {
                     count = 0;
                     wave++;
-                    if (wave > waves)
+                    if (wave > waves && !fading)
                     {
+                        //if (bgmID.HasValue) Engine.Sound.FadeOut(bgmID.Value, 3.0f);
                         Engine.RemoveNode(this);
                         Engine.AddNode(new LevelCompletedNode());
+                        fading = true;
                     }
                 }
             }

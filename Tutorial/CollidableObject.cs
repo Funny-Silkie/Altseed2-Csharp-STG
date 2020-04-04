@@ -37,9 +37,9 @@ namespace Tutorial
             Position = position;
         }
 
-        protected override void OnAdded() => Objects.Add(this);
+        protected override void OnRegistered() => Objects.Add(this);
 
-        protected override void OnRemoved() => Objects.Remove(this);
+        protected override void OnUnregistered() => Objects.Remove(this);
 
         protected override void OnUpdate()
         {

@@ -7,7 +7,9 @@ namespace Tutorial
     /// </summary>
     public class TitleNode : Node
     {
-        protected override void OnAdded()
+        private bool fading = false;
+
+        protected override void OnRegistered()
         {
             var titleText = new TextNode()
             {
@@ -39,10 +41,11 @@ namespace Tutorial
 
         protected override void OnUpdate()
         {
-            if (Engine.Keyboard.GetKeyState(Keys.Z) == ButtonState.Push)
+            if (!fading && Engine.Keyboard.GetKeyState(Keys.Z) == ButtonState.Push)
             {
                 Engine.RemoveNode(this);
                 Engine.AddNode(new MainNode());
+                fading = true;
             }
         }
     }
