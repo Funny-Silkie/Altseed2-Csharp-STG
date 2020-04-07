@@ -9,7 +9,7 @@ namespace Tutorial
     {
         private bool fading = false;
 
-        protected override void OnRegistered()
+        protected override void OnAdded()
         {
             var titleText = new TextNode()
             {

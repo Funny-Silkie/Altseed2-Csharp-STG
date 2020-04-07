@@ -25,7 +25,7 @@ namespace Tutorial
         /// </summary>
         public int Score { get; set; }
 
-        protected override void OnRegistered()
+        protected override void OnAdded()
         {
             AddChildNode(characterNode);
             AddChildNode(uiNode);
@@ -61,7 +61,7 @@ namespace Tutorial
             //AddChildNode(new StayEnemy(player, new Vector2F(500, 500)));
         }
 
-        protected override void OnUnregistered()
+        protected override void OnRemoved()
         {
             CollidableObject.Objects.Clear();
         }
