@@ -9,18 +9,34 @@ namespace Tutorial
     public abstract class CollidableObject : SpriteNode
     {
         /// <summary>
-        /// オブジェクトのコレクションを取得する
+        /// コライダのコレクションを取得する
         /// </summary>
         public static HashSet<CollidableObject> Objects { get; } = new HashSet<CollidableObject>(10);
+
+        /// <summary>
+        /// コライダを取得する
+        /// </summary>
+        public CircleCollider Collider { get; } = new CircleCollider();
 
         /// <summary>
         /// <see cref="OnUpdate"/>内で衝突判定を調査するかどうかを取得する
         /// </summary>
         public abstract bool DoSurvey { get; }
+
+        public override Vector2F Position
+        {
+            get => base.Position;
+            set
+            {
+                base.Position = value;
+                Collider.Position = value;
+            }
+        }
+
         /// <summary>
         /// 衝突半径を取得する
         /// </summary>
-        public float Radius { get; protected set; }
+        public float Radius { get => Collider.Radius; protected set => Collider.Radius = value; }
 
         /// <summary>
         /// 所属するステージを取得する
@@ -58,14 +74,6 @@ namespace Tutorial
         }
 
         /// <summary>
-        /// 2オブジェクト間の衝突判定
-        /// </summary>
-        /// <param name="o1">衝突を調べるオブジェクト</param>
-        /// <param name="o2">衝突を調べるオブジェクト</param>
-        /// <returns><paramref name="o1"/>と<paramref name="o2"/>が衝突していたらtrue，それ以外でfalse</returns>
-        private static bool IsCollide(CollidableObject o1, CollidableObject o2) => (o1.Position - o2.Position).Length <= o1.Radius + o2.Radius;
-
-        /// <summary>
         /// 衝突時に実行
         /// </summary>
         /// <param name="obj">衝突したオブジェクト</param>
@@ -86,7 +94,7 @@ namespace Tutorial
         private void Survey()
         {
             foreach (var obj in Objects)
-                if (IsCollide(this, obj))
+                if (Collider.GetIsCollidedWith(obj.Collider))
                     CollideWith(obj);
         }
     }
