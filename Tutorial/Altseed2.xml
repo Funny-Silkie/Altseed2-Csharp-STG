@@ -486,12 +486,12 @@
         </member>
         <member name="F:Altseed.RenderTargetCareType.DontCare">
             <summary>
-            
+            クリアしない
             </summary>
         </member>
         <member name="F:Altseed.RenderTargetCareType.Clear">
             <summary>
-            
+            クリアする
             </summary>
         </member>
         <member name="T:Altseed.ToolDir">
@@ -1735,6 +1735,38 @@
             ジョイスティックの最大同時接続数を取得します。
             </summary>
         </member>
+        <member name="M:Altseed.Joystick.GetButtonState(System.Int32,System.Int32)">
+            <summary>
+            ボタンの状態をインデックスで取得します。
+            </summary>
+            <param name="joystickIndex">検索するジョイスティックのインデックス</param>
+            <param name="buttonIndex">状態を検索するボタンのインデックス</param>
+            <returns>指定インデックスのボタンの状態</returns>
+        </member>
+        <member name="M:Altseed.Joystick.GetButtonState(System.Int32,Altseed.JoystickButtonType)">
+            <summary>
+            ボタンの状態を種類から取得します。
+            </summary>
+            <param name="joystickIndex">検索するジョイスティックのインデックス</param>
+            <param name="type">状態を検索するボタンの種類</param>
+            <returns>指定種類のボタンの状態</returns>
+        </member>
+        <member name="M:Altseed.Joystick.GetAxisState(System.Int32,System.Int32)">
+            <summary>
+            軸の状態をインデックスで取得します。
+            </summary>
+            <param name="joystickIndex">検索するジョイスティックのインデックス</param>
+            <param name="axisIndex">状態を検索する軸のインデックス</param>
+            <returns>指定インデックスの軸の状態</returns>
+        </member>
+        <member name="M:Altseed.Joystick.GetAxisState(System.Int32,Altseed.JoystickAxisType)">
+            <summary>
+            軸の状態を軸の種類で取得します。
+            </summary>
+            <param name="joystickIndex">検索するジョイスティックのインデックス</param>
+            <param name="type">状態を検索する軸の種類</param>
+            <returns>指定種類の軸の状態</returns>
+        </member>
         <member name="T:Altseed.Graphics">
             <summary>
             グラフィックの制御を行うクラス
@@ -1976,18 +2008,18 @@
         </member>
         <member name="M:Altseed.Material.GetTexture(System.String)">
             <summary>
-            指定した名前を持つ<see cref="T:Altseed.Texture2D"/>のインスタンスを取得する
+            指定した名前を持つ<see cref="T:Altseed.TextureBase"/>のインスタンスを取得する
             </summary>
-            <param name="key">検索する<see cref="T:Altseed.Texture2D"/>のインスタンスの名前</param>
+            <param name="key">検索する<see cref="T:Altseed.TextureBase"/>のインスタンスの名前</param>
             <exception cref="T:System.ArgumentNullException"><paramref name="key"/>がnull</exception>
-            <returns><paramref name="key"/>を名前として持つ<see cref="T:Altseed.Texture2D"/>のインスタンス</returns>
+            <returns><paramref name="key"/>を名前として持つ<see cref="T:Altseed.TextureBase"/>のインスタンス</returns>
         </member>
         <member name="M:Altseed.Material.SetTexture(System.String,Altseed.TextureBase)">
             <summary>
-            指定した名前を持つ<see cref="T:Altseed.Texture2D"/>の値を設定する
+            指定した名前を持つ<see cref="T:Altseed.TextureBase"/>の値を設定する
             </summary>
-            <param name="key">検索する<see cref="T:Altseed.Texture2D"/>のインスタンスの名前</param>
-            <param name="value">設定する<see cref="T:Altseed.Texture2D"/>のインスタンスの値</param>
+            <param name="key">検索する<see cref="T:Altseed.TextureBase"/>のインスタンスの名前</param>
+            <param name="value">設定する<see cref="T:Altseed.TextureBase"/>のインスタンスの値</param>
             <exception cref="T:System.ArgumentNullException"><paramref name="key"/>がnull</exception>
         </member>
         <member name="M:Altseed.Material.GetShader(Altseed.ShaderStageType)">
@@ -5901,23 +5933,19 @@
         </member>
         <member name="M:Altseed.Node.OnAdded">
             <summary>
-            自身が親に追加された時に実行
+            エンジンに追加された時に実行します。
             </summary>
+            <remarks>
+            自身もしくは親ノードがEngineに登録されたあとのUpdateの際に実行されます。
+            </remarks>
         </member>
         <member name="M:Altseed.Node.OnRemoved">
             <summary>
-            自身が親から削除された時に実行
+            エンジンから削除された時に実行
             </summary>
-        </member>
-        <member name="M:Altseed.Node.OnRegistered">
-            <summary>
-            自身がエンジンに追加された時に実行
-            </summary>
-        </member>
-        <member name="M:Altseed.Node.OnUnregistered">
-            <summary>
-            自身がエンジンから削除された時に実行
-            </summary>
+            <remarks>
+            自身もしくは親ノードがEngineにから削除されたあとのUpdateの際に実行されます。
+            </remarks>
         </member>
         <member name="M:Altseed.Node.OnUpdate">
             <summary>
