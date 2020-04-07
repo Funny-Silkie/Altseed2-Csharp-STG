@@ -1602,6 +1602,20 @@
             リソースの再読み込みを行います。
             </summary>
         </member>
+        <member name="T:Altseed.Cursor">
+            <summary>
+            カーソルを表します。
+            </summary>
+        </member>
+        <member name="M:Altseed.Cursor.Create(System.String,Altseed.Vector2I)">
+            <summary>
+            指定したpng画像を読み込んだ<see cref="T:Altseed.Cursor"/>のインスタンスを生成します。
+            </summary>
+            <param name="path">読み込むpng画像のパス</param>
+            <param name="hot">カーソルのクリック判定座標を指定します。カーソル画像はここが中心となります。</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="path"/>がnull</exception>
+            <returns>指定したpng画像を読み込んだ<see cref="T:Altseed.Cursor"/>のインスタンス</returns>
+        </member>
         <member name="T:Altseed.Keyboard">
             <summary>
             キーボードを表します。
@@ -1652,6 +1666,12 @@
             </summary>
             <param name="button">状態を取得するマウスのボタン</param>
             <returns>マウスボタンの状態</returns>
+        </member>
+        <member name="M:Altseed.Mouse.SetCursorImage(Altseed.Cursor)">
+            <summary>
+            カーソル画像をセットします。
+            </summary>
+            <param name="cursor">状態を取得するマウスのボタン</param>
         </member>
         <member name="T:Altseed.Joystick">
             <summary>
@@ -3592,6 +3612,66 @@
             </summary>
             <returns>使用するインスタンス</returns>
         </member>
+        <member name="T:Altseed.Collider">
+            <summary>
+            コライダの抽象基本クラスです
+            </summary>
+        </member>
+        <member name="P:Altseed.Collider.Position">
+            <summary>
+            コライダの位置情報を取得または設定します。
+            </summary>
+        </member>
+        <member name="P:Altseed.Collider.Rotation">
+            <summary>
+            コライダの回転情報を取得または設定します。
+            </summary>
+        </member>
+        <member name="M:Altseed.Collider.GetIsCollidedWith(Altseed.Collider)">
+            <summary>
+            指定したコライダとの衝突判定を行います。
+            </summary>
+        </member>
+        <member name="T:Altseed.CircleCollider">
+            <summary>
+            円形コライダのクラス
+            </summary>
+        </member>
+        <member name="P:Altseed.CircleCollider.Radius">
+            <summary>
+            円形コライダの半径を取得または設定します。
+            </summary>
+        </member>
+        <member name="T:Altseed.RectangleCollider">
+            <summary>
+            矩形コライダのクラス
+            </summary>
+        </member>
+        <member name="P:Altseed.RectangleCollider.Size">
+            <summary>
+            矩形コライダの幅・高さを取得または設定します。
+            </summary>
+        </member>
+        <member name="P:Altseed.RectangleCollider.CenterPosition">
+            <summary>
+            矩形コライダの中心の位置を取得または設定します。
+            </summary>
+        </member>
+        <member name="T:Altseed.PolygonCollider">
+            <summary>
+            多角形コライダのクラス
+            </summary>
+        </member>
+        <member name="M:Altseed.PolygonCollider.GetVertexes">
+            <summary>
+            多角形コライダの頂点の座標を取得します。
+            </summary>
+        </member>
+        <member name="M:Altseed.PolygonCollider.SetVertexes(Altseed.Vector2FArray)">
+            <summary>
+            多角形コライダの頂点の座標を設定します。
+            </summary>
+        </member>
         <member name="T:Altseed.Registerable`1">
             <summary>
             <see cref="T:Altseed.RegisterableCollection`2"/>に登録や削除が可能な要素であることを表します。
@@ -4034,6 +4114,16 @@
         <member name="M:Altseed.Engine.RemoveNode(Altseed.Node)">
             <summary>
             エンジンからノードを削除します。
+            </summary>
+        </member>
+        <member name="M:Altseed.Engine.FindNodes``1">
+            <summary>
+            エンジンに登録されている <typeparamref name="T"/> 型のノードを列挙します。
+            </summary>
+        </member>
+        <member name="M:Altseed.Engine.FindNodes``1(System.Func{``0,System.Boolean})">
+            <summary>
+            エンジンに登録されている <typeparamref name="T"/> 型のノードのうち <paramref name="condition"/> を満たすものを列挙します。
             </summary>
         </member>
         <member name="P:Altseed.Engine.Context">
@@ -5960,6 +6050,16 @@
         <member name="M:Altseed.Node.EnumerateDescendants">
             <summary>
             子孫ノードを列挙します。
+            </summary>
+        </member>
+        <member name="M:Altseed.Node.EnumerateDescendants``1">
+            <summary>
+            <typeparamref name="T"/> 型の子孫ノードを列挙します。
+            </summary>
+        </member>
+        <member name="M:Altseed.Node.EnumerateDescendants``1(System.Func{``0,System.Boolean})">
+            <summary>
+            <typeparamref name="T"/>型の子孫ノードのうち <paramref name="condition"/> を満たすものを列挙します。
             </summary>
         </member>
         <member name="P:Altseed.PolygonNode.Src">
