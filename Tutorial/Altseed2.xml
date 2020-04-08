@@ -3632,6 +3632,26 @@
             指定したコライダとの衝突判定を行います。
             </summary>
         </member>
+        <member name="M:Altseed.Collider.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            シリアライズされたデータをもとに<see cref="T:Altseed.Collider"/>のインスタンスを生成する
+            </summary>
+            <param name="info">シリアライズされたデータを格納するオブジェクト</param>
+            <param name="context">送信元の情報</param>
+        </member>
+        <member name="M:Altseed.Collider.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            シリアライズするデータを設定します。
+            </summary>
+            <param name="info">シリアライズされるデータを格納するオブジェクト</param>
+            <param name="context">送信先の情報</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Altseed.Collider.Deserialize_GetPtr(System.IntPtr@,System.Runtime.Serialization.SerializationInfo)" -->
+        <member name="M:Altseed.Collider.Call_GetPtr(System.Runtime.Serialization.SerializationInfo)">
+            <summary>
+            呼び出し禁止
+            </summary>
+        </member>
         <member name="T:Altseed.CircleCollider">
             <summary>
             円形コライダのクラス
@@ -3640,6 +3660,26 @@
         <member name="P:Altseed.CircleCollider.Radius">
             <summary>
             円形コライダの半径を取得または設定します。
+            </summary>
+        </member>
+        <member name="M:Altseed.CircleCollider.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            シリアライズされたデータをもとに<see cref="T:Altseed.CircleCollider"/>のインスタンスを生成する
+            </summary>
+            <param name="info">シリアライズされたデータを格納するオブジェクト</param>
+            <param name="context">送信元の情報</param>
+        </member>
+        <member name="M:Altseed.CircleCollider.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            シリアライズするデータを設定します。
+            </summary>
+            <param name="info">シリアライズされるデータを格納するオブジェクト</param>
+            <param name="context">送信先の情報</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Altseed.CircleCollider.Deserialize_GetPtr(System.IntPtr@,System.Runtime.Serialization.SerializationInfo)" -->
+        <member name="M:Altseed.CircleCollider.Call_GetPtr(System.Runtime.Serialization.SerializationInfo)">
+            <summary>
+            呼び出し禁止
             </summary>
         </member>
         <member name="T:Altseed.RectangleCollider">
@@ -3657,19 +3697,54 @@
             矩形コライダの中心の位置を取得または設定します。
             </summary>
         </member>
+        <member name="M:Altseed.RectangleCollider.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            シリアライズされたデータをもとに<see cref="T:Altseed.RectangleCollider"/>のインスタンスを生成する
+            </summary>
+            <param name="info">シリアライズされたデータを格納するオブジェクト</param>
+            <param name="context">送信元の情報</param>
+        </member>
+        <member name="M:Altseed.RectangleCollider.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            シリアライズするデータを設定します。
+            </summary>
+            <param name="info">シリアライズされるデータを格納するオブジェクト</param>
+            <param name="context">送信先の情報</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Altseed.RectangleCollider.Deserialize_GetPtr(System.IntPtr@,System.Runtime.Serialization.SerializationInfo)" -->
+        <member name="M:Altseed.RectangleCollider.Call_GetPtr(System.Runtime.Serialization.SerializationInfo)">
+            <summary>
+            呼び出し禁止
+            </summary>
+        </member>
         <member name="T:Altseed.PolygonCollider">
             <summary>
             多角形コライダのクラス
             </summary>
         </member>
-        <member name="M:Altseed.PolygonCollider.GetVertexes">
+        <member name="P:Altseed.PolygonCollider.Vertexes">
             <summary>
-            多角形コライダの頂点の座標を取得します。
+            多角形コライダの頂点の座標を取得または設定します
             </summary>
         </member>
-        <member name="M:Altseed.PolygonCollider.SetVertexes(Altseed.Vector2FArray)">
+        <member name="M:Altseed.PolygonCollider.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
-            多角形コライダの頂点の座標を設定します。
+            シリアライズされたデータをもとに<see cref="T:Altseed.PolygonCollider"/>のインスタンスを生成する
+            </summary>
+            <param name="info">シリアライズされたデータを格納するオブジェクト</param>
+            <param name="context">送信元の情報</param>
+        </member>
+        <member name="M:Altseed.PolygonCollider.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            シリアライズするデータを設定します。
+            </summary>
+            <param name="info">シリアライズされるデータを格納するオブジェクト</param>
+            <param name="context">送信先の情報</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Altseed.PolygonCollider.Deserialize_GetPtr(System.IntPtr@,System.Runtime.Serialization.SerializationInfo)" -->
+        <member name="M:Altseed.PolygonCollider.Call_GetPtr(System.Runtime.Serialization.SerializationInfo)">
+            <summary>
+            呼び出し禁止
             </summary>
         </member>
         <member name="T:Altseed.Registerable`1">
