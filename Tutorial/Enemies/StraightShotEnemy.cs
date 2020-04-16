@@ -32,10 +32,10 @@ namespace Tutorial
             // カウントが150の倍数で実行
             if (count % 150 == 0)
             {
-                // プレイヤーに対するベクトルを取得
-                var velocity = player.Position - Position;
+                // プレイヤーに対するベクトルの単位ベクトルを取得
+                var velocity = (player.Position - Position).Normal;
                 // ベクトルの長さを調整(弾速になる)
-                velocity.Length = 5;
+                velocity *= 5;
 
                 // 弾を追加
                 Shot(velocity);

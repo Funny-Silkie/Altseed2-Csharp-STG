@@ -31,11 +31,11 @@ namespace Tutorial
         // フレーム毎に実行
         protected override void OnUpdate()
         {
-            // プレイヤーへのベクトルを取得
-            var vector = player.Position - Position;
+            // プレイヤーへのベクトルの単位ベクトルを取得
+            var vector = (player.Position - Position).Normal;
 
             // ベクトルの長さを調整
-            vector.Length = speed;
+            vector *= speed;
 
             // ベクトル分座標を動かす
             Position += vector;
