@@ -147,18 +147,18 @@ namespace Tutorial
             enemies[0].Enqueue(new ChaseEnemy(player, new Vector2F(700, 560), 2.0f));
             enemies[0].Enqueue(new ChaseEnemy(player, new Vector2F(700, 560), 2.0f));
 
-            enemies[0].Enqueue(new StraightShotEnemy(player, new Vector2F(300, 100)));
-            enemies[0].Enqueue(new StraightShotEnemy(player, new Vector2F(300, 620)));
+            enemies[0].Enqueue(new StraightShotEnemy(player, new Vector2F(600, 100)));
+            enemies[0].Enqueue(new StraightShotEnemy(player, new Vector2F(600, 620)));
 
             enemies[0].Enqueue(new ChaseEnemy(player, new Vector2F(700, 560), 2.0f));
 
-            enemies[0].Enqueue(new StraightShotEnemy(player, new Vector2F(300, 100)));
-            enemies[0].Enqueue(new StraightShotEnemy(player, new Vector2F(300, 620)));
+            enemies[0].Enqueue(new StraightShotEnemy(player, new Vector2F(600, 100)));
+            enemies[0].Enqueue(new StraightShotEnemy(player, new Vector2F(600, 620)));
 
             enemies[0].Enqueue(new ChaseEnemy(player, new Vector2F(700, 160), 2.0f));
 
-            enemies[0].Enqueue(new StraightShotEnemy(player, new Vector2F(300, 100)));
-            enemies[0].Enqueue(new StraightShotEnemy(player, new Vector2F(300, 620)));
+            enemies[0].Enqueue(new StraightShotEnemy(player, new Vector2F(600, 100)));
+            enemies[0].Enqueue(new StraightShotEnemy(player, new Vector2F(600, 620)));
         }
 
         // ウェーブ2の初期化
@@ -171,8 +171,8 @@ namespace Tutorial
             enemies[1].Enqueue(new ChaseEnemy(player, new Vector2F(500, 360), 2.5f));
             enemies[1].Enqueue(new ChaseEnemy(player, new Vector2F(500, 360), 2.5f));
 
-            enemies[1].Enqueue(new StraightShotEnemy(player, new Vector2F(100, 100)));
-            enemies[1].Enqueue(new StraightShotEnemy(player, new Vector2F(100, 620)));
+            enemies[1].Enqueue(new StraightShotEnemy(player, new Vector2F(500, 100)));
+            enemies[1].Enqueue(new StraightShotEnemy(player, new Vector2F(500, 620)));
 
             var random = new System.Random();
 
@@ -186,10 +186,10 @@ namespace Tutorial
             enemies[1].Enqueue(new Meteor(player, new Vector2F(910, random.Next(50, Engine.WindowSize.Y - 50)), new Vector2F(-4.0f, 0.0f)));
             enemies[1].Enqueue(new Meteor(player, new Vector2F(910, random.Next(50, Engine.WindowSize.Y - 50)), new Vector2F(-4.0f, 0.0f)));
 
-            enemies[1].Enqueue(new StraightShotEnemy(player, new Vector2F(400, 320)));
+            enemies[1].Enqueue(new StraightShotEnemy(player, new Vector2F(700, 320)));
             enemies[1].Enqueue(new Meteor(player, new Vector2F(910, random.Next(50, Engine.WindowSize.Y - 50)), new Vector2F(-4.0f, 0.0f)));
 
-            enemies[1].Enqueue(new StraightShotEnemy(player, new Vector2F(400, 400)));
+            enemies[1].Enqueue(new StraightShotEnemy(player, new Vector2F(700, 400)));
             enemies[1].Enqueue(new Meteor(player, new Vector2F(910, random.Next(50, Engine.WindowSize.Y - 50)), new Vector2F(-4.0f, 0.0f)));
         }
 
