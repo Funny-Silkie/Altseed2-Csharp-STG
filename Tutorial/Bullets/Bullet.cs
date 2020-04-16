@@ -7,8 +7,6 @@ namespace Tutorial
     /// </summary>
     public abstract class Bullet : CollidableObject
     {
-        protected sealed override bool DoSurvey => false;
-
         /// <summary>
         /// 移動距離
         /// </summary>
@@ -21,6 +19,7 @@ namespace Tutorial
         /// <param name="velocity">速度</param>
         public Bullet(MainNode stage, Vector2F position, Vector2F velocity) : base(stage, position)
         {
+            doSurvey = false;
             this.velocity = velocity;
             ZOrder--;
         }

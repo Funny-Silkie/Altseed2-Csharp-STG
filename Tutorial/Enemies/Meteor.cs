@@ -11,7 +11,6 @@ namespace Tutorial
         private Vector2F velocity;
 
         private int HP = 3;
-        protected override int Score => 1;
 
         /// <summary>
         /// 新しいインスタンスを生成する
@@ -24,7 +23,8 @@ namespace Tutorial
             this.velocity = velocity;
             Texture = Texture_Meteor;
             CenterPosition = Texture.Size / 2;
-            Radius = Texture.Size.X / 2;
+            collider.Radius = Texture.Size.X / 2;
+            score = 1;
         }
 
         protected override void OnUpdate()

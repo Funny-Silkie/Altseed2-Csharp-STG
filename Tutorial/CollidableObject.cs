@@ -11,37 +11,22 @@ namespace Tutorial
         /// <summary>
         /// コライダのコレクションを取得する
         /// </summary>
-        public static HashSet<CollidableObject> Objects { get; } = new HashSet<CollidableObject>(10);
+        public static HashSet<CollidableObject> objects = new HashSet<CollidableObject>(10);
 
         /// <summary>
         /// コライダを取得する
         /// </summary>
-        protected CircleCollider Collider { get; } = new CircleCollider();
+        protected CircleCollider collider = new CircleCollider();
 
         /// <summary>
         /// <see cref="OnUpdate"/>内で衝突判定を調査するかどうかを取得する
         /// </summary>
-        protected abstract bool DoSurvey { get; }
-
-        public override Vector2F Position
-        {
-            get => base.Position;
-            set
-            {
-                base.Position = value;
-                Collider.Position = value;
-            }
-        }
-
-        /// <summary>
-        /// 衝突半径を取得する
-        /// </summary>
-        protected float Radius { get => Collider.Radius; set => Collider.Radius = value; }
+        protected bool doSurvey;
 
         /// <summary>
         /// 所属するステージを取得する
         /// </summary>
-        public MainNode Stage { get; }
+        public MainNode stage;
 
         /// <summary>
         /// 新しいインスタンスを生成する
@@ -49,17 +34,18 @@ namespace Tutorial
         /// <param name="position">座標</param>
         protected CollidableObject(MainNode stage, Vector2F position)
         {
-            Stage = stage;
+            this.stage = stage;
             Position = position;
         }
 
-        protected override void OnAdded() => Objects.Add(this);
+        protected override void OnAdded() => objects.Add(this);
 
-        protected override void OnRemoved() => Objects.Remove(this);
+        protected override void OnRemoved() => objects.Remove(this);
 
         protected override void OnUpdate()
         {
-            if (DoSurvey) Survey();
+            if (doSurvey) Survey();
+            collider.Position = Position;
         }
 
         /// <summary>
@@ -69,7 +55,7 @@ namespace Tutorial
         private void CollideWith(CollidableObject obj)
         {
             if (obj == null) return;
-            if (!obj.DoSurvey) obj.OnCollision(this);
+            if (!obj.doSurvey) obj.OnCollision(this);
             OnCollision(obj);
         }
 
@@ -93,8 +79,8 @@ namespace Tutorial
         /// </summary>
         private void Survey()
         {
-            foreach (var obj in Objects)
-                if (Collider.GetIsCollidedWith(obj.Collider))
+            foreach (var obj in objects)
+                if (collider.GetIsCollidedWith(obj.collider))
                     CollideWith(obj);
         }
     }

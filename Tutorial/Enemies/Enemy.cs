@@ -1,5 +1,4 @@
-using Altseed;
-using static Tutorial.Resources;
+﻿using Altseed;
 
 namespace Tutorial
 {
@@ -8,28 +7,28 @@ namespace Tutorial
     /// </summary>
     public abstract class Enemy : CollidableObject
     {
-        public sealed override bool DoSurvey => true;
-        protected abstract int Score { get; }
+        protected int score;
 
         /// <summary>
         /// プレイヤーへの参照を取得する
         /// </summary>
-        protected Player Player { get; }
+        protected Player player;
         
         /// <summary>
         /// 新しいインスタンスを生成する
         /// </summary>
         /// <param name="position">座標</param>
-        protected Enemy(Player player, Vector2F position) : base(player.Stage, position)
+        protected Enemy(Player player, Vector2F position) : base(player.stage, position)
         {
-            Player = player;
+            doSurvey = true;
+            this.player = player;
         }
 
         protected override void OnCollision(CollidableObject obj)
         {
             if (obj is PlayerBullet)
             {
-                Stage.Score += Score;
+                stage.score += score;
                 Parent.AddChildNode(new DeathEffect(Position));
                 Parent.RemoveChildNode(this);
                 //Engine.Sound.Play(Sound_Explosion);
@@ -48,7 +47,7 @@ namespace Tutorial
         /// <param name="velocity">弾速</param>
         protected void Shot(Vector2F velocity)
         {
-            Parent.AddChildNode(new EnemyBullet(Stage, Position, velocity));
+            Parent.AddChildNode(new EnemyBullet(stage, Position, velocity));
             //Engine.Sound.Play(Sound_EnemyShot);
         }
     }

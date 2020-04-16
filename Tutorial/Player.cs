@@ -8,17 +8,16 @@ namespace Tutorial
     /// </summary>
     public sealed class Player : CollidableObject
     {
-        protected override bool DoSurvey => true;
-
         /// <summary>
         /// 新しいインスタンスを生成する
         /// </summary>
         /// <param name="position">座標</param>
         public Player(MainNode stage, Vector2F position) : base(stage, position)
         {
+            doSurvey = true;
             Texture = Texture_Player;
             CenterPosition = Texture.Size / 2;
-            Radius = Texture.Size.Y / 2;
+            collider.Radius = Texture.Size.Y / 2;
         }
 
         protected override void OnCollision(CollidableObject obj)
@@ -27,7 +26,7 @@ namespace Tutorial
             {
                 //Engine.Sound.Play(Sound_Explosion)
                 Parent.RemoveChildNode(this);
-                Stage.ToGameOver();
+                stage.ToGameOver();
             }
         }
 
@@ -63,15 +62,8 @@ namespace Tutorial
         /// </summary>
         private void Shot()
         {
-            if (Engine.Keyboard.GetKeyState(Keys.Z) == ButtonState.Push) Parent.AddChildNode(new PlayerBullet(Stage, Position + CenterPosition));
+            if (Engine.Keyboard.GetKeyState(Keys.Z) == ButtonState.Push) Parent.AddChildNode(new PlayerBullet(stage, Position + CenterPosition));
             //Engine.Sound.Play(Sound_PlayerShot);
-
-            //if (Engine.Keyboard.GetKeyState(Keys.Z) == ButtonState.Hold)
-            //    for (int i = 0; i < 5; i++)
-            //    {
-            //        Parent.AddChildNode(new PlayerBullet(Position + CenterPosition + new Vector2F(0, i * 10)));
-            //        Parent.AddChildNode(new PlayerBullet(Position + CenterPosition + new Vector2F(0, -i * 10)));
-            //    }
         }
     }
 }

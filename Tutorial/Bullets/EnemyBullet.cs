@@ -14,7 +14,7 @@ namespace Tutorial
         {
             Texture = Texture_Bullet_Red;
             CenterPosition = Texture.Size / 2;
-            Radius = Texture.Size.X / 2;
+            collider.Radius = Texture.Size.X / 2;
         }
 
         protected override void OnCollision(CollidableObject obj)

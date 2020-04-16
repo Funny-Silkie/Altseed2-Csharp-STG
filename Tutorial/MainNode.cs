@@ -23,7 +23,7 @@ namespace Tutorial
         /// <summary>
         /// スコアを取得または設定する
         /// </summary>
-        public int Score { get; set; }
+        public int score;
 
         protected override void OnAdded()
         {
@@ -57,13 +57,11 @@ namespace Tutorial
             InitAllWave();
 
             //InitBGM();
-
-            //AddChildNode(new StayEnemy(player, new Vector2F(500, 500)));
         }
 
         protected override void OnRemoved()
         {
-            CollidableObject.Objects.Clear();
+            CollidableObject.objects.Clear();
         }
 
         /// <summary>
@@ -179,7 +177,7 @@ namespace Tutorial
 
         protected override void OnUpdate()
         {
-            scoreNode.Text = $"Score : {Score}";
+            scoreNode.Text = $"Score : {score}";
             waveNode.Text = $"Wave : {wave}";
 
             Summon();

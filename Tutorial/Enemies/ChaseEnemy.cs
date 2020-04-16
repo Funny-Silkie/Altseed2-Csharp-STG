@@ -1,4 +1,4 @@
-using Altseed;
+﻿using Altseed;
 using static Tutorial.Resources;
 
 namespace Tutorial
@@ -9,7 +9,6 @@ namespace Tutorial
     public sealed class ChaseEnemy : Enemy
     {
         private readonly float speed;
-        protected override int Score => 10;
 
         /// <summary>
         /// 新しいインスタンスを生成する
@@ -19,13 +18,14 @@ namespace Tutorial
         {
             Texture = Texture_UFO;
             CenterPosition = Texture.Size / 2;
-            Radius = Texture.Size.X / 2;
+            collider.Radius = Texture.Size.X / 2;
             this.speed = speed;
+            score = 10;
         }
 
         protected override void OnUpdate()
         {
-            var vector = Player.Position - Position;
+            var vector = player.Position - Position;
             Position += vector.Normal * speed;
             base.OnUpdate();
         }

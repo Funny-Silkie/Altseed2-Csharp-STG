@@ -1,4 +1,4 @@
-using Altseed;
+﻿using Altseed;
 using System;
 using static Tutorial.Resources;
 
@@ -11,8 +11,6 @@ namespace Tutorial
     {
         private int count = 0;
 
-        protected override int Score => 20;
-
         /// <summary>
         /// 新しいインスタンスを生成する
         /// </summary>
@@ -22,12 +20,13 @@ namespace Tutorial
         {
             Texture = Texture_UFO;
             CenterPosition = Texture.Size / 2;
-            Radius = Texture.Size.X / 2;
+            collider.Radius = Texture.Size.X / 2;
+            score = 20;
         }
 
         protected override void OnUpdate()
         {
-            if (count % 150 == 0) Shot((Player.Position - Position).Normal * 5);
+            if (count % 150 == 0) Shot((player.Position - Position).Normal * 5);
             
             Position -= new Vector2F(MathF.Sin(MathHelper.DegreeToRadian(count)) * 3.0f, 0);
 
