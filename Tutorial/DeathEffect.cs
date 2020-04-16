@@ -6,7 +6,7 @@ namespace Tutorial
     /// <summary>
     /// 死亡時エフェクト
     /// </summary>
-    public sealed class DeathEffect : SpriteNode
+    public class DeathEffect : SpriteNode
     {
         private int count = 0;
 

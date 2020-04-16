@@ -1,9 +1,9 @@
-﻿using Altseed;
+using Altseed;
 using static Tutorial.Resources;
 
 namespace Tutorial
 {
-    public sealed class PlayerBullet : Bullet
+    public class PlayerBullet : Bullet
     {
         /// <summary>
         /// 弾の移動量/フレーム

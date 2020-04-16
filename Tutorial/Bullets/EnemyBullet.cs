@@ -3,7 +3,7 @@ using static Tutorial.Resources;
 
 namespace Tutorial
 {
-    public sealed class EnemyBullet : Bullet
+    public class EnemyBullet : Bullet
     {
         /// <summary>
         /// 新しいインスタンスを生成する

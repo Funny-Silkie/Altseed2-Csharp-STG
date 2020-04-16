@@ -6,7 +6,7 @@ namespace Tutorial
     /// <summary>
     /// プレイヤーのクラス
     /// </summary>
-    public sealed class Player : CollidableObject
+    public class Player : CollidableObject
     {
         /// <summary>
         /// 新しいインスタンスを生成する

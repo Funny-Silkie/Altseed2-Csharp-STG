@@ -1,4 +1,4 @@
-﻿using Altseed;
+using Altseed;
 using static Tutorial.Resources;
 
 namespace Tutorial
@@ -6,7 +6,7 @@ namespace Tutorial
     /// <summary>
     /// 追跡型敵
     /// </summary>
-    public sealed class ChaseEnemy : Enemy
+    public class ChaseEnemy : Enemy
     {
         private readonly float speed;
 
