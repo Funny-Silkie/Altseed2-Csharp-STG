@@ -1,4 +1,4 @@
-﻿using Altseed;
+using Altseed;
 using System;
 using static Tutorial.Resources;
 
@@ -11,7 +11,7 @@ namespace Tutorial
     {
         private int count = 0;
 
-        public override int Score => 20;
+        protected override int Score => 20;
 
         /// <summary>
         /// 新しいインスタンスを生成する

@@ -1,4 +1,4 @@
-﻿using Altseed;
+using Altseed;
 using static Tutorial.Resources;
 
 namespace Tutorial
@@ -9,7 +9,7 @@ namespace Tutorial
     public abstract class Enemy : CollidableObject
     {
         public sealed override bool DoSurvey => true;
-        public abstract int Score { get; }
+        protected abstract int Score { get; }
 
         /// <summary>
         /// プレイヤーへの参照を取得する

@@ -1,4 +1,4 @@
-﻿using Altseed;
+using Altseed;
 using static Tutorial.Resources;
 
 namespace Tutorial
@@ -11,7 +11,7 @@ namespace Tutorial
         private int count = 0;
         private readonly int shotAmount;
         private Vector2F velocity;
-        public override int Score => 30;
+        protected override int Score => 30;
 
         /// <summary>
         /// 新しいインスタンスを生成する

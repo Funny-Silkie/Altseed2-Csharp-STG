@@ -8,7 +8,7 @@ namespace Tutorial
     /// </summary>
     public sealed class Player : CollidableObject
     {
-        public override bool DoSurvey => true;
+        protected override bool DoSurvey => true;
 
         /// <summary>
         /// 新しいインスタンスを生成する

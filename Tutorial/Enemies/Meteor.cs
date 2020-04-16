@@ -11,7 +11,7 @@ namespace Tutorial
         private Vector2F velocity;
 
         private int HP = 3;
-        public override int Score => 1;
+        protected override int Score => 1;
 
         /// <summary>
         /// 新しいインスタンスを生成する

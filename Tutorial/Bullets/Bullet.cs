@@ -7,7 +7,7 @@ namespace Tutorial
     /// </summary>
     public abstract class Bullet : CollidableObject
     {
-        public sealed override bool DoSurvey => false;
+        protected sealed override bool DoSurvey => false;
 
         /// <summary>
         /// 移動距離

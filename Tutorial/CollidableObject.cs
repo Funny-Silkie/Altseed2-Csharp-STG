@@ -16,12 +16,12 @@ namespace Tutorial
         /// <summary>
         /// コライダを取得する
         /// </summary>
-        public CircleCollider Collider { get; } = new CircleCollider();
+        protected CircleCollider Collider { get; } = new CircleCollider();
 
         /// <summary>
         /// <see cref="OnUpdate"/>内で衝突判定を調査するかどうかを取得する
         /// </summary>
-        public abstract bool DoSurvey { get; }
+        protected abstract bool DoSurvey { get; }
 
         public override Vector2F Position
         {
@@ -36,7 +36,7 @@ namespace Tutorial
         /// <summary>
         /// 衝突半径を取得する
         /// </summary>
-        public float Radius { get => Collider.Radius; protected set => Collider.Radius = value; }
+        protected float Radius { get => Collider.Radius; set => Collider.Radius = value; }
 
         /// <summary>
         /// 所属するステージを取得する
