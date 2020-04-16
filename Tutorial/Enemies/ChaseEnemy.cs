@@ -1,4 +1,4 @@
-using Altseed;
+﻿using Altseed;
 using static Tutorial.Resources;
 
 namespace Tutorial
@@ -8,7 +8,7 @@ namespace Tutorial
     /// </summary>
     public class ChaseEnemy : Enemy
     {
-        private readonly float speed;
+        private float speed;
 
         /// <summary>
         /// 新しいインスタンスを生成する

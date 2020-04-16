@@ -9,7 +9,7 @@ namespace Tutorial
     public class RadialShotEnemy : Enemy
     {
         private int count = 0;
-        private readonly int shotAmount;
+        private int shotAmount;
         private Vector2F velocity;
 
         /// <summary>

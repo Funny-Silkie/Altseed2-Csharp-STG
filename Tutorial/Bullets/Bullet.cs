@@ -10,7 +10,7 @@ namespace Tutorial
         /// <summary>
         /// 移動距離
         /// </summary>
-        private readonly Vector2F velocity;
+        private Vector2F velocity;
 
         /// <summary>
         /// 新しいインスタンスを生成する

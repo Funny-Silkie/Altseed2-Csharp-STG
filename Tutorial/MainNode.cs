@@ -12,10 +12,10 @@ namespace Tutorial
         private int count = 0;
         private const int waves = 3;
         private int wave = 1;
-        private readonly Queue<Enemy>[] enemies = new Queue<Enemy>[waves];
-        private readonly Node characterNode = new Node();
+        private Queue<Enemy>[] enemies = new Queue<Enemy>[waves];
+        private Node characterNode = new Node();
         private Player player;
-        private readonly Node uiNode = new Node();
+        private Node uiNode = new Node();
         private TextNode scoreNode;
         private TextNode waveNode;
         private bool fading = false;

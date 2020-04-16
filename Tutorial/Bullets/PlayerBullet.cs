@@ -1,4 +1,4 @@
-using Altseed;
+﻿using Altseed;
 using static Tutorial.Resources;
 
 namespace Tutorial
@@ -8,7 +8,7 @@ namespace Tutorial
         /// <summary>
         /// 弾の移動量/フレーム
         /// </summary>
-        private readonly static Vector2F velocity = new Vector2F(10f, 0.0f);
+        private static Vector2F velocity = new Vector2F(10f, 0.0f);
 
         /// <summary>
         /// 新しいインスタンスを生成する
