@@ -3,52 +3,80 @@ using static Tutorial.Resources;
 
 namespace Tutorial
 {
-    /// <summary>
-    /// 放射ショットの敵
-    /// </summary>
+    // 放射ショットの敵
     public class RadialShotEnemy : Enemy
     {
+        // カウンタ変数
         private int count = 0;
+
+        // 撃ち出すショットの個数
         private int shotAmount;
+
+        // フレーム毎の速度
         private Vector2F velocity;
 
-        /// <summary>
-        /// 新しいインスタンスを生成する
-        /// </summary>
-        /// <param name="player">プレイヤーへの参照</param>
-        /// <param name="position">座標</param>
-        /// <param name="shotAmount">ショットの個数</param>
+        // コンストラクタ
         public RadialShotEnemy(Player player, Vector2F position, int shotAmount) : base(player, position)
         {
+            // 撃ち出すショットの個数を設定
             this.shotAmount = shotAmount;
+
+            // テクスチャを設定
             Texture = Texture_UFO;
+
+            // 中心座標を設定
             CenterPosition = Texture.Size / 2;
+
+            // 半径を設定
             collider.Radius = Texture.Size.X / 2;
+
+            // スコアを設定
             score = 30;
         }
 
+        // フレーム毎に実行
         protected override void OnUpdate()
         {
+            // カウントが250の倍数だったら
             if (count % 250 == 0)
             {
+                // 計算用のローカル変数
                 var half = shotAmount / 2;
+
                 for (int i = 0; i < shotAmount; i++)
                 {
-                    var vector = (player.Position - Position).Normal * 7.0f;
+                    // 現時点の座標からプレイヤーに向かうベクトルの単位ベクトルを取得する
+                    var vector = (player.Position - Position).Normal;
+
+                    // ベクトルを速度分掛ける
+                    vector *= 7.0f;
+
+                    // ベクトルを傾ける
                     vector.Degree += 30 * (i - half);
+
+                    // ショットを放つ
                     Shot(vector);
                 }
             }
 
+            // カウント÷100の余りが0～49だったら
             if (count % 100 < 50)
             {
-                if (count % 100 == 0) velocity = (player.Position - Position).Normal * 3.0f;
-                
+                // カウント÷100の余りが0だったら
+                if (count % 100 == 0)
+                {
+                    // 進むベクトルを設定
+                    velocity = (player.Position - Position).Normal * 3.0f;
+                }
+
+                // 速度分ベクトルを設定
                 Position += velocity;
             }
 
+            // EnemyクラスのOnUpdateを呼び出す
             base.OnUpdate();
 
+            // カウントを進める
             count++;
         }
     }

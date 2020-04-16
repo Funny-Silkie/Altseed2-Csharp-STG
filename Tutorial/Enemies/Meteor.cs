@@ -3,43 +3,61 @@ using static Tutorial.Resources;
 
 namespace Tutorial
 {
-    /// <summary>
-    /// 隕石
-    /// </summary>
+    // 隕石
     public class Meteor : Enemy
     {
+        // フレーム毎の移動速度
         private Vector2F velocity;
 
+        // HP
         private int HP = 3;
 
-        /// <summary>
-        /// 新しいインスタンスを生成する
-        /// </summary>
-        /// <param name="player">プレイヤーへの参照</param>
-        /// <param name="position">座標</param>
-        /// <param name="velocity">速度</param>
+        // コンストラクタ
         public Meteor(Player player, Vector2F position, Vector2F velocity) : base(player, position)
         {
+            // 速度の設定
             this.velocity = velocity;
+
+            // テクスチャの設定
             Texture = Texture_Meteor;
+
+            // 中心座標の設定
             CenterPosition = Texture.Size / 2;
+
+            // 半径の設定
             collider.Radius = Texture.Size.X / 2;
+
+            // スコアの設定
             score = 1;
         }
 
+        // 毎フレーム実行
         protected override void OnUpdate()
         {
+            // 座標を速度分加算
             Position += velocity;
+
+            // EnemyクラスのOnUpdate呼び出し
             base.OnUpdate();
+
+            // 画面外に出たら削除
             RemoveMyselfIfOutOfWindow();
         }
 
+        // 衝突時に実行
         protected override void OnCollision(CollidableObject obj)
         {
+            // 衝突したのが自機弾だったら
             if (obj is PlayerBullet)
             {
+                // HPを1減らす
                 HP--;
-                if (HP <= 0) base.OnCollision(obj);
+
+                // HPが0になったらEnemyクラスのOnCollisionを呼び出して削除
+                if (HP == 0)
+                {
+                    base.OnCollision(obj);
+                }
             }
         }
     }

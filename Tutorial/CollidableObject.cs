@@ -3,61 +3,62 @@ using Altseed;
 
 namespace Tutorial
 {
-    /// <summary>
-    /// 衝突可能なオブジェクト(円形)
-    /// </summary>
+    // 衝突可能なオブジェクト(円形)
     public class CollidableObject : SpriteNode
     {
-        /// <summary>
-        /// コライダのコレクションを取得する
-        /// </summary>
-        public static HashSet<CollidableObject> objects = new HashSet<CollidableObject>(10);
+        // コライダのコレクション
+        public static HashSet<CollidableObject> objects = new HashSet<CollidableObject>();
 
-        /// <summary>
-        /// コライダを取得する
-        /// </summary>
+        // コライダ
         protected CircleCollider collider = new CircleCollider();
 
-        /// <summary>
-        /// <see cref="OnUpdate"/>内で衝突判定を調査するかどうかを取得する
-        /// </summary>
+        // OnUpdate内で衝突判定を調査するかどうか
         protected bool doSurvey;
 
-        /// <summary>
-        /// 所属するステージを取得する
-        /// </summary>
-        public MainNode stage;
+        // 所属するメインノードへの参照
+        public MainNode mainNode;
 
-        /// <summary>
-        /// 新しいインスタンスを生成する
-        /// </summary
-        /// <param name="position">座標</param>
-        public CollidableObject(MainNode stage, Vector2F position)
+        // コンストラクタ
+        public CollidableObject(MainNode mainNode, Vector2F position)
         {
-            this.stage = stage;
+            // メインノードへの参照を設定
+            this.mainNode = mainNode;
+
+            // コライダの座標を設定
+            collider.Position = position;
+
+            // 座標を設定
             Position = position;
         }
 
+        // エンジンに追加された時に実行
         protected override void OnAdded()
         {
+            // コライダのコレクションに自身を追加
             objects.Add(this);
         }
 
+        // エンジンから削除された時に実行
         protected override void OnRemoved()
         {
+            // コライダのコレクションから自身を削除
             objects.Remove(this);
         }
 
+        // フレーム毎に実行
         protected override void OnUpdate()
         {
-            if (doSurvey) Survey();
+            // フラグが成立時に衝突判定を実行
+            if (doSurvey)
+            {
+                Survey();
+            }
+
+            // コライダの座標を更新
             collider.Position = Position;
         }
 
-        /// <summary>
-        /// <see cref="OnCollision(CollidableObject)"/>の制御
-        /// </summary>
-        /// <param name="obj"></param>
+        // 衝突時に実行
         private void CollideWith(CollidableObject obj)
         {
             if (obj == null) return;
@@ -65,29 +66,28 @@ namespace Tutorial
             OnCollision(obj);
         }
 
-        /// <summary>
-        /// 衝突時に実行
-        /// </summary>
-        /// <param name="obj">衝突したオブジェクト</param>
+        // 衝突時に実行される内容をオーバーライドして設定できる
         protected virtual void OnCollision(CollidableObject obj)
         {
 
         }
 
-        /// <summary>
-        /// 画面外で消去
-        /// </summary>
+        // 画面外に出た時自身を消去
         protected void RemoveMyselfIfOutOfWindow()
         {
             var halfSize = Texture.Size / 2;
-            if (Position.X < -halfSize.X || Position.Y < -halfSize.Y || Position.X > Engine.WindowSize.X + halfSize.X || Position.Y > Engine.WindowSize.Y + halfSize.Y) Parent?.RemoveChildNode(this);
+            if ((Position.X < -halfSize.X || Position.X > Engine.WindowSize.X + halfSize.X)
+                && (Position.Y < -halfSize.Y || Position.Y > Engine.WindowSize.Y + halfSize.Y))
+            {
+                // 自身を削除
+                Parent?.RemoveChildNode(this);
+            }
         }
 
-        /// <summary>
-        /// 衝突判定を調査する
-        /// </summary>
+        // 衝突判定を調査する
         private void Survey()
         {
+            // objects内の全オブジェクトを検索し，衝突が確認されたオブジェクト間でCollideWithを実行
             foreach (var obj in objects)
                 if (collider.GetIsCollidedWith(obj.collider))
                     CollideWith(obj);

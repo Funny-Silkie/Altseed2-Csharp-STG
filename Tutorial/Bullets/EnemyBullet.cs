@@ -3,23 +3,30 @@ using static Tutorial.Resources;
 
 namespace Tutorial
 {
+    // 敵の弾のクラス
     public class EnemyBullet : Bullet
     {
-        /// <summary>
-        /// 新しいインスタンスを生成する
-        /// </summary>
-        /// <param name="position">座標</param>
-        /// <param name="velocity">速度</param>
-        public EnemyBullet(MainNode stage, Vector2F position, Vector2F velocity) : base(stage, position, velocity)
+        // コンストラクタ
+        public EnemyBullet(MainNode mainNode, Vector2F position, Vector2F velocity) : base(mainNode, position, velocity)
         {
+            // テクスチャを設定
             Texture = Texture_Bullet_Red;
+
+            // 中心座標を設定
             CenterPosition = Texture.Size / 2;
+
+            // 半径を設定
             collider.Radius = Texture.Size.X / 2;
         }
 
+        // 衝突時に実行
         protected override void OnCollision(CollidableObject obj)
         {
-            if (obj is Player) Parent?.RemoveChildNode(this);
+            // 衝突対象がプレイヤーだったらBulletのOnCollisionを実行して削除
+            if (obj is Player)
+            {
+                Parent?.RemoveChildNode(this);
+            }
         }
     }
 }

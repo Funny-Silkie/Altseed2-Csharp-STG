@@ -2,9 +2,7 @@
 
 namespace Tutorial
 {
-    /// <summary>
-    /// リソースを置いておくクラス
-    /// </summary>
+    // リソースを置いておくクラス
     public static class Resources
     {
         #region Fonts

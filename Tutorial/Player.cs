@@ -3,66 +3,109 @@ using static Tutorial.Resources;
 
 namespace Tutorial
 {
-    /// <summary>
-    /// プレイヤーのクラス
-    /// </summary>
+    // プレイヤーのクラス
     public class Player : CollidableObject
     {
-        /// <summary>
-        /// 新しいインスタンスを生成する
-        /// </summary>
-        /// <param name="position">座標</param>
-        public Player(MainNode stage, Vector2F position) : base(stage, position)
+        // コンストラクタ
+        public Player(MainNode mainNode, Vector2F position) : base(mainNode, position)
         {
+            // 衝突判定を行うように設定
             doSurvey = true;
+
+            // テクスチャを設定
             Texture = Texture_Player;
+
+            // 中心座標を設定
             CenterPosition = Texture.Size / 2;
+
+            // コライダの半径を設定
             collider.Radius = Texture.Size.Y / 2;
         }
 
+        // 衝突時に実行
         protected override void OnCollision(CollidableObject obj)
         {
+            // 衝突対象が敵か敵の弾だったら
             if (obj is Enemy || obj is EnemyBullet)
             {
+                // 死亡音を再生
                 //Engine.Sound.Play(Sound_Explosion)
+
+                // 自身を親から削除
                 Parent.RemoveChildNode(this);
-                stage.ToGameOver();
+
+                // ゲームオーバーに遷移
+                mainNode.ToGameOver();
             }
         }
 
+        // フレーム毎に実行
         protected override void OnUpdate()
         {
+            // 移動を実行
             Move();
+
+            // ショットを実行
             Shot();
+
+            // CollidableObjectのOnupdate呼び出し
             base.OnUpdate();
         }
 
-        /// <summary>
-        /// 移動
-        /// </summary>
+        // 移動を行う
         private void Move()
         {
+            // 現在のX座標を取得する
             var x = Position.X;
+            // 現在のY座標を取得する
             var y = Position.Y;
+
+            // ↑キーでY座標を減少
+            if (Engine.Keyboard.GetKeyState(Keys.Up) == ButtonState.Hold)
+            {
+                y -= 2.5f;
+            }
+
+            // ↓キーでY座標を増加
+            if (Engine.Keyboard.GetKeyState(Keys.Down) == ButtonState.Hold)
+            {
+                y += 2.5f;
+            }
+
+            // →キーでX座標を増加
+            if (Engine.Keyboard.GetKeyState(Keys.Right) == ButtonState.Hold)
+            {
+                x += 2.5f;
+            }
+
+            // ←キーでX座標を減少
+            if (Engine.Keyboard.GetKeyState(Keys.Left) == ButtonState.Hold)
+            {
+                x -= 2.5f;
+            }
+
+            // テクスチャのサイズの半分を取得する
             var halfSize = Texture.Size / 2;
 
-            if (Engine.Keyboard.GetKeyState(Keys.Up) == ButtonState.Hold) y -= 2.5f;
-            if (Engine.Keyboard.GetKeyState(Keys.Down) == ButtonState.Hold) y += 2.5f;
-            if (Engine.Keyboard.GetKeyState(Keys.Right) == ButtonState.Hold) x += 2.5f;
-            if (Engine.Keyboard.GetKeyState(Keys.Left) == ButtonState.Hold) x -= 2.5f;
-
+            // X座標が画面外に行かないように調整
             x = MathHelper.Clamp(x, Engine.WindowSize.X - halfSize.X, halfSize.X);
+            // Y座標が画面外に行かないように調整
             y = MathHelper.Clamp(y, Engine.WindowSize.Y - halfSize.Y, halfSize.Y);
 
+            // 調整された座標を設定
             Position = new Vector2F(x, y);
         }
 
-        /// <summary>
-        /// ショット
-        /// </summary>
+        // ショット
         private void Shot()
         {
-            if (Engine.Keyboard.GetKeyState(Keys.Z) == ButtonState.Push) Parent.AddChildNode(new PlayerBullet(stage, Position + CenterPosition));
+            // Zキーでショットを放つ
+            if (Engine.Keyboard.GetKeyState(Keys.Z) == ButtonState.Push)
+            {
+                Parent.AddChildNode(new PlayerBullet(mainNode, Position + CenterPosition));
+            }
+
+            // ショット音を鳴らす
             //Engine.Sound.Play(Sound_PlayerShot);
         }
     }

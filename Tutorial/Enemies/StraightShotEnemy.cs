@@ -4,33 +4,50 @@ using static Tutorial.Resources;
 
 namespace Tutorial
 {
-    /// <summary>
-    /// まっすぐな弾を発射する敵
-    /// </summary>
+    // まっすぐな弾を発射する敵
     public class StraightShotEnemy : Enemy
     {
+        // カウンタ
         private int count = 0;
 
-        /// <summary>
-        /// 新しいインスタンスを生成する
-        /// </summary>
-        /// <param name="player">プレイヤーへの参照</param>
-        /// <param name="position">座標</param>
+        // コンストラクタ
         public StraightShotEnemy(Player player, Vector2F position) : base(player, position)
         {
+            // テクスチャを設定
             Texture = Texture_UFO;
+
+            // 中心座標を設定
             CenterPosition = Texture.Size / 2;
+
+            // 半径を設定
             collider.Radius = Texture.Size.X / 2;
+
+            // 倒された時に加算されるスコアを設定
             score = 20;
         }
 
+        // フレーム毎に実行
         protected override void OnUpdate()
         {
-            if (count % 150 == 0) Shot((player.Position - Position).Normal * 5);
-            
+            // カウントが150の倍数で実行
+            if (count % 150 == 0)
+            {
+                // プレイヤーに対するベクトルを取得
+                var velocity = player.Position - Position;
+                // ベクトルの長さを調整(弾速になる)
+                velocity.Length = 5;
+
+                // 弾を追加
+                Shot(velocity);
+            }
+
+            // 座標を設定
             Position -= new Vector2F(MathF.Sin(MathHelper.DegreeToRadian(count)) * 3.0f, 0);
 
+            // EnemyのOnUpdateを実行
             base.OnUpdate();
+
+            // カウントを進める
             count++;
         }
     }

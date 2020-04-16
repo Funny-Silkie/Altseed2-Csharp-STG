@@ -2,32 +2,35 @@
 
 namespace Tutorial
 {
-    /// <summary>
-    /// 弾のクラス
-    /// </summary>
+    // 弾のクラス
     public class Bullet : CollidableObject
     {
-        /// <summary>
-        /// 移動距離
-        /// </summary>
+        // フレーム毎に進む距離
         private Vector2F velocity;
 
-        /// <summary>
-        /// 新しいインスタンスを生成する
-        /// </summary>
-        /// <param name="position">座標</param>
-        /// <param name="velocity">速度</param>
-        public Bullet(MainNode stage, Vector2F position, Vector2F velocity) : base(stage, position)
+        // コンストラクタ
+        public Bullet(MainNode mainNpde, Vector2F position, Vector2F velocity) : base(mainNpde, position)
         {
+            // 衝突判定を行わないように設定
             doSurvey = false;
+
+            // 弾速を設定
             this.velocity = velocity;
+
+            // 表示位置をプレイヤーや敵より奥に設定
             ZOrder--;
         }
 
+        // フレーム毎に実行
         protected override void OnUpdate()
         {
+            // 座標を速度分進める
             Position += velocity;
+
+            // CollidableObjectのOnUpdateを呼び出す
             base.OnUpdate();
+
+            // 画面外に出たら自身を削除
             RemoveMyselfIfOutOfWindow();
         }
     }
