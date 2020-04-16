@@ -5,7 +5,7 @@ namespace Tutorial
     /// <summary>
     /// 弾のクラス
     /// </summary>
-    public abstract class Bullet : CollidableObject
+    public class Bullet : CollidableObject
     {
         /// <summary>
         /// 移動距離

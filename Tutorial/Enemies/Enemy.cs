@@ -5,7 +5,7 @@ namespace Tutorial
     /// <summary>
     /// 敵の抽象クラス
     /// </summary>
-    public abstract class Enemy : CollidableObject
+    public class Enemy : CollidableObject
     {
         protected int score;
 
@@ -18,7 +18,7 @@ namespace Tutorial
         /// 新しいインスタンスを生成する
         /// </summary>
         /// <param name="position">座標</param>
-        protected Enemy(Player player, Vector2F position) : base(player.stage, position)
+        public Enemy(Player player, Vector2F position) : base(player.stage, position)
         {
             doSurvey = true;
             this.player = player;

@@ -6,7 +6,7 @@ namespace Tutorial
     /// <summary>
     /// 衝突可能なオブジェクト(円形)
     /// </summary>
-    public abstract class CollidableObject : SpriteNode
+    public class CollidableObject : SpriteNode
     {
         /// <summary>
         /// コライダのコレクションを取得する
@@ -32,7 +32,7 @@ namespace Tutorial
         /// 新しいインスタンスを生成する
         /// </summary
         /// <param name="position">座標</param>
-        protected CollidableObject(MainNode stage, Vector2F position)
+        public CollidableObject(MainNode stage, Vector2F position)
         {
             this.stage = stage;
             Position = position;
@@ -69,7 +69,10 @@ namespace Tutorial
         /// 衝突時に実行
         /// </summary>
         /// <param name="obj">衝突したオブジェクト</param>
-        protected abstract void OnCollision(CollidableObject obj); 
+        protected virtual void OnCollision(CollidableObject obj)
+        {
+
+        }
 
         /// <summary>
         /// 画面外で消去
