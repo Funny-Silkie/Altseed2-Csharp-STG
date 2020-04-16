@@ -61,8 +61,19 @@ namespace Tutorial
         // 衝突時に実行
         private void CollideWith(CollidableObject obj)
         {
-            if (obj == null) return;
-            if (!obj.doSurvey) obj.OnCollision(this);
+            // nullだったら終了
+            if (obj == null)
+            {
+                return;
+            }
+
+            // 衝突対象がSurveyを実行しないオブジェクトだった場合，相手のOnCollisionも実行
+            if (!obj.doSurvey)
+            {
+                obj.OnCollision(this);
+            }
+
+            // 自身のOnCollisiionを実行
             OnCollision(obj);
         }
 
