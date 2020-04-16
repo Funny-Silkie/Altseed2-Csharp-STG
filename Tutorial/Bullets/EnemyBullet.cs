@@ -1,5 +1,4 @@
 ﻿using Altseed;
-using static Tutorial.Resources;
 
 namespace Tutorial
 {
@@ -9,8 +8,8 @@ namespace Tutorial
         // コンストラクタ
         public EnemyBullet(MainNode mainNode, Vector2F position, Vector2F velocity) : base(mainNode, position, velocity)
         {
-            // テクスチャを設定
-            Texture = Texture_Bullet_Red;
+            // テクスチャを読み込む
+            Texture = Texture2D.LoadStrict("Resources/Bullet_Red.png");
 
             // 中心座標を設定
             CenterPosition = Texture.Size / 2;

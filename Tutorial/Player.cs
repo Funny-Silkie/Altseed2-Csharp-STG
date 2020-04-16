@@ -1,5 +1,4 @@
 ﻿using Altseed;
-using static Tutorial.Resources;
 
 namespace Tutorial
 {
@@ -12,8 +11,8 @@ namespace Tutorial
             // 衝突判定を行うように設定
             doSurvey = true;
 
-            // テクスチャを設定
-            Texture = Texture_Player;
+            // テクスチャを読み込む
+            Texture = Texture2D.LoadStrict("Resources/Player.png");
 
             // 中心座標を設定
             CenterPosition = Texture.Size / 2;

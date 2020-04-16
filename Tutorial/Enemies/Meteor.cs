@@ -1,5 +1,4 @@
 ﻿using Altseed;
-using static Tutorial.Resources;
 
 namespace Tutorial
 {
@@ -19,7 +18,7 @@ namespace Tutorial
             this.velocity = velocity;
 
             // テクスチャの設定
-            Texture = Texture_Meteor;
+            Texture = Texture2D.LoadStrict("Resources/Meteor.png");
 
             // 中心座標の設定
             CenterPosition = Texture.Size / 2;

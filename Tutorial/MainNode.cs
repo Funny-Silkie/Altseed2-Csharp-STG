@@ -53,8 +53,8 @@ namespace Tutorial
 
             // 背景に使用するテクスチャ
             var backTexture = new SpriteNode();
-            // 背景のテクスチャを設定
-            backTexture.Texture = Resources.Texture_Background;
+            // 背景のテクスチャを読み込む
+            backTexture.Texture = Texture2D.LoadStrict("Resources/Background.png");
             // 表示位置を奥に設定
             backTexture.ZOrder = -100;
 
@@ -69,8 +69,8 @@ namespace Tutorial
 
             // スコアを表示するノードを設定
             scoreNode = new TextNode();
-            // スコア表示に使うフォントを設定
-            scoreNode.Font = Resources.Font30;
+            // スコア表示に使うフォントを読み込む
+            scoreNode.Font = Font.LoadDynamicFontStrict("Resources/GenYoMinJP-Bold.ttf", 30);
             // スコア表示の位置を設定
             scoreNode.Position = new Vector2F();
 
@@ -79,8 +79,8 @@ namespace Tutorial
 
             // 現在ウェーブを表示するノードを設定
             waveNode = new TextNode();
-            // ウェーブ表示に使うフォントを設定
-            waveNode.Font = Resources.Font30;
+            // ウェーブ表示に使うフォントを読み込む
+            waveNode.Font = Font.LoadDynamicFontStrict("Resources/GenYoMinJP-Bold.ttf", 30);
             // ウェーブ表示の座標を設定
             waveNode.Position = new Vector2F(200, 0);
 

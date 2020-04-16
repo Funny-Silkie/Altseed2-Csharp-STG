@@ -1,5 +1,4 @@
 ﻿using Altseed;
-using static Tutorial.Resources;
 
 namespace Tutorial
 {
@@ -15,8 +14,8 @@ namespace Tutorial
             // 座標を設定
             Position = position;
 
-            // テクスチャを設定
-            Texture = Texture_Explosion;
+            // テクスチャを読み込む
+            Texture = Texture2D.LoadStrict("Resources/Explosion.png");
 
             // 中心座標を設定
             CenterPosition = new Vector2F(32f, 32f);

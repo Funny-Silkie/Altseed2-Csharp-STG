@@ -1,5 +1,4 @@
 ﻿using Altseed;
-using static Tutorial.Resources;
 
 namespace Tutorial
 {
@@ -12,8 +11,8 @@ namespace Tutorial
         // コンストラクタ
         public PlayerBullet(MainNode mainNode, Vector2F position) : base(mainNode, position, velocity)
         {
-            // テクスチャを設定
-            Texture = Texture_Bullet_Blue;
+            // テクスチャを読み込む
+            Texture = Texture2D.LoadStrict("Resources/Bullet_Blue.png");
 
             // 中心座標を設定
             CenterPosition = Texture.Size / 2;

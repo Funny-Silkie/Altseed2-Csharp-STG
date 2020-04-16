@@ -13,8 +13,8 @@ namespace Tutorial
         {
             // タイトル
             var titleText = new TextNode();
-            // タイトルのフォントを設定
-            titleText.Font = Resources.Font100;
+            // タイトルのフォントを読み込む
+            titleText.Font = Font.LoadDynamicFontStrict("Resources/GenYoMinJP-Bold.ttf", 100);
             // タイトルの文字を設定
             titleText.Text = "Clear!";
             // タイトルの座標を設定
@@ -25,12 +25,10 @@ namespace Tutorial
 
             // 画面下の案内
             var announce = new TextNode();
-            // 案内のフォントを設定
-            announce.Font = Resources.Font100;
+            // 案内のフォントを読み込む
+            announce.Font = Font.LoadDynamicFontStrict("Resources/GenYoMinJP-Bold.ttf", 50);
             // 案内のテキストを設定
             announce.Text = "Press Z to go title";
-            // 案内の拡大率を設定
-            announce.Scale = new Vector2F(0.5f, 0.5f);
             // 案内の座標を設定
             announce.Position = new Vector2F(296, 575);
 

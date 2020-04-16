@@ -42,8 +42,8 @@ namespace Tutorial
 
         //    // 自機
         //    var player = new SpriteNode();
-        //    // 自機のテクスチャを設定
-        //    player.Texture = Resources.Texture_Player;
+        //    // 自機のテクスチャを読み込む
+        //    player.Texture = Texture2D.LoadStrict("Resources/Player.png");
         //    // 自機の座標を設定
         //    player.Position = new Vector2F(100, 360);
         //    // 自機の中心座標を設定
@@ -87,8 +87,8 @@ namespace Tutorial
         //        {
         //            // 発射される自機弾
         //            var bullet = new SpriteNode();
-        //            // 自機弾のテクスチャを設定
-        //            bullet.Texture = Resources.Texture_Bullet_Blue;
+        //            // 自機弾のテクスチャを読み込む
+        //            bullet.Texture = Texture2D.LoadStrict("Resources/Bullet_Blue.png");
         //            // 自機弾の座標を設定
         //            bullet.Position = player.Position;
         //            // 自機弾の中心座標を設定

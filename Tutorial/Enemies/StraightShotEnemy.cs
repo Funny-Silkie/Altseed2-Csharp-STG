@@ -1,6 +1,5 @@
 ﻿using Altseed;
 using System;
-using static Tutorial.Resources;
 
 namespace Tutorial
 {
@@ -13,8 +12,8 @@ namespace Tutorial
         // コンストラクタ
         public StraightShotEnemy(Player player, Vector2F position) : base(player, position)
         {
-            // テクスチャを設定
-            Texture = Texture_UFO;
+            // テクスチャを読み込む
+            Texture = Texture2D.LoadStrict("Resources/UFO.png");
 
             // 中心座標を設定
             CenterPosition = Texture.Size / 2;
