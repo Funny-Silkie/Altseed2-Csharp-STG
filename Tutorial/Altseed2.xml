@@ -2120,6 +2120,11 @@
             変換行列を取得または設定します。
             </summary>
         </member>
+        <member name="P:Altseed.Rendered.Id">
+            <summary>
+            BaseObjectのIdを取得します
+            </summary>
+        </member>
         <member name="M:Altseed.Rendered.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
             シリアライズされたデータをもとに<see cref="T:Altseed.Rendered"/>のインスタンスを生成する
@@ -2618,6 +2623,32 @@
             </summary>
             <param name="character">文字</param>
             <param name="texture">テクスチャ</param>
+        </member>
+        <member name="T:Altseed.CullingSystem">
+            <summary>
+            カリングのクラス
+            </summary>
+        </member>
+        <member name="P:Altseed.CullingSystem.DrawingRenderedCount">
+            <summary>
+            描画されているRenderedの個数を取得する
+            </summary>
+        </member>
+        <member name="P:Altseed.CullingSystem.DrawingRenderedIds">
+            <summary>
+            描画されているRenderedのIdの配列を取得する
+            </summary>
+        </member>
+        <member name="M:Altseed.CullingSystem.GetInstance">
+            <summary>
+            インスタンスを取得します。
+            </summary>
+            <returns>使用するインスタンス</returns>
+        </member>
+        <member name="M:Altseed.CullingSystem.UpdateAABB">
+            <summary>
+            RenderedのAABBを更新します
+            </summary>
         </member>
         <member name="M:Altseed.Tool.Begin(System.String,Altseed.ToolWindow)">
             <summary>
@@ -4154,6 +4185,11 @@
         <member name="P:Altseed.Engine.Renderer">
             <summary>
             レンダラのクラスを取得します。
+            </summary>
+        </member>
+        <member name="P:Altseed.Engine.CullingSystem">
+            <summary>
+            カリングのクラスを取得します。
             </summary>
         </member>
         <member name="P:Altseed.Engine.Sound">
@@ -6033,6 +6069,11 @@
             このノードを描画するカメラを取得または設定します。
             </summary>
         </member>
+        <member name="P:Altseed.DrawnNode.CullingId">
+            <summary>
+            カリング用ID
+            </summary>
+        </member>
         <member name="M:Altseed.DrawnNode.UpdateTransform">
             <summary>
             <see cref="P:Altseed.DrawnNode.Transform"/>を更新する
@@ -6157,6 +6198,11 @@
             描画に適用するマテリアルを取得または設定します。
             </summary>
         </member>
+        <member name="P:Altseed.PolygonNode.CullingId">
+            <summary>
+            カリング用ID
+            </summary>
+        </member>
         <member name="M:Altseed.PolygonNode.#ctor">
             <summary>
             新しいインスタンスを生成します。
@@ -6200,6 +6246,11 @@
             使用するマテリアルを取得または設定します
             </summary>
         </member>
+        <member name="P:Altseed.SpriteNode.CullingId">
+            <summary>
+            カリング用ID
+            </summary>
+        </member>
         <member name="M:Altseed.SpriteNode.#ctor">
             <summary>
             新しいインスタンスを生成します。
@@ -6233,6 +6284,11 @@
         <member name="P:Altseed.TextNode.Color">
             <summary>
             色を取得または設定します。
+            </summary>
+        </member>
+        <member name="P:Altseed.TextNode.CullingId">
+            <summary>
+            カリング用ID
             </summary>
         </member>
         <member name="M:Altseed.TextNode.#ctor">
