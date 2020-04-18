@@ -11,6 +11,9 @@ namespace Tutorial
         // 撃ち出すショットの個数
         private int shotAmount;
 
+        // ショット時の効果音
+        private Sound shotSound;
+
         // フレーム毎の速度
         private Vector2F velocity;
 
@@ -31,6 +34,9 @@ namespace Tutorial
 
             // スコアを設定
             score = 30;
+
+            // ショット時の効果音を読み込む
+            shotSound = Sound.LoadStrict("Resources/shot2.wav", true);
         }
 
         // フレーム毎に実行
@@ -77,6 +83,16 @@ namespace Tutorial
 
             // カウントを進める
             count++;
+        }
+
+        // 弾を撃つ
+        private void Shot(Vector2F velocity)
+        {
+            // 敵弾を画面に追加
+            Parent.AddChildNode(new EnemyBullet(mainNode, Position, velocity));
+
+            // ショット音を再生
+            Engine.Sound.Play(shotSound);
         }
     }
 }

@@ -9,6 +9,9 @@ namespace Tutorial
         // カウンタ
         private int count = 0;
 
+        // ショット時の効果音
+        private Sound shotSound;
+
         // コンストラクタ
         public StraightShotEnemy(Player player, Vector2F position) : base(player, position)
         {
@@ -23,6 +26,9 @@ namespace Tutorial
 
             // 倒された時に加算されるスコアを設定
             score = 20;
+
+            // ショット時の効果音を読み込む
+            shotSound = Sound.LoadStrict("Resources/shot2.wav", true);
         }
 
         // フレーム毎に実行
@@ -48,6 +54,16 @@ namespace Tutorial
 
             // カウントを進める
             count++;
+        }
+
+        // 弾を撃つ
+        private void Shot(Vector2F velocity)
+        {
+            // 敵弾を画面に追加
+            Parent.AddChildNode(new EnemyBullet(mainNode, Position, velocity));
+
+            // ショット音を再生
+            Engine.Sound.Play(shotSound);
         }
     }
 }

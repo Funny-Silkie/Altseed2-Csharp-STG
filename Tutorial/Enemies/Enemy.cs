@@ -36,8 +36,11 @@ namespace Tutorial
                 // 自身を削除
                 Parent.RemoveChildNode(this);
 
+                // 死亡時サウンドを読み込み
+                var deathSound = Sound.LoadStrict("Resources/Explosion.wav", true);
+
                 // 死亡時サウンドを再生
-                //Engine.Sound.Play(Sound_Explosion);
+                Engine.Sound.Play(deathSound);
             }
         }
 
@@ -49,16 +52,6 @@ namespace Tutorial
 
             // 画面外に出たら自身を削除
             RemoveMyselfIfOutOfWindow();
-        }
-
-        // 弾を撃つ
-        protected void Shot(Vector2F velocity)
-        {
-            // 敵弾を画面に追加
-            Parent.AddChildNode(new EnemyBullet(mainNode, Position, velocity));
-
-            // ショット音を再生
-            //Engine.Sound.Play(Sound_EnemyShot);
         }
     }
 }

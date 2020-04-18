@@ -5,6 +5,9 @@ namespace Tutorial
     // プレイヤーのクラス
     public class Player : CollidableObject
     {
+        // ショット時の効果音
+        private Sound shotSound;
+
         // コンストラクタ
         public Player(MainNode mainNode, Vector2F position) : base(mainNode, position)
         {
@@ -19,6 +22,9 @@ namespace Tutorial
 
             // コライダの半径を設定
             collider.Radius = Texture.Size.Y / 2;
+
+            // ショット音を読み込む
+            shotSound = Sound.LoadStrict("Resources/shot1.wav", true);
         }
 
         // 衝突時に実行
@@ -27,8 +33,11 @@ namespace Tutorial
             // 衝突対象が敵か敵の弾だったら
             if (obj is Enemy || obj is EnemyBullet)
             {
+                // 死亡音を読み込む
+                var deathSound = Sound.LoadStrict("Resources/Explosion.wav", true);
+
                 // 死亡音を再生
-                //Engine.Sound.Play(Sound_Explosion)
+                Engine.Sound.Play(deathSound);
 
                 // 自身を親から削除
                 Parent.RemoveChildNode(this);
@@ -105,7 +114,7 @@ namespace Tutorial
             }
 
             // ショット音を鳴らす
-            //Engine.Sound.Play(Sound_PlayerShot);
+            Engine.Sound.Play(shotSound);
         }
     }
 }

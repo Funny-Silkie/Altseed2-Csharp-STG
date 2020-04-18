@@ -91,7 +91,7 @@ namespace Tutorial
             InitAllWave();
 
             // BGMを初期化する
-            //InitBGM();
+            InitBGM();
         }
 
         // エンジンから削除されたときに実行
@@ -104,11 +104,20 @@ namespace Tutorial
         // BGMを初期化
         private void InitBGM()
         {
+            // BGMを読み込む
+            var bgm = Sound.LoadStrict("Resources/BGM.wav", false);
+
             // BGMをループするように設定
-            Resources.Sound_BGM.IsLoopingMode = true;
+            bgm.IsLoopingMode = true;
+
+            // ループ開始位置を設定
+            bgm.LoopStartingPoint = 11.33f;
+
+            // ループ終了位置を設定
+            bgm.LoopEndPoint = 33.93f;
 
             // BGMのプレイ開始
-            bgmID = Engine.Sound.Play(Resources.Sound_BGM);
+            bgmID = Engine.Sound.Play(bgm);
         }
 
         // 全ウェーブの初期化
@@ -244,10 +253,10 @@ namespace Tutorial
         public void ToGameOver()
         {
             // BGMをフェードアウト
-            //if (!bgmID.HasValue)
-            //{
-            //    Engine.Sound.FadeOut(bgmID.Value, 3.0f);
-            //}
+            if (!bgmID.HasValue)
+            {
+                Engine.Sound.FadeOut(bgmID.Value, 3.0f);
+            }
 
             // 画面遷移中でないなら遷移処理を実行
             if (!fading)
@@ -286,10 +295,10 @@ namespace Tutorial
                     if (wave > waves && !fading)
                     {
                         // BGMをフェードアウト
-                        //if (bgmID.HasValue)
-                        //{
-                        //    Engine.Sound.FadeOut(bgmID.Value, 3.0f);
-                        //}
+                        if (bgmID.HasValue)
+                        {
+                            Engine.Sound.FadeOut(bgmID.Value, 3.0f);
+                        }
 
                         // エンジンから自身を削除
                         Engine.RemoveNode(this);
