@@ -210,8 +210,8 @@ namespace Tutorial
 
 
             enemies[2].Enqueue(new StraightShotEnemy(player, new Vector2F(600, 100)));
-            enemies[2].Enqueue(new ChaseEnemy(player, new Vector2F(100, 100), 3.0f));
-            enemies[2].Enqueue(new ChaseEnemy(player, new Vector2F(100, 620), 3.0f));
+            enemies[2].Enqueue(new ChaseEnemy(player, new Vector2F(100, 100), 2.0f));
+            enemies[2].Enqueue(new ChaseEnemy(player, new Vector2F(100, 620), 2.0f));
             enemies[2].Enqueue(new StraightShotEnemy(player, new Vector2F(600, 620)));
 
             enemies[2].Enqueue(new RadialShotEnemy(player, new Vector2F(400, 160), 3));
@@ -224,8 +224,8 @@ namespace Tutorial
             enemies[2].Enqueue(new RadialShotEnemy(player, new Vector2F(100, 360), 5));
             enemies[2].Enqueue(new RadialShotEnemy(player, new Vector2F(860, 360), 5));
 
-            enemies[2].Enqueue(new ChaseEnemy(player, new Vector2F(500, 360), 3.0f));
-            enemies[2].Enqueue(new ChaseEnemy(player, new Vector2F(500, 360), 3.0f));
+            enemies[2].Enqueue(new ChaseEnemy(player, new Vector2F(500, 360), 2.0f));
+            enemies[2].Enqueue(new ChaseEnemy(player, new Vector2F(500, 360), 2.0f));
 
             enemies[2].Enqueue(new RadialShotEnemy(player, new Vector2F(600, 200), 7));
             enemies[2].Enqueue(new RadialShotEnemy(player, new Vector2F(600, 520), 7));
@@ -253,9 +253,9 @@ namespace Tutorial
         public void ToGameOver()
         {
             // BGMをフェードアウト
-            if (!bgmID.HasValue)
+            if (bgmID.HasValue)
             {
-                Engine.Sound.FadeOut(bgmID.Value, 3.0f);
+                Engine.Sound.FadeOut(bgmID.Value, 1.0f);
             }
 
             // 画面遷移中でないなら遷移処理を実行
@@ -297,7 +297,7 @@ namespace Tutorial
                         // BGMをフェードアウト
                         if (bgmID.HasValue)
                         {
-                            Engine.Sound.FadeOut(bgmID.Value, 3.0f);
+                            Engine.Sound.FadeOut(bgmID.Value, 1.0f);
                         }
 
                         // エンジンから自身を削除

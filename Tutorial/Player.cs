@@ -111,10 +111,10 @@ namespace Tutorial
             if (Engine.Keyboard.GetKeyState(Keys.Z) == ButtonState.Push)
             {
                 Parent.AddChildNode(new PlayerBullet(mainNode, Position + CenterPosition));
-            }
 
-            // ショット音を鳴らす
-            Engine.Sound.Play(shotSound);
+                // ショット音を鳴らす
+                Engine.Sound.Play(shotSound);
+            }
         }
     }
 }
