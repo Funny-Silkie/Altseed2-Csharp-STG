@@ -15,6 +15,10 @@ namespace Tutorial
             var player = new SpriteNode();
             // 自機のテクスチャを読み込む
             player.Texture = Texture2D.LoadStrict("Resources/Player.png");
+            // 自機の座標を設定
+            player.Position = new Vector2F(100, 360);
+            // 自機の中心座標を設定
+            player.CenterPosition = player.Texture.Size / 2;
 
             // 自機をエンジンに追加
             Engine.AddNode(player);
@@ -24,6 +28,30 @@ namespace Tutorial
             {
                 // エンジンを更新
                 Engine.Update();
+
+                // ↑キーでY座標を減少
+                if (Engine.Keyboard.GetKeyState(Keys.Up) == ButtonState.Hold)
+                {
+                    player.Position += new Vector2F(0.0f, -2.5f);
+                }
+
+                // ↓キーでY座標を増加
+                if (Engine.Keyboard.GetKeyState(Keys.Down) == ButtonState.Hold)
+                {
+                    player.Position += new Vector2F(0.0f, 2.5f);
+                }
+
+                // →キーでX座標を増加
+                if (Engine.Keyboard.GetKeyState(Keys.Right) == ButtonState.Hold)
+                {
+                    player.Position += new Vector2F(2.5f, 0.0f);
+                }
+
+                // ←キーでX座標を減少
+                if (Engine.Keyboard.GetKeyState(Keys.Left) == ButtonState.Hold)
+                {
+                    player.Position -= new Vector2F(2.5f, 0.0f);
+                }
 
                 // Escapeキーでゲーム終了
                 if (Engine.Keyboard.GetKeyState(Keys.Escape) == ButtonState.Push)
