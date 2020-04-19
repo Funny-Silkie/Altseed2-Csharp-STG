@@ -91,92 +91,30 @@ namespace Tutorial
 
 
             enemies[0].Enqueue(new ChaseEnemy(player, new Vector2F(700, 160), 2.0f));
-            enemies[0].Enqueue(new ChaseEnemy(player, new Vector2F(700, 160), 2.0f));
-            enemies[0].Enqueue(new ChaseEnemy(player, new Vector2F(700, 160), 2.0f));
 
-            enemies[0].Enqueue(new ChaseEnemy(player, new Vector2F(700, 360), 2.0f));
-            enemies[0].Enqueue(new ChaseEnemy(player, new Vector2F(700, 360), 2.0f));
-            enemies[0].Enqueue(new ChaseEnemy(player, new Vector2F(700, 360), 2.0f));
-
-            enemies[0].Enqueue(new ChaseEnemy(player, new Vector2F(700, 560), 2.0f));
-            enemies[0].Enqueue(new ChaseEnemy(player, new Vector2F(700, 560), 2.0f));
-            enemies[0].Enqueue(new ChaseEnemy(player, new Vector2F(700, 560), 2.0f));
-
-            enemies[0].Enqueue(new StraightShotEnemy(player, new Vector2F(600, 100)));
             enemies[0].Enqueue(new StraightShotEnemy(player, new Vector2F(600, 620)));
 
-            enemies[0].Enqueue(new ChaseEnemy(player, new Vector2F(700, 560), 2.0f));
+            enemies[0].Enqueue(new Meteor(player, new Vector2F(910, 400), new Vector2F(-4.0f, 0.0f)));
 
-            enemies[0].Enqueue(new StraightShotEnemy(player, new Vector2F(600, 100)));
-            enemies[0].Enqueue(new StraightShotEnemy(player, new Vector2F(600, 620)));
-
-            enemies[0].Enqueue(new ChaseEnemy(player, new Vector2F(700, 160), 2.0f));
-
-            enemies[0].Enqueue(new StraightShotEnemy(player, new Vector2F(600, 100)));
-            enemies[0].Enqueue(new StraightShotEnemy(player, new Vector2F(600, 620)));
+            enemies[0].Enqueue(new RadialShotEnemy(player, new Vector2F(400, 160), 3));
         }
 
         // ウェーブ2の初期化
         private void InitWave2()
         {
-            // enemies[0].Enqueue～でウェーブ1に敵を追加
+            // enemies[1].Enqueue～でウェーブ1に敵を追加
             // 追加した順番に敵が出現する
 
 
-            enemies[1].Enqueue(new ChaseEnemy(player, new Vector2F(500, 360), 2.5f));
-            enemies[1].Enqueue(new ChaseEnemy(player, new Vector2F(500, 360), 2.5f));
-
-            enemies[1].Enqueue(new StraightShotEnemy(player, new Vector2F(500, 100)));
-            enemies[1].Enqueue(new StraightShotEnemy(player, new Vector2F(500, 620)));
-
-            var random = new System.Random();
-
-            enemies[1].Enqueue(new Meteor(player, new Vector2F(910, random.Next(50, Engine.WindowSize.Y - 50)), new Vector2F(-4.0f, 0.0f)));
-            enemies[1].Enqueue(new Meteor(player, new Vector2F(910, random.Next(50, Engine.WindowSize.Y - 50)), new Vector2F(-4.0f, 0.0f)));
-            enemies[1].Enqueue(new Meteor(player, new Vector2F(910, random.Next(50, Engine.WindowSize.Y - 50)), new Vector2F(-4.0f, 0.0f)));
-            enemies[1].Enqueue(new Meteor(player, new Vector2F(910, random.Next(50, Engine.WindowSize.Y - 50)), new Vector2F(-4.0f, 0.0f)));
-            enemies[1].Enqueue(new Meteor(player, new Vector2F(910, random.Next(50, Engine.WindowSize.Y - 50)), new Vector2F(-4.0f, 0.0f)));
-            enemies[1].Enqueue(new Meteor(player, new Vector2F(910, random.Next(50, Engine.WindowSize.Y - 50)), new Vector2F(-4.0f, 0.0f)));
-            enemies[1].Enqueue(new Meteor(player, new Vector2F(910, random.Next(50, Engine.WindowSize.Y - 50)), new Vector2F(-4.0f, 0.0f)));
-            enemies[1].Enqueue(new Meteor(player, new Vector2F(910, random.Next(50, Engine.WindowSize.Y - 50)), new Vector2F(-4.0f, 0.0f)));
-            enemies[1].Enqueue(new Meteor(player, new Vector2F(910, random.Next(50, Engine.WindowSize.Y - 50)), new Vector2F(-4.0f, 0.0f)));
-
-            enemies[1].Enqueue(new StraightShotEnemy(player, new Vector2F(700, 320)));
-            enemies[1].Enqueue(new Meteor(player, new Vector2F(910, random.Next(50, Engine.WindowSize.Y - 50)), new Vector2F(-4.0f, 0.0f)));
-
-            enemies[1].Enqueue(new StraightShotEnemy(player, new Vector2F(700, 400)));
-            enemies[1].Enqueue(new Meteor(player, new Vector2F(910, random.Next(50, Engine.WindowSize.Y - 50)), new Vector2F(-4.0f, 0.0f)));
         }
 
         // ウェーブ3の初期化
         private void InitWave3()
         {
-            // enemies[0].Enqueue～でウェーブ1に敵を追加
+            // enemies[2].Enqueue～でウェーブ1に敵を追加
             // 追加した順番に敵が出現する
 
 
-            enemies[2].Enqueue(new StraightShotEnemy(player, new Vector2F(600, 100)));
-            enemies[2].Enqueue(new ChaseEnemy(player, new Vector2F(100, 100), 2.0f));
-            enemies[2].Enqueue(new ChaseEnemy(player, new Vector2F(100, 620), 2.0f));
-            enemies[2].Enqueue(new StraightShotEnemy(player, new Vector2F(600, 620)));
-
-            enemies[2].Enqueue(new RadialShotEnemy(player, new Vector2F(400, 160), 3));
-            enemies[2].Enqueue(new RadialShotEnemy(player, new Vector2F(400, 360), 3));
-            enemies[2].Enqueue(new RadialShotEnemy(player, new Vector2F(400, 560), 3));
-
-            enemies[2].Enqueue(new StraightShotEnemy(player, new Vector2F(910, 50)));
-            enemies[2].Enqueue(new StraightShotEnemy(player, new Vector2F(910, 670)));
-
-            enemies[2].Enqueue(new RadialShotEnemy(player, new Vector2F(100, 360), 5));
-            enemies[2].Enqueue(new RadialShotEnemy(player, new Vector2F(860, 360), 5));
-
-            enemies[2].Enqueue(new ChaseEnemy(player, new Vector2F(500, 360), 2.0f));
-            enemies[2].Enqueue(new ChaseEnemy(player, new Vector2F(500, 360), 2.0f));
-
-            enemies[2].Enqueue(new RadialShotEnemy(player, new Vector2F(600, 200), 7));
-            enemies[2].Enqueue(new RadialShotEnemy(player, new Vector2F(600, 520), 7));
-            enemies[2].Enqueue(new RadialShotEnemy(player, new Vector2F(600, 200), 7));
-            enemies[2].Enqueue(new RadialShotEnemy(player, new Vector2F(600, 520), 7));
         }
 
         // フレーム毎に実行
