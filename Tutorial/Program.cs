@@ -10,7 +10,7 @@ namespace Tutorial
         static void Main(string[] args)
         {
             // エンジンを初期化
-            Engine.Initialize("Tutorial", 960, 720, new Configuration());
+            Engine.Initialize("Tutorial", 960, 720);
 
             // タイトル画面をエンジンに追加
             Engine.AddNode(new TitleNode());
