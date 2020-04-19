@@ -38,9 +38,6 @@ namespace Tutorial
 
             // EnemyクラスのOnUpdate呼び出し
             base.OnUpdate();
-
-            // 画面外に出たら削除
-            RemoveMyselfIfOutOfWindow();
         }
 
         // 衝突時に実行
