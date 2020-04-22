@@ -5,11 +5,8 @@ namespace Tutorial
     // 自機弾
     public class PlayerBullet : Bullet
     {
-        // フレーム毎の移動距離
-        private static Vector2F velocity = new Vector2F(10f, 0.0f);
-
         // コンストラクタ
-        public PlayerBullet(MainNode mainNode, Vector2F position) : base(mainNode, position, velocity)
+        public PlayerBullet(MainNode mainNode, Vector2F position) : base(mainNode, position, new Vector2F(10f, 0.0f))
         {
             // テクスチャを読み込む
             Texture = Texture2D.LoadStrict("Resources/Bullet_Blue.png");
