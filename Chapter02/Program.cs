@@ -9,7 +9,7 @@ namespace Tutorial
         static void Main(string[] args)
         {
             // エンジンを初期化
-            Engine.Initialize("Tutorial", 960, 720, new Configuration());
+            Engine.Initialize("Tutorial", 960, 720);
 
             // 自機
             var player = new SpriteNode();
