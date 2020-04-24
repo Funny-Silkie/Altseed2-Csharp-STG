@@ -11,7 +11,7 @@ namespace Tutorial
             // エンジンを初期化
             Engine.Initialize("Tutorial", 960, 720);
 
-            // タイトル画面をエンジンに追加
+            // メイン画面をエンジンに追加
             Engine.AddNode(new MainNode());
 
             // メインループ
