@@ -1,0 +1,80 @@
+﻿using Altseed;
+
+namespace Tutorial
+{
+    // 敵の基礎となるクラス
+    public class Enemy : CollidableObject
+    {
+        // 倒された時に加算されるスコアの値
+        protected int score;
+        
+        // プレイヤーへの参照
+        protected Player player;
+        
+        // コンストラクタ
+        ------added start------
+        public Enemy(Player player, Vector2F position) : base(player.mainNode, position)
+        ------added end------
+        ------removed start------
+        public Enemy(Player player, Vector2F position)
+        ------removed end------
+        {
+            ------added start------
+            // 衝突判定を行うように設定
+            doSurvey = true;
+            ------added end------
+            ------removed start------
+            // 座標を設定
+            Position = position;
+            ------removed end------
+
+            // プレイヤーへの参照を設定
+            this.player = player;
+        }
+
+        ------added start------
+        // 衝突時に実行
+        protected override void OnCollision(CollidableObject obj)
+        {
+            // 衝突対象が自機弾だったら
+            if (obj is PlayerBullet)
+            {
+                // スコアを加算
+                mainNode.score += score;
+
+                // 死亡時エフェクトを再生
+                Parent.AddChildNode(new DeathEffect(Position));
+
+                // 自身を削除
+                Parent.RemoveChildNode(this);
+            }
+        }
+        ------added end------
+
+        // フレーム毎に実行
+        protected override void OnUpdate()
+        {
+            // CollidableObjectのOnUpdateを実行
+            base.OnUpdate();
+
+            // 画面外に出たら自身を削除
+            RemoveMyselfIfOutOfWindow();
+        }
+
+        ------removed start------
+        // 画面外に出た時自身を消去
+        protected void RemoveMyselfIfOutOfWindow()
+        {
+            var halfSize = Texture.Size / 2;
+            if (Position.X < -halfSize.X
+                || Position.X > Engine.WindowSize.X + halfSize.X
+                || Position.Y < -halfSize.Y
+                || Position.Y > Engine.WindowSize.Y + halfSize.Y)
+            {
+                // 自身を削除
+                Parent?.RemoveChildNode(this);
+            }
+        }
+        ------removed end------
+    }
+}
