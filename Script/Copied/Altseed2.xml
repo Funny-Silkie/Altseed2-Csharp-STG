@@ -1037,6 +1037,511 @@
             タイ語
             </summary>
         </member>
+        <member name="T:Altseed.ToolFocused">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolFocused.ChildWindows">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolFocused.RootWindow">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolFocused.AnyWindow">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolFocused.RootAndChildWindows">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Altseed.ToolColor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.Text">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.TextDisabled">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.WindowBg">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.ChildBg">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.PopupBg">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.Border">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.BorderShadow">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.FrameBg">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.FrameBgHovered">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.FrameBgActive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.TitleBg">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.TitleBgActive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.TitleBgCollapsed">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.MenuBarBg">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.ScrollbarBg">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.ScrollbarGrab">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.ScrollbarGrabHovered">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.ScrollbarGrabActive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.CheckMark">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.SliderGrab">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.SliderGrabActive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.Button">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.ButtonHovered">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.ButtonActive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.Header">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.HeaderHovered">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.HeaderActive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.Separator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.SeparatorHovered">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.SeparatorActive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.ResizeGrip">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.ResizeGripHovered">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.ResizeGripActive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.Tab">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.TabHovered">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.TabActive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.TabUnfocused">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.TabUnfocusedActive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.PlotLines">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.PlotLinesHovered">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.PlotHistogram">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.PlotHistogramHovered">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.TextSelectedBg">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.DragDropTarget">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.NavHighlight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.NavWindowingHighlight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.NavWindowingDimBg">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.ModalWindowDimBg">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolColor.COUNT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Altseed.ToolStyleVar">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolStyleVar.Alpha">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolStyleVar.WindowPadding">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolStyleVar.WindowRounding">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolStyleVar.WindowBorderSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolStyleVar.WindowMinSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolStyleVar.WindowTitleAlign">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolStyleVar.ChildRounding">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolStyleVar.ChildBorderSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolStyleVar.PopupRounding">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolStyleVar.PopupBorderSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolStyleVar.FramePadding">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolStyleVar.FrameRounding">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolStyleVar.FrameBorderSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolStyleVar.ItemSpacing">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolStyleVar.ItemInnerSpacing">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolStyleVar.IndentSpacing">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolStyleVar.ScrollbarSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolStyleVar.ScrollbarRounding">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolStyleVar.GrabMinSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolStyleVar.GrabRounding">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolStyleVar.TabRounding">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolStyleVar.ButtonTextAlign">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolStyleVar.SelectableTextAlign">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolStyleVar.COUNT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Altseed.ToolCombo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolCombo.None">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolCombo.PopupAlignLeft">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolCombo.HeightSmall">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolCombo.HeightRegular">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolCombo.HeightLarge">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolCombo.HeightLargest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolCombo.NoArrowButton">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolCombo.NoPreview">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolCombo.HeightMask_">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Altseed.ToolHovered">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolHovered.None">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolHovered.ChildWindows">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolHovered.RootWindow">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolHovered.AnyWindow">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolHovered.AllowWhenBlockedByPopup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolHovered.AllowWhenBlockedByActiveItem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolHovered.AllowWhenOverlapped">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolHovered.AllowWhenDisabled">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolHovered.RectOnly">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Altseed.ToolHovered.RootAndChildWindows">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:Altseed.FFTWindow">
             <summary>
             音のスペクトル解析に使用する窓関数
@@ -2093,7 +2598,7 @@
             <summary>
             使用するカメラを設定します。
             </summary>
-            <param name="commandList">描画するカメラ</param>
+            <param name="camera">描画するカメラ</param>
         </member>
         <member name="M:Altseed.Renderer.ResetCamera">
             <summary>
@@ -2577,13 +3082,14 @@
             呼び出し禁止
             </summary>
         </member>
-        <member name="M:Altseed.Font.Font_Unsetter_Deserialize(System.Runtime.Serialization.SerializationInfo,System.Int32@,System.Boolean@)">
+        <member name="M:Altseed.Font.Font_Unsetter_Deserialize(System.Runtime.Serialization.SerializationInfo,System.Int32@,System.Boolean@,System.String@)">
             <summary>
             <see cref="!:OnDeserialization(object)"/>でデシリアライズされなかったオブジェクトを呼び出す
             </summary>
             <param name="info">シリアライズされたデータを格納するオブジェクト</param>
             <param name="Size"><see cref="P:Altseed.Font.Size"/></param>
             <param name="IsStaticFont"><see cref="P:Altseed.Font.IsStaticFont"/></param>
+            <param name="Path"><see cref="P:Altseed.Font.Path"/></param>
         </member>
         <member name="M:Altseed.Font.System#Runtime#Serialization#IDeserializationCallback#OnDeserialization(System.Object)">
             <summary>
@@ -2648,6 +3154,11 @@
         <member name="M:Altseed.CullingSystem.UpdateAABB">
             <summary>
             RenderedのAABBを更新します
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.AddFontFromFileTTF(System.String,System.Single,Altseed.ToolGlyphRanges)">
+            <summary>
+            パスからフォントを読み込みます。パックされたファイルは非対応です。
             </summary>
         </member>
         <member name="M:Altseed.Tool.Begin(System.String,Altseed.ToolWindow)">
@@ -2760,7 +3271,27 @@
             
             </summary>
         </member>
+        <member name="M:Altseed.Tool.ListBox(System.String,System.Int32@,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="M:Altseed.Tool.Selectable(System.String,System.Boolean@,Altseed.ToolSelectable)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.InputText(System.String,System.String,System.Int32,Altseed.ToolInputText)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.InputTextWithHint(System.String,System.String,System.String,System.Int32,Altseed.ToolInputText)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.InputTextMultiline(System.String,System.String,System.Int32,Altseed.Vector2F,Altseed.ToolInputText)">
             <summary>
             
             </summary>
@@ -2770,7 +3301,37 @@
             
             </summary>
         </member>
+        <member name="M:Altseed.Tool.InputInt2(System.String,Altseed.Int32Array)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.InputInt3(System.String,Altseed.Int32Array)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.InputInt4(System.String,Altseed.Int32Array)">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="M:Altseed.Tool.InputFloat(System.String,System.Single@)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.InputFloat2(System.String,Altseed.FloatArray)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.InputFloat3(System.String,Altseed.FloatArray)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.InputFloat4(System.String,Altseed.FloatArray)">
             <summary>
             
             </summary>
@@ -2780,7 +3341,37 @@
             
             </summary>
         </member>
+        <member name="M:Altseed.Tool.SliderInt2(System.String,Altseed.Int32Array,System.Single,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SliderInt3(System.String,Altseed.Int32Array,System.Single,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SliderInt4(System.String,Altseed.Int32Array,System.Single,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="M:Altseed.Tool.SliderFloat(System.String,System.Single@,System.Single,System.Single,System.Single)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SliderFloat2(System.String,Altseed.FloatArray,System.Single,System.Single,System.Single)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SliderFloat3(System.String,Altseed.FloatArray,System.Single,System.Single,System.Single)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SliderFloat4(System.String,Altseed.FloatArray,System.Single,System.Single,System.Single)">
             <summary>
             
             </summary>
@@ -2806,6 +3397,26 @@
             </summary>
         </member>
         <member name="M:Altseed.Tool.DragFloat(System.String,System.Single@,System.Single,System.Single,System.Single)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.DragIntRange2(System.String,System.Int32@,System.Int32@,System.Single,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.DragFloatRange2(System.String,System.Single@,System.Single@,System.Single,System.Single,System.Single)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.ColorEdit3(System.String,Altseed.Color@,Altseed.ToolColorEdit)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.ColorEdit4(System.String,Altseed.Color@,Altseed.ToolColorEdit)">
             <summary>
             
             </summary>
@@ -2935,11 +3546,6 @@
             
             </summary>
         </member>
-        <member name="M:Altseed.Tool.SetNextItemWidth(System.Single)">
-            <summary>
-            
-            </summary>
-        </member>
         <member name="M:Altseed.Tool.PushItemWidth(System.Single)">
             <summary>
             
@@ -2995,16 +3601,6 @@
             
             </summary>
         </member>
-        <member name="M:Altseed.Tool.SetScrollHereX">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:Altseed.Tool.SetScrollHereY">
-            <summary>
-            
-            </summary>
-        </member>
         <member name="M:Altseed.Tool.GetTextLineHeight">
             <summary>
             
@@ -3055,12 +3651,607 @@
             
             </summary>
         </member>
-        <member name="M:Altseed.Tool.SetNextWindowSize(Altseed.Vector2F)">
+        <member name="M:Altseed.Tool.SetNextWindowSize(Altseed.Vector2F,Altseed.ToolCond)">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Altseed.Tool.SetNextWindowPos(Altseed.Vector2F)">
+        <member name="M:Altseed.Tool.SetNextWindowPos(Altseed.Vector2F,Altseed.ToolCond)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.IsWindowAppearing">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.IsWindowCollapsed">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.IsWindowFocused(Altseed.ToolFocused)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.IsWindowHovered(Altseed.ToolFocused)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.GetWindowPos">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SetNextWindowCollapsed(System.Boolean,Altseed.ToolCond)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SetNextWindowFocus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SetNextWindowBgAlpha(System.Single)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SetWindowPosWithCond(Altseed.Vector2F,Altseed.ToolCond)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SetWindowSizeWithCond(Altseed.Vector2F,Altseed.ToolCond)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SetWindowCollapsedWithCond(System.Boolean,Altseed.ToolCond)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SetWindowFocus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SetWindowFontScale(System.Single)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SetWindowPosByName(System.String,Altseed.Vector2F,Altseed.ToolCond)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SetWindowSizeByName(System.String,Altseed.Vector2F,Altseed.ToolCond)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SetWindowCollapsedByName(System.String,System.Boolean,Altseed.ToolCond)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SetWindowFocusByName(System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.GetContentRegionMax">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.GetContentRegionAvail">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.GetWindowContentRegionMin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.GetWindowContentRegionMax">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.GetWindowContentRegionWidth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.GetScrollX">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.GetScrollY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.GetScrollMaxX">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.GetScrollMaxY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SetScrollX(System.Single)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SetScrollY(System.Single)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SetScrollHereX(System.Single)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SetScrollHereY(System.Single)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SetScrollFromPosX(System.Single,System.Single)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SetScrollFromPosY(System.Single,System.Single)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.PushStyleColor(Altseed.ToolColor,Altseed.Color)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.PopStyleColor(System.Int32)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.PushStyleVarFloat(Altseed.ToolStyleVar,System.Single)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.PushStyleVarVector2F(Altseed.ToolStyleVar,Altseed.Vector2F)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.PopStyleVar(System.Int32)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.GetStyleColor(Altseed.ToolColor)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.GetFontTexUvWhitePixel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SetNextItemWidth(System.Single)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.CalcItemWidth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.PushAllowKeyboardFocus(System.Boolean)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.PopAllowKeyboardFocus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.Spacing">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.BeginGroup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.EndGroup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.GetCursorPos">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SetCursorPos(Altseed.Vector2F)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.GetCursorStartPos">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.GetCursorScreenPos">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.AlignTextToFramePadding">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.GetTextLineHeightWithSpacing">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.GetFrameHeight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.GetFrameHeightWithSpacing">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SmallButton(System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.Image(Altseed.Texture2D,Altseed.Vector2F,Altseed.Vector2F,Altseed.Vector2F,Altseed.Vector4F,Altseed.Vector4F)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.ImageButton(Altseed.Texture2D,Altseed.Vector2F,Altseed.Vector2F,Altseed.Vector2F,System.Int32,Altseed.Vector4F,Altseed.Vector4F)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.Checkbox(System.String,System.Boolean@)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.ProgressBar(System.Single,Altseed.Vector2F,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.Bullet">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.BeginCombo(System.String,System.String,Altseed.ToolCombo)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.EndCombo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.Combo(System.String,System.Int32@,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.ColorButton(System.String,Altseed.Color@,Altseed.ToolColorEdit,Altseed.Vector2F)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SetColorEditOptions(Altseed.ToolColorEdit)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.GetTreeNodeToLabelSpacing">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.ListBoxHeader(System.String,Altseed.Vector2F)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.ListBoxFooter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.PlotLines(System.String,Altseed.FloatArray,System.Int32,System.Int32,System.String,System.Single,System.Single,Altseed.Vector2F,System.Int32)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.PlotHistogram(System.String,Altseed.FloatArray,System.Int32,System.Int32,System.String,System.Single,System.Single,Altseed.Vector2F,System.Int32)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.ValueBool(System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.ValueInt(System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.ValueFloat(System.String,System.Single,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.BeginMainMenuBar">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.EndMainMenuBar">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.BeginPopupContextItem(System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.BeginPopupContextWindow(System.String,System.Int32,System.Boolean)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.BeginPopupContextVoid(System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.BeginPopupModalEx(System.String,System.Boolean@,Altseed.ToolWindow)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.OpenPopupOnItemClick(System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.IsPopupOpen(System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.CloseCurrentPopup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.GetColumnIndex">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.GetColumnWidth(System.Int32)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SetColumnWidth(System.Int32,System.Single)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.GetColumnOffset(System.Int32)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SetColumnOffset(System.Int32,System.Single)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.GetColumnsCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SetTabItemClosed(System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.PushClipRect(Altseed.Vector2F,Altseed.Vector2F,System.Boolean)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.PopClipRect">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SetItemDefaultFocus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SetKeyboardFocusHere(System.Int32)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.IsItemHoveredWithFlags(Altseed.ToolHovered)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.IsItemFocused">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.IsItemClicked(System.Int32)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.IsItemVisible">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.IsItemEdited">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.IsItemActivated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.IsItemDeactivated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.IsItemDeactivatedAfterEdit">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.IsAnyItemHovered">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.IsAnyItemActive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.IsAnyItemFocused">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.GetItemRectMin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.GetItemRectMax">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.GetItemRectSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SetItemAllowOverlap">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.IsRectVisible(Altseed.Vector2F)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.IsRectVisibleVector2F2(Altseed.Vector2F,Altseed.Vector2F)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.GetTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.GetClipboardText">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SetClipboardText(System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.LoadIniSettingsFromDisk(System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SaveIniSettingsToDisk(System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.OpenDialog(System.String,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.OpenDialogMultiple(System.String,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.SaveDialog(System.String,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Altseed.Tool.PickFolder(System.String)">
             <summary>
             
             </summary>
@@ -3142,12 +4333,13 @@
             呼び出し禁止
             </summary>
         </member>
-        <member name="M:Altseed.StreamFile.StreamFile_Unsetter_Deserialize(System.Runtime.Serialization.SerializationInfo,System.Int32@)">
+        <member name="M:Altseed.StreamFile.StreamFile_Unsetter_Deserialize(System.Runtime.Serialization.SerializationInfo,System.Int32@,System.String@)">
             <summary>
             <see cref="!:OnDeserialization(object)"/>でデシリアライズされなかったオブジェクトを呼び出す
             </summary>
             <param name="info">シリアライズされたデータを格納するオブジェクト</param>
             <param name="CurrentPosition"><see cref="P:Altseed.StreamFile.CurrentPosition"/></param>
+            <param name="Path"><see cref="P:Altseed.StreamFile.Path"/></param>
         </member>
         <member name="M:Altseed.StreamFile.System#Runtime#Serialization#IDeserializationCallback#OnDeserialization(System.Object)">
             <summary>
@@ -3243,6 +4435,13 @@
             <summary>
             呼び出し禁止
             </summary>
+        </member>
+        <member name="M:Altseed.StaticFile.StaticFile_Unsetter_Deserialize(System.Runtime.Serialization.SerializationInfo,System.String@)">
+            <summary>
+            <see cref="M:Altseed.StaticFile.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)"/>でデシリアライズされなかったオブジェクトを呼び出す
+            </summary>
+            <param name="info">シリアライズされたデータを格納するオブジェクト</param>
+            <param name="Path"><see cref="P:Altseed.StaticFile.Path"/></param>
         </member>
         <member name="P:Altseed.StaticFile.Buffer">
             <summary>
@@ -3777,6 +4976,12 @@
             <summary>
             呼び出し禁止
             </summary>
+        </member>
+        <member name="P:Altseed.PolygonCollider.VertexArray">
+            <summary>
+            頂点情報の配列を取得または設定する
+            </summary>
+            <exception cref="T:System.ArgumentNullException">設定しようとした値がnull</exception>
         </member>
         <member name="T:Altseed.Registerable`1">
             <summary>
@@ -6300,6 +7505,288 @@
             <summary>
             描画を実行します。
             </summary>
+        </member>
+        <member name="T:Altseed.ColliderNode">
+            <summary>
+            コライダを管理するノード
+            </summary>
+        </member>
+        <member name="P:Altseed.ColliderNode.Collider">
+            <summary>
+            コライダを取得する
+            </summary>
+        </member>
+        <member name="P:Altseed.ColliderNode.Position">
+            <summary>
+            座標を取得または設定する
+            </summary>
+        </member>
+        <member name="P:Altseed.ColliderNode.Rotation">
+            <summary>
+            コライダの回転情報を取得または設定する
+            </summary>
+        </member>
+        <member name="M:Altseed.ColliderNode.#ctor">
+            <summary>
+            <see cref="T:Altseed.ColliderNode"/>の新しいインスタンスを生成する
+            </summary>
+        </member>
+        <member name="T:Altseed.CircleColliderNode">
+            <summary>
+            円形コライダを管理するノード
+            </summary>
+        </member>
+        <member name="P:Altseed.CircleColliderNode.CircleCollider">
+            <summary>
+            使用するコライダを取得する
+            </summary>
+        </member>
+        <member name="P:Altseed.CircleColliderNode.Radius">
+            <summary>
+            衝突半径を取得または設定する
+            </summary>
+        </member>
+        <member name="M:Altseed.CircleColliderNode.#ctor">
+            <summary>
+            既定の<see cref="T:Altseed.CircleCollider"/>を使用して<see cref="T:Altseed.CircleColliderNode"/>の新しいインスタンスを生成する
+            </summary>
+        </member>
+        <member name="M:Altseed.CircleColliderNode.#ctor(Altseed.CircleCollider)">
+            <summary>
+            指定した<see cref="T:Altseed.CircleCollider"/>を使用して<see cref="T:Altseed.CircleColliderNode"/>の新しいインスタンスを生成する
+            </summary>
+            <param name="collider">使用する<see cref="T:Altseed.CircleCollider"/>のインスタンス</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="collider"/>がnull</exception>
+        </member>
+        <member name="T:Altseed.PolygonColliderNode">
+            <summary>
+            ポリゴンコライダを管理するノード
+            </summary>
+        </member>
+        <member name="P:Altseed.PolygonColliderNode.PolygonCollider">
+            <summary>
+            使用するコライダを取得する
+            </summary>
+        </member>
+        <member name="P:Altseed.PolygonColliderNode.Vertexes">
+            <summary>
+            頂点情報の配列を取得または設定する
+            </summary>
+            <exception cref="T:System.ArgumentNullException">設定しようとした値がnull</exception>
+        </member>
+        <member name="M:Altseed.PolygonColliderNode.#ctor">
+            <summary>
+            既定の<see cref="T:Altseed.PolygonCollider"/>を使用して<see cref="T:Altseed.PolygonColliderNode"/>の新しいインスタンスを生成する
+            </summary>
+        </member>
+        <member name="M:Altseed.PolygonColliderNode.#ctor(Altseed.PolygonCollider)">
+            <summary>
+            指定した<see cref="T:Altseed.PolygonCollider"/>を使用して<see cref="T:Altseed.PolygonColliderNode"/>の新しいインスタンスを生成する
+            </summary>
+            <param name="collider">使用する<see cref="T:Altseed.PolygonCollider"/>のインスタンス</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="collider"/>がnull</exception>
+        </member>
+        <member name="T:Altseed.RectangleColliderNode">
+            <summary>
+            短形コライダを管理するノード
+            </summary>
+        </member>
+        <member name="P:Altseed.RectangleColliderNode.CenterPosition">
+            <summary>
+            中心座標を取得または設定する
+            </summary>
+        </member>
+        <member name="P:Altseed.RectangleColliderNode.RectangleCollider">
+            <summary>
+            使用するコライダを取得する
+            </summary>
+        </member>
+        <member name="P:Altseed.RectangleColliderNode.Size">
+            <summary>
+            サイズを取得または設定する
+            </summary>
+        </member>
+        <member name="M:Altseed.RectangleColliderNode.#ctor">
+            <summary>
+            既定の<see cref="T:Altseed.RectangleCollider"/>を使用して<see cref="T:Altseed.RectangleColliderNode"/>の新しいインスタンスを生成する
+            </summary>
+        </member>
+        <member name="M:Altseed.RectangleColliderNode.#ctor(Altseed.RectangleCollider)">
+            <summary>
+            指定した<see cref="T:Altseed.RectangleCollider"/>を使用して<see cref="T:Altseed.RectangleColliderNode"/>の新しいインスタンスを生成する
+            </summary>
+            <param name="collider">使用する<see cref="T:Altseed.RectangleCollider"/>のインスタンス</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="collider"/>がnull</exception>
+        </member>
+        <member name="T:Altseed.CollisionCollection">
+            <summary>
+            コライダを格納するコレクション
+            </summary>
+        </member>
+        <member name="P:Altseed.CollisionCollection.Count">
+            <summary>
+            格納されている<see cref="T:Altseed.ColliderNode"/>の個数を取得する
+            </summary>
+        </member>
+        <member name="M:Altseed.CollisionCollection.Add(Altseed.ColliderNode)">
+            <summary>
+            指定したコライダを追加する
+            </summary>
+            <param name="node">追加するコライダのノード</param>
+            <exception cref="T:System.ArgumentException"><paramref name="node"/>が親に存在しない</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="node"/>がnull</exception>
+            <returns><paramref name="node"/>を追加出来たらtrue，それ以外でfalse</returns>
+        </member>
+        <member name="M:Altseed.CollisionCollection.Clear">
+            <summary>
+            全ての要素を削除する
+            </summary>
+        </member>
+        <member name="M:Altseed.CollisionCollection.Contains(Altseed.ColliderNode)">
+            <summary>
+            指定した<see cref="T:Altseed.ColliderNode"/>が格納されているかどうかを返す
+            </summary>
+            <param name="node">検索する<see cref="T:Altseed.ColliderNode"/></param>
+            <returns><paramref name="node"/>が格納されていたらtrue，それ以外でfalse</returns>
+        </member>
+        <member name="M:Altseed.CollisionCollection.GetEnumerator">
+            <summary>
+            列挙をサポートする構造体を返す
+            </summary>
+            <returns><see cref="T:Altseed.CollisionCollection.Enumerator"/>の新しいインスタンス</returns>
+        </member>
+        <member name="M:Altseed.CollisionCollection.Remove(Altseed.ColliderNode)">
+            <summary>
+            指定したコライダを削除する
+            </summary>
+            <param name="node">削除するコライダのノード</param>
+            <exception cref="T:System.ArgumentException"><paramref name="node"/>が親に存在しない</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="node"/>がnull</exception>
+            <returns><paramref name="node"/>を削除出来たらtrue，それ以外でfalse</returns>
+        </member>
+        <member name="M:Altseed.CollisionCollection.Update">
+            <summary>
+            衝突判定を実施する
+            </summary>
+        </member>
+        <member name="T:Altseed.CollisionCollection.Enumerator">
+            <summary>
+            列挙をサポートする構造体
+            </summary>
+        </member>
+        <member name="P:Altseed.CollisionCollection.Enumerator.Current">
+            <summary>
+            現在列挙されている要素を取得する
+            </summary>
+        </member>
+        <member name="M:Altseed.CollisionCollection.Enumerator.#ctor(Altseed.CollisionCollection)">
+            <summary>
+            <see cref="T:Altseed.CollisionCollection.Enumerator"/>の新しいインスタンスを生成する
+            </summary>
+            <param name="collection">使用する<see cref="T:Altseed.CollisionCollection"/>のインスタンス</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="collection"/>がnull</exception>
+        </member>
+        <member name="M:Altseed.CollisionCollection.Enumerator.Dispose">
+            <summary>
+            このインスタンスを破棄する
+            </summary>
+        </member>
+        <member name="M:Altseed.CollisionCollection.Enumerator.MoveNext">
+            <summary>
+            列挙を次に進める
+            </summary>
+            <exception cref="T:System.InvalidOperationException">列挙中にコレクションが変更された</exception>
+            <returns>列挙を次に進められたらtrue，それ以外でfalse</returns>
+        </member>
+        <member name="T:Altseed.CollisionInfo">
+            <summary>
+            衝突判定に関する情報を格納したクラス
+            </summary>
+        </member>
+        <member name="P:Altseed.CollisionInfo.CollisionType">
+            <summary>
+            衝突の種類を取得する
+            </summary>
+        </member>
+        <member name="P:Altseed.CollisionInfo.SelfCollider">
+            <summary>
+            自身の<see cref="T:Altseed.ColliderNode"/>を取得する
+            </summary>
+        </member>
+        <member name="P:Altseed.CollisionInfo.TheirsCollider">
+            <summary>
+            衝突相手の<see cref="T:Altseed.ColliderNode"/>を取得する
+            </summary>
+        </member>
+        <member name="T:Altseed.CollisionManagerNode">
+            <summary>
+            衝突判定を制御ノード
+            </summary>
+        </member>
+        <member name="P:Altseed.CollisionManagerNode.ColliderCount">
+            <summary>
+            格納されているコライダの個数を取得する
+            </summary>
+        </member>
+        <member name="P:Altseed.CollisionManagerNode.Colliders">
+            <summary>
+            登録されているコライダを取得する
+            </summary>
+        </member>
+        <member name="M:Altseed.CollisionManagerNode.#ctor">
+            <summary>
+            <see cref="T:Altseed.CollisionManagerNode"/>の新しいインスタンスを生成する
+            </summary>
+        </member>
+        <member name="M:Altseed.CollisionManagerNode.ContainsCollider(Altseed.ColliderNode)">
+            <summary>
+            指定した<see cref="T:Altseed.ColliderNode"/>が格納されているかどうかを返す
+            </summary>
+            <param name="node">検索する<see cref="T:Altseed.ColliderNode"/></param>
+            <returns><paramref name="node"/>が格納されていたらtrue，それ以外でfalse</returns>
+        </member>
+        <member name="T:Altseed.CollisionType">
+            <summary>
+            衝突のタイプ
+            </summary>
+        </member>
+        <member name="F:Altseed.CollisionType.Enter">
+            <summary>
+            前フレームでは衝突しておらず，このフレームで衝突している
+            </summary>
+        </member>
+        <member name="F:Altseed.CollisionType.Stay">
+            <summary>
+            前フレームでは衝突しており，このフレームでも衝突している
+            </summary>
+        </member>
+        <member name="F:Altseed.CollisionType.Exit">
+            <summary>
+            前フレームでは衝突しており，このフレームで衝突していない
+            </summary>
+        </member>
+        <member name="T:Altseed.ICollisionEventReceiver">
+            <summary>
+            衝突判定を感知するイベントを提供するインターフェイス
+            </summary>
+        </member>
+        <member name="M:Altseed.ICollisionEventReceiver.OnCollisionEnter(Altseed.CollisionInfo)">
+            <summary>
+            衝突を開始した時に呼び出される
+            </summary>
+            <param name="info">衝突に関する情報</param>
+        </member>
+        <member name="M:Altseed.ICollisionEventReceiver.OnCollisionExit(Altseed.CollisionInfo)">
+            <summary>
+            衝突を終了した時に呼び出される
+            </summary>
+            <param name="info">衝突に関する情報</param>
+        </member>
+        <member name="M:Altseed.ICollisionEventReceiver.OnCollisionStay(Altseed.CollisionInfo)">
+            <summary>
+            衝突が継続している時に呼び出される
+            </summary>
+            <param name="info">衝突に関する情報</param>
         </member>
     </members>
 </doc>
