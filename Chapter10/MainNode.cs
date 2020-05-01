@@ -256,6 +256,9 @@ namespace Tutorial
             if (bgmID.HasValue)
             {
                 Engine.Sound.FadeOut(bgmID.Value, 1.0f);
+
+                // BGMが止まったのでIDをnullに
+                bgmID = null;
             }
 
             // 画面遷移中でないなら遷移処理を実行
@@ -298,6 +301,9 @@ namespace Tutorial
                         if (bgmID.HasValue)
                         {
                             Engine.Sound.FadeOut(bgmID.Value, 1.0f);
+
+                            // BGMが止まったのでIDをnullに
+                            bgmID = null;
                         }
 
                         // エンジンから自身を削除
