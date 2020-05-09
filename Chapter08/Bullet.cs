@@ -9,7 +9,7 @@ namespace Tutorial
         private Vector2F velocity;
 
         // コンストラクタ
-        public Bullet(MainNode mainNpde, Vector2F position, Vector2F velocity) : base(mainNpde, position)
+        public Bullet(MainNode mainNode, Vector2F position, Vector2F velocity) : base(mainNode, position)
         {
             // 衝突判定を行わないように設定
             doSurvey = false;
