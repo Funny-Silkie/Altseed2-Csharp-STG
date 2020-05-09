@@ -33,9 +33,6 @@ namespace Tutorial
             // 座標を速度分進める
             Position += velocity;
 
-            // CollidableObjectのOnUpdateを呼び出す
-            base.OnUpdate();
-
             // 画面外に出たら自身を削除
             RemoveMyselfIfOutOfWindow();
         }
