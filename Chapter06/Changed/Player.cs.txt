@@ -13,8 +13,14 @@ namespace Tutorial
         // コンストラクタ
         public Player(MainNode mainNode, Vector2F position) : base(mainNode, position)
         {
+            ------added start------
             // 衝突判定を行うように設定
             doSurvey = true;
+            ------added end------
+            ------removed start------
+            // 座標を設定
+            Position = position;
+            ------removed end------
 
             // テクスチャを読み込む
             Texture = Texture2D.LoadStrict("Resources/Player.png");
@@ -49,9 +55,11 @@ namespace Tutorial
 
             // ショットを実行
             Shot();
-
+            
+            ------added start------
             // CollidableObjectのOnupdate呼び出し
             base.OnUpdate();
+            ------added end------
         }
 
         // 移動を行う

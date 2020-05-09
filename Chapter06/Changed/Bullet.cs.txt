@@ -10,9 +10,14 @@ namespace Tutorial
     {
         // フレーム毎に進む距離
         private Vector2F velocity;
-
+        
+        ------added start------
         // コンストラクタ
-        public Bullet(MainNode mainNpde, Vector2F position, Vector2F velocity) : base(mainNpde, position)
+        public Bullet(MainNode mainNode, Vector2F position, Vector2F velocity) : base(mainNpde, position)
+        ------added end------
+        ------removed start------
+        public Bullet(Vector2F position, Vector2F velocity)
+        ------removed end------
         {
             ------added start------
             // 衝突判定を行わないように設定
@@ -35,9 +40,11 @@ namespace Tutorial
         {
             // 座標を速度分進める
             Position += velocity;
-
+            
+            ------added start------
             // CollidableObjectのOnUpdateを呼び出す
             base.OnUpdate();
+            ------added end------
 
             // 画面外に出たら自身を削除
             RemoveMyselfIfOutOfWindow();

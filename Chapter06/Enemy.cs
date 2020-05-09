@@ -1,4 +1,4 @@
-﻿using Altseed;
+using Altseed;
 
 namespace Tutorial
 {
@@ -27,9 +27,6 @@ namespace Tutorial
             // 衝突対象が自機弾だったら
             if (obj is PlayerBullet)
             {
-                // スコアを加算
-                mainNode.score += score;
-
                 // 死亡時エフェクトを再生
                 Parent.AddChildNode(new DeathEffect(Position));
 
