@@ -26,9 +26,6 @@ namespace Tutorial
 
             // ショットを実行
             Shot();
-
-            // CollidableObjectのOnupdate呼び出し
-            base.OnUpdate();
         }
 
         // 移動を行う
