@@ -173,7 +173,7 @@ namespace Tutorial
         // ウェーブ2の初期化
         private void InitWave2()
         {
-            // enemies[0].Enqueue～でウェーブ1に敵を追加
+            // enemies[1].Enqueue～でウェーブ1に敵を追加
             // 追加した順番に敵が出現する
 
 
@@ -205,7 +205,7 @@ namespace Tutorial
         // ウェーブ3の初期化
         private void InitWave3()
         {
-            // enemies[0].Enqueue～でウェーブ1に敵を追加
+            // enemies[2].Enqueue～でウェーブ1に敵を追加
             // 追加した順番に敵が出現する
 
 
