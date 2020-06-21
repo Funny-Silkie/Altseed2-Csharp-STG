@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Altseed;
+using Altseed2;
 
 namespace Tutorial
 {

@@ -16,7 +16,7 @@
     <None Update="Altseed2.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Altseed_Core.dll">
+    <None Update="Altseed2_Core.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

@@ -1,6 +1,6 @@
 ﻿------added start------
 
-using Altseed;
+using Altseed2;
 using System;
 
 namespace Tutorial
