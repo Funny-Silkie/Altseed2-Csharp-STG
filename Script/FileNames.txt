@@ -1,3 +1,0 @@
-Altseed2.dll
-Altseed2_Core.dll
-Altseed2.xml

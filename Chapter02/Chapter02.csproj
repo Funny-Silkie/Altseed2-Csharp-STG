@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Altseed2" Version="0.0.2-alpha" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="Altseed2.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -16,12 +20,6 @@
     <None Update="Resources\Player.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="Altseed2">
-      <HintPath>Altseed2.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>
