@@ -107,7 +107,7 @@ namespace Tutorial
             // Zキーでショットを放つ
             if (Engine.Keyboard.GetKeyState(Keys.Z) == ButtonState.Push)
             {
-                Parent.AddChildNode(new PlayerBullet(mainNode, Position + CenterPosition));
+                Parent.AddChildNode(new PlayerBullet(mainNode, Position));
 
                 // ショット音を鳴らす
                 Engine.Sound.Play(shotSound);
