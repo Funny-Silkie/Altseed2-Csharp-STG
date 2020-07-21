@@ -17,8 +17,6 @@ Scriptフォルダの中にシステムがあります。
 
 前のチャプターからの変更点は`Changed/`フォルダに書かれています。
 
-追加された部分は
-`------add start------`と`------add end------`で囲まれています。
-
-削除された部分は
-`------remove start------`と`------remove end------`で囲まれています。
+差分の生成は`Script/diffGenerator/GenerateDiff.bat`を選択ことで可能です。
+比較ディレクトリは`Script/diffGenerator/ReadFolder.txt`内を編集することで設定可能です。
+各行に比較したいディレクトリをスペースを挟んで記入してください。
