@@ -37,25 +37,25 @@ namespace Tutorial
             var y = Position.Y;
 
             // ↑キーでY座標を減少
-            if (Engine.Keyboard.GetKeyState(Keys.Up) == ButtonState.Hold)
+            if (Engine.Keyboard.GetKeyState(Key.Up) == ButtonState.Hold)
             {
                 y -= 2.5f;
             }
 
             // ↓キーでY座標を増加
-            if (Engine.Keyboard.GetKeyState(Keys.Down) == ButtonState.Hold)
+            if (Engine.Keyboard.GetKeyState(Key.Down) == ButtonState.Hold)
             {
                 y += 2.5f;
             }
 
             // →キーでX座標を増加
-            if (Engine.Keyboard.GetKeyState(Keys.Right) == ButtonState.Hold)
+            if (Engine.Keyboard.GetKeyState(Key.Right) == ButtonState.Hold)
             {
                 x += 2.5f;
             }
 
             // ←キーでX座標を減少
-            if (Engine.Keyboard.GetKeyState(Keys.Left) == ButtonState.Hold)
+            if (Engine.Keyboard.GetKeyState(Key.Left) == ButtonState.Hold)
             {
                 x -= 2.5f;
             }
@@ -76,7 +76,7 @@ namespace Tutorial
         private void Shot()
         {
             // Zキーでショットを放つ
-            if (Engine.Keyboard.GetKeyState(Keys.Z) == ButtonState.Push)
+            if (Engine.Keyboard.GetKeyState(Key.Z) == ButtonState.Push)
             {
                 Parent.AddChildNode(new PlayerBullet(Position));
             }

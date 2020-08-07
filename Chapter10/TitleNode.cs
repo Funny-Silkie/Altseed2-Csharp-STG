@@ -50,7 +50,7 @@ namespace Tutorial
         protected override void OnUpdate()
         {
             // 画面が遷移中でなく，Zキーが押された時に実行
-            if (!fading && Engine.Keyboard.GetKeyState(Keys.Z) == ButtonState.Push)
+            if (!fading && Engine.Keyboard.GetKeyState(Key.Z) == ButtonState.Push)
             {
                 // エンジンから自身を削除
                 Engine.RemoveNode(this);
