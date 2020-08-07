@@ -22,7 +22,7 @@ namespace Tutorial
             // 自機の座標を設定
             player.Position = new Vector2F(100, 360);
             // 自機の中心座標を設定
-            player.CenterPosition = player.Texture.Size / 2;
+            player.CenterPosition = player.ContentSize / 2;
 
             // 自機をエンジンに追加
             Engine.AddNode(player);
@@ -67,7 +67,7 @@ namespace Tutorial
                     // 自機弾の座標を設定
                     bullet.Position = player.Position;
                     // 自機弾の中心座標を設定
-                    bullet.CenterPosition = bullet.Texture.Size / 2;
+                    bullet.CenterPosition = bullet.ContentSize / 2;
                     // 自機弾の表示位置を自機より奥に設定
                     bullet.ZOrder--;
 

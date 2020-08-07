@@ -21,7 +21,7 @@ namespace Tutorial
             Texture = Texture2D.LoadStrict("Resources/Meteor.png");
 
             // 中心座標の設定
-            CenterPosition = Texture.Size / 2;
+            CenterPosition = ContentSize / 2;
 
             // 半径の設定
             collider.Radius = Texture.Size.X / 2;

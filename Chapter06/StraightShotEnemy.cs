@@ -16,7 +16,7 @@ namespace Tutorial
             Texture = Texture2D.LoadStrict("Resources/UFO.png");
 
             // 中心座標を設定
-            CenterPosition = Texture.Size / 2;
+            CenterPosition = ContentSize / 2;
 
             // 半径を設定
             collider.Radius = Texture.Size.X / 2;

@@ -18,7 +18,7 @@ namespace Tutorial
             Texture = Texture2D.LoadStrict("Resources/Player.png");
 
             // 中心座標を設定
-            CenterPosition = Texture.Size / 2;
+            CenterPosition = ContentSize / 2;
 
             // コライダの半径を設定
             collider.Radius = Texture.Size.Y / 2;
