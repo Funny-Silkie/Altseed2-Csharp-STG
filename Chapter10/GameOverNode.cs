@@ -18,7 +18,9 @@ namespace Tutorial
             // タイトルの文字を設定
             titleText.Text = "Game Over";
             // タイトルの座標を設定
-            titleText.Position = new Vector2F(241, 51);
+            titleText.Position = new Vector2F(Engine.WindowSize.X / 2, 100f);
+            // タイトルの中心座標を設定
+            titleText.CenterPosition = titleText.ContentSize / 2;
 
             // タイトルを追加
             AddChildNode(titleText);
@@ -30,7 +32,9 @@ namespace Tutorial
             // 案内の文字を設定
             announce.Text = "Press Z to go title";
             // 案内の座標を設定
-            announce.Position = new Vector2F(296, 575);
+            announce.Position = new Vector2F(Engine.WindowSize.X / 2, 600f);
+            // 案内の中心座標を設定
+            announce.CenterPosition = announce.ContentSize / 2;
 
             // 案内を追加
             AddChildNode(announce);
