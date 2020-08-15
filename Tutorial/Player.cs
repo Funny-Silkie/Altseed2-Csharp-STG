@@ -56,7 +56,7 @@ namespace Tutorial
             // ショットを実行
             Shot();
 
-            // CollidableObjectのOnupdate呼び出し
+            // CollidableObjectのOnUpdate呼び出し
             base.OnUpdate();
         }
 
