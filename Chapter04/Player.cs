@@ -78,7 +78,7 @@ namespace Tutorial
             // Zキーでショットを放つ
             if (Engine.Keyboard.GetKeyState(Key.Z) == ButtonState.Push)
             {
-                Parent.AddChildNode(new Bullet(Position , new Vector2F(10f, 0.0f)));
+                Parent.AddChildNode(new Bullet(Position , new Vector2F(10f, 0f)));
             }
         }
     }
